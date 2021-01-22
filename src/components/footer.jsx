@@ -2,13 +2,7 @@ import React from 'react'
 
 function Footer() {
     return (
-        <footer
-            style={{
-                marginTop: `2rem`,
-                border: `1px solid black`,
-                textAlign: `center`
-            }}
-        >
+        <footer>
             © {new Date().getFullYear()}
         </footer>
     )

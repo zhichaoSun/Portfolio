@@ -32,7 +32,7 @@ const Header = ({sections}) => {
                 <div className="links section-links">
                     <ul>
                     {
-                        sections.map((section, index) => (
+                        sections.map(section => (
                             <li key={section}>
                                 <Link 
                                     href={`#${section}`} 

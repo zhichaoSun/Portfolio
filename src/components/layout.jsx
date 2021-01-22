@@ -13,10 +13,10 @@ const Layout = ({ sections, children }) => {
             <div
                 style={{
                     margin: `0 auto`,
-                    maxWidth: 1280,
+                    // maxWidth: 1280,
                     width: 1280,
-                    padding: `0 1.0875rem 1.45rem`,
-                    border: '1px solid white ',
+                    // padding: `0 1.0875rem 1.45rem`,
+                    // border: '1px solid white ',
                 }}
             >
                 <main>{children}</main>

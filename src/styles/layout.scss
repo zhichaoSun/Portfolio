@@ -2,51 +2,76 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
 
 $white: #f7f7f7;
-$orange:  #FF5722;
-
-// html {
-//     scroll-behavior: smooth;
-// }
+$black: #1b1b1b;
+$orange:  #ff5722;
 
 body {
     background-color: #2b2b2b;
 }
 
 header {
-    width: 100%;
+    // width: 100vw;
     height: 50px;
-    outline: 1px solid $white;
+    // outline: 1px solid $white;
     background-color: #1b1b1b;
-    // background-color: transparent;
-    
+    display: block;
     position: sticky;
     top: 0;
-}
 
-.header-container {
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.links {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 800;
-    font-size: 1.25em;
-    margin: 0 20px;
-    // outline: 1px solid $white;
-    ul{
+    .header-container {
+        height: 100%;
+        width: 100%;
         display: flex;
-        li {
-            padding: 0 20px;
-            a {
-                cursor: pointer;
-                color: $white;
-                text-decoration: none;
-                text-transform: capitalize;
+        justify-content: space-between;
+        align-items: center;
+
+        .links {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            font-size: 1.25em;
+            margin: 0 20px;
+            // outline: 1px solid $white;
+            ul{
+                display: flex;
+                li {
+                    padding: 0 20px;
+                    a {
+                        cursor: pointer;
+                        color: $white;
+                        text-decoration: none;
+                        text-transform: capitalize;
+                    }
+                }
             }
         }
     }
 }
 
+.section {
+    +.section-divider {
+        height: 50px;
+        background-color: $black;
+        // border: 1px solid #ff5722;
+    }
+    height: calc(100vh - 50px);
+    color: $white;
+    display: grid;
+    place-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 3rem;
+}
+
+footer {
+    height: 50px;
+    // width: 90vw;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $black;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
