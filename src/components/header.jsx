@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import { Link } from "gatsby"
 
 import { SiLinkedin, SiGithub } from "react-icons/si";
 
@@ -32,8 +33,8 @@ const Header = ({sections}) => {
                     <ul>
                     {
                         sections.map((section, index) => (
-                            <li key={index}>
-                                <a 
+                            <li key={section}>
+                                <Link 
                                     href={`#${section}`} 
                                     style={{
                                         color: ("#"+section === currenthash) || (currenthash==="" && section==="home") 
@@ -42,7 +43,7 @@ const Header = ({sections}) => {
                                     }}
                                 >
                                     {section}
-                                </a>
+                                </Link>
                             </li>
                         ))
                     }

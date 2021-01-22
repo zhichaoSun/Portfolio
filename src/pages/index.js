@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect } from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
@@ -8,6 +8,15 @@ const IndexPage = () => {
 
     const sections = ["home", "about", "work", "contact"]
 
+    useEffect(() => {
+        let initHash = document.location.hash
+        setTimeout(()=> {
+            document
+                .querySelector(initHash===""?"#home":initHash)
+                .scrollIntoView({ behavior: "smooth", block: "start" })
+        }, 0)
+    }, [])
+
     return(
         <Layout sections={sections}>
             <SEO title="Home" />
@@ -15,6 +24,7 @@ const IndexPage = () => {
             {sections.map(sec=>(
                 <div
                     id={sec}
+                    key={sec}
                     style={{
                         color: "white",
                         display: "grid",

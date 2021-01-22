@@ -1,8 +1,12 @@
 @import '../../node_modules/reset-css/sass/reset';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
 
-$white: #fff;
+$white: #f7f7f7;
 $orange:  #FF5722;
+
+// html {
+//     scroll-behavior: smooth;
+// }
 
 body {
     background-color: #2b2b2b;
@@ -13,6 +17,7 @@ header {
     height: 50px;
     outline: 1px solid $white;
     background-color: #1b1b1b;
+    // background-color: transparent;
     
     position: sticky;
     top: 0;
