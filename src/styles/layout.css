@@ -109,20 +109,54 @@ header .header-container .links ul li a {
   text-transform: capitalize;
 }
 
-.section {
+section {
   height: calc(100vh - 50px);
   color: #f7f7f7;
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
   font-family: 'Poppins', sans-serif;
   font-weight: 800;
   font-size: 3rem;
 }
 
-.section + .section-divider {
+section + .divider {
   height: 50px;
   background-color: #1b1b1b;
+}
+
+section.home {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 4em 1fr 1fr 4em;
+      grid-template-columns: 4em 1fr 1fr 4em;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  gap: 0px 10px;
+      grid-template-areas: ". content circles .";
+}
+
+section.home .content {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: content;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+section.home .circles {
+  position: relative;
+  height: 700px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: circles;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+section.home .circles img {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 footer {

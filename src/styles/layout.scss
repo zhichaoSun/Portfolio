@@ -47,19 +47,43 @@ header {
     }
 }
 
-.section {
-    +.section-divider {
+section {
+    height: calc(100vh - 50px);
+    color: $white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 3rem;
+
+    +.divider {
         height: 50px;
         background-color: $black;
         // border: 1px solid #ff5722;
     }
-    height: calc(100vh - 50px);
-    color: $white;
+}
+
+section.home {
     display: grid;
-    place-items: center;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 800;
-    font-size: 3rem;
+    grid-template-columns: 4em 1fr 1fr 4em;
+    grid-template-rows: 1fr;
+    gap: 0px 10px;
+    grid-template-areas: ". content circles .";
+
+    .content {
+        grid-area: content;
+        align-self: center;
+    }
+
+    .circles {
+        position: relative;
+        height: 700px;
+        grid-area: circles;
+        align-self: center;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
 }
 
 footer {

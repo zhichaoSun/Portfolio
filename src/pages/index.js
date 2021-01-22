@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react"
 
-import Layout from "../components/layout"
 import SEO from "../components/seo"
+
+import Layout from "../components/layout"
+import Home from "../components/sections/home"
 
 const sections = ["home", "about", "work", "contact"]
 
@@ -20,10 +22,13 @@ const IndexPage = () => {
         <Layout sections={sections}>
             <SEO title="Home" />
 
+            <Home />
+
             {sections.map(sec => (
                 <>
                     <div id = {sec} key = {sec} className="section">
                         {sec}<br/>
+                        
                     </div>
                 {
                     sec !== "contact"
