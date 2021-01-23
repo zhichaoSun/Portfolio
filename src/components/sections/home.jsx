@@ -8,7 +8,7 @@ import C4 from "../../static/images/C4.svg"
 const Home = () => {
     return (
         <>
-            <section className="home">
+            <section className="home" id="home">
                 <div className="content">
                     Home Content
                 </div>

@@ -3,8 +3,9 @@ import { Link } from "gatsby"
 
 import { SiLinkedin, SiGithub } from "react-icons/si";
 
+const sections = ["home", "about", "work", "contact"]
 
-const Header = ({sections}) => {
+const Header = () => {
 
     const [currenthash, setCurrenthash] = useState("")
 
@@ -32,6 +33,7 @@ const Header = ({sections}) => {
                 <div className="links section-links">
                     <ul>
                     {
+                        
                         sections.map(section => (
                             <li key={section}>
                                 <Link 

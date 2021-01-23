@@ -5,11 +5,11 @@ import Footer from "./footer"
 
 import "../styles/layout.css"
 
-const Layout = ({ sections, children }) => {
+const Layout = ({ children }) => {
 
     return (
         <>
-            <Header sections={sections}/>
+            <Header />
             <div
                 style={{
                     margin: `0 auto`,
