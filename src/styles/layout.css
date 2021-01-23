@@ -60,6 +60,8 @@ table {
 
 body {
   background-color: #2b2b2b;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 header {
@@ -123,7 +125,7 @@ section + .divider {
   background-color: #1b1b1b;
 }
 
-section.home {
+section#home {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 4em 1fr 1fr 4em;
@@ -134,7 +136,7 @@ section.home {
       grid-template-areas: ". content circles .";
 }
 
-section.home .content {
+section#home .content {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: content;
@@ -142,9 +144,9 @@ section.home .content {
       align-self: center;
 }
 
-section.home .circles {
+section#home .circles {
   position: relative;
-  height: 700px;
+  height: 100%;
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: circles;
@@ -153,13 +155,13 @@ section.home .circles {
       align-self: center;
 }
 
-section.home .circles img {
+section#home .circles img {
   position: absolute;
   top: 0;
   left: 0;
 }
 
-section.about {
+section#about {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 4em 1fr 1fr 4em;
@@ -170,7 +172,7 @@ section.about {
       grid-template-areas: ". rects content .";
 }
 
-section.about .content {
+section#about .content {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: content;
@@ -179,9 +181,9 @@ section.about .content {
       align-self: center;
 }
 
-section.about .rects {
+section#about .rects {
   position: relative;
-  height: 829px;
+  height: 100%;
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: rects;
@@ -190,13 +192,13 @@ section.about .rects {
       align-self: center;
 }
 
-section.about .rects img {
+section#about .rects img {
   position: absolute;
   top: 0;
   left: 0;
 }
 
-section.work {
+section#work {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -206,6 +208,77 @@ section.work {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+section#contact {
+  height: calc(100vh - 100px);
+}
+
+section#contact .contact-grid-container {
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2em 1fr 2fr 1fr 2em;
+      grid-template-columns: 2em 1fr 2fr 1fr 2em;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  gap: 0px 10px;
+      grid-template-areas: ". contactL contactForm contactR .";
+}
+
+section#contact .contact-grid-container .contactL {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: contactL;
+  height: 100%;
+}
+
+section#contact .contact-grid-container .contactL .circle, section#contact .contact-grid-container .contactL .rect {
+  position: relative;
+}
+
+section#contact .contact-grid-container .contactL .circle img, section#contact .contact-grid-container .contactL .rect img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+section#contact .contact-grid-container .contactR {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: contactR;
+  height: 100%;
+}
+
+section#contact .contact-grid-container .contactR .circle, section#contact .contact-grid-container .contactR .rect {
+  position: relative;
+}
+
+section#contact .contact-grid-container .contactR .circle img, section#contact .contact-grid-container .contactR .rect img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+section#contact .contact-grid-container .contactForm {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: contactForm;
+  height: 100%;
+  z-index: 1;
+}
+
+section#contact .contact-grid-container .contactForm .from {
+  height: 100%;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  color: #f7f7f7;
+}
+
+section#contact .contact-grid-container .contactForm .from span {
+  color: #ff5722;
 }
 
 footer {

@@ -7,6 +7,8 @@ $orange:  #ff5722;
 
 body {
     background-color: #2b2b2b;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 header {
@@ -62,7 +64,7 @@ section {
     }
 }
 
-section.home {
+section#home {
     display: grid;
     grid-template-columns: 4em 1fr 1fr 4em;
     grid-template-rows: 1fr;
@@ -76,7 +78,7 @@ section.home {
 
     .circles {
         position: relative;
-        height: 700px;
+        height: 100%;
         grid-area: circles;
         align-self: center;
         img {
@@ -87,7 +89,7 @@ section.home {
     }
 }
 
-section.about {
+section#about {
     display: grid;
     grid-template-columns: 4em 1fr 1fr 4em;
     grid-template-rows: 1fr;
@@ -101,7 +103,7 @@ section.about {
 
     .rects {
         position: relative;
-        height: 829px;
+        height: 100%;
         grid-area: rects;
         align-self: center;
         img {
@@ -112,15 +114,74 @@ section.about {
     }
 }
 
-section.work {
+section#work {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+section#contact {
+    height: calc(100vh - 100px);
+
+    .contact-grid-container {
+        height: 100%;
+
+        display: grid;
+        grid-template-columns: 2em 1fr 2fr 1fr 2em;
+        grid-template-rows: 1fr;
+        gap: 0px 10px;
+        grid-template-areas:
+            ". contactL contactForm contactR .";
+
+        .contactL { 
+            grid-area: contactL; 
+            height: 100%; 
+            .circle, .rect {
+                position: relative;
+                // grid-area: circles;
+                // align-self: center;
+                img {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+            }
+        }
+        .contactR { 
+            grid-area: contactR; 
+            height: 100%;
+            .circle, .rect {
+                position: relative;
+                // grid-area: circles;
+                // align-self: center;
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+        .contactForm {
+            grid-area: contactForm; 
+            height: 100%;
+            z-index: 1;
+            .from {
+                height: 100%;
+                width: 100%;
+                display: grid;
+                place-items: center;
+                color: $white;
+                span{
+                    color: $orange;
+                }
+            }
+        }
+        
+    }
+}
+
 footer {
     height: 50px;
-    // width: 90vw;
     color: $white;
     display: flex;
     justify-content: center;
