@@ -17,6 +17,33 @@ const IndexPage = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
         gsap.registerPlugin(ScrollTrigger)
+
+        ScrollTrigger.create({
+            trigger: "#about",
+            markers: true,
+            start: "50% 50%",
+            end: "50% 50%",
+            onEnter: () => setActiveSection("about"),
+            onEnterBack: () => setActiveSection("home"),
+        })
+
+        ScrollTrigger.create({
+            trigger: "#work",
+            markers: true,
+            start: "50% 50%",
+            end: "50% 50%",
+            onEnter: () => setActiveSection("work"),
+            onEnterBack: () => setActiveSection("about")
+        })
+
+        ScrollTrigger.create({
+            trigger: "#contact",
+            markers: true,
+            start: "50% 50%",
+            end: "50% 50%",
+            onEnter: () => setActiveSection("contact"),
+            onEnterBack: () => setActiveSection("work")
+        })
     }, []);
 
     return(
