@@ -32,18 +32,10 @@ const Home = () => {
                     Home Content
                 </div>
                 <div className="circles">
-                    <div className="circle">
-                        <img src={C4} alt="C4"/>
-                    </div>
-                    <div className="circle">
-                        <img src={C3} alt="C3"/>
-                    </div>
-                    <div className="circle">
-                        <img src={C2} alt="C2"/>
-                    </div>
-                    <div className="circle">
-                        <img src={C1} alt="C1"/>
-                    </div>
+                    <div className="circle circle4"></div>
+                    <div className="circle circle3"></div>
+                    <div className="circle circle2"></div>
+                    <div className="circle circle1"></div>
                 </div>
             </section>
             {/* <section className="divider"></section> */}
