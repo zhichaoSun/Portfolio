@@ -24,6 +24,7 @@ header {
     position: fixed;
     top: 0;
     z-index: 100;
+    overflow: hidden;
 
     .header-container {
         height: 100%;
@@ -43,6 +44,7 @@ header {
                 li {
                     padding: 0 20px;
                     p, a {
+                        visibility :hidden;
                         cursor: pointer;
                         color: $white;
                         text-decoration: none;

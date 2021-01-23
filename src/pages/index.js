@@ -10,6 +10,12 @@ import About from "../components/sections/about"
 import Work from "../components/sections/work"
 import Contact from "../components/sections/contact"
 
+const colors = {
+    white: "#f7f7f7",
+    black: "#1b1b1b",
+    orange: "#ff5722"
+}
+
 const IndexPage = () => {
 
     const [activeSection, setActiveSection] = useState("home") 
@@ -20,29 +26,113 @@ const IndexPage = () => {
 
         ScrollTrigger.create({
             trigger: "#about",
-            markers: true,
+            // markers: true,
             start: "50% 50%",
             end: "50% 50%",
-            onEnter: () => setActiveSection("about"),
-            onEnterBack: () => setActiveSection("home"),
+            onEnter: () => (
+                gsap.timeline()
+                .to("#p-about", {
+                    duration: 0.3,
+                    color: colors.orange,
+                    scale: 1.25,
+                    ease: Power3.easeOut
+                })
+                .to("#p-home", {
+                    duration: 0.3,
+                    color: colors.white,
+                    scale: 1,
+                    ease: Power3.easeInOut
+                }, "<")
+            ),
+            onEnterBack: () => (
+                gsap.timeline()
+                .to("#p-about", {
+                    duration: 0.3,
+                    color: colors.white,
+                    scale: 1,
+                    ease: Power3.easeInOut
+                })
+                .to("#p-home", {
+                    duration: 0.3,
+                    color: colors.orange,
+                    scale: 1.25,
+                    ease: Power3.easeOut
+                }, "<")
+            ),
         })
 
         ScrollTrigger.create({
             trigger: "#work",
-            markers: true,
+            // markers: true,
             start: "50% 50%",
             end: "50% 50%",
-            onEnter: () => setActiveSection("work"),
-            onEnterBack: () => setActiveSection("about")
+            onEnter: () => (
+                gsap.timeline()
+                .to("#p-work", {
+                    duration: 0.3,
+                    color: colors.orange,
+                    scale: 1.25,
+                    ease: Power3.easeOut
+                })
+                .to("#p-about", {
+                    duration: 0.3,
+                    color: colors.white,
+                    scale: 1,
+                    ease: Power3.easeInOut
+                }, "<")
+            ),
+            onEnterBack: () => (
+                gsap.timeline()
+                .to("#p-work", {
+                    duration: 0.3,
+                    color: colors.white,
+                    scale: 1,
+                    ease: Power3.easeInOut
+                })
+                .to("#p-about", {
+                    duration: 0.3,
+                    color: colors.orange,
+                    scale: 1.25,
+                    ease: Power3.easeOut
+                }, "<")
+            ),
         })
 
         ScrollTrigger.create({
             trigger: "#contact",
-            markers: true,
+            // markers: true,
             start: "50% 50%",
             end: "50% 50%",
-            onEnter: () => setActiveSection("contact"),
-            onEnterBack: () => setActiveSection("work")
+            onEnter: () => (
+                gsap.timeline()
+                .to("#p-contact", {
+                    duration: 0.3,
+                    color: colors.orange,
+                    scale: 1.25,
+                    ease: Power3.easeOut
+                })
+                .to("#p-work", {
+                    duration: 0.3,
+                    color: colors.white,
+                    scale: 1,
+                    ease: Power3.easeInOut
+                }, "<")
+            ),
+            onEnterBack: () => (
+                gsap.timeline()
+                .to("#p-contact", {
+                    duration: 0.3,
+                    color: colors.white,
+                    scale: 1,
+                    ease: Power3.easeInOut
+                })
+                .to("#p-work", {
+                    duration: 0.3,
+                    color: colors.orange,
+                    scale: 1.25,
+                    ease: Power3.easeOut
+                }, "<")
+            ),
         })
     }, []);
 

@@ -1,15 +1,56 @@
-import React from "react"
+import React, { useEffect } from "react"
 // import { Link } from "gatsby"
-
 import { gsap, Power3, ScrollToPlugin } from "gsap/all";
 
 import { SiLinkedin, SiGithub } from "react-icons/si";
 
 const sections = ["home", "about", "work", "contact"]
 
+const colors = {
+    white: "#f7f7f7",
+    black: "#1b1b1b",
+    orange: "#ff5722"
+}
+
 const Header = ({ activeSection, setActiveSection }) => {
 
-    gsap.registerPlugin(ScrollToPlugin);
+    useEffect(() => {
+        gsap.registerPlugin(ScrollToPlugin);
+
+        gsap.timeline()
+        .set([".links p", ".links a"], {
+            autoAlpha: 1,
+        })
+        .from("header", {
+            duration: 2,
+            ease: Power3.easeInOut,
+            autoAlpha: 0,
+        })
+        .to("#p-home", {
+            color: colors.orange,
+            scale: 1.25,
+            ease: Power3.easeInOut,
+            duration: 1,
+        }, "<")
+        .from(".links p", {
+            duration: 1,
+            yPercent: 200,
+            ease: Power3.easeInOut,
+            stagger: {
+                amount: 0.2,
+                from: "start",
+            }
+        }, "<")
+        .from(".social-links li", {
+            duration: 1,
+            yPercent: 200,
+            ease: Power3.easeInOut,
+            stagger: {
+                amount: 0.2,
+                from: "end",
+            }
+        }, "<")
+    }, [])
 
     const scrollHandler = (section) => {
         // setActiveSection(section)
@@ -26,12 +67,12 @@ const Header = ({ activeSection, setActiveSection }) => {
                 <div className="links social-links">
                     <ul>
                         <li>
-                            <a href="https://www.linkedin.com/in/zhichao-sun/" target="_blank">
+                            <a className="adfadf" href="https://www.linkedin.com/in/zhichao-sun/" target="_blank">
                                 <SiLinkedin />
                             </a>
                         </li>
                         <li>
-                            <a href="https://github.com/zhichaoSun" target="_blank">
+                            <a className="adfadf" href="https://github.com/zhichaoSun" target="_blank">
                                 <SiGithub />
                             </a>
                         </li>
@@ -46,8 +87,9 @@ const Header = ({ activeSection, setActiveSection }) => {
                                     // style={{
                                     //     color: activeSection === section ? "#FF5722" : "#FFFFFF"
                                     // }}
-                                    className={activeSection===section ? `active` : ``}
+                                    // className={activeSection===section ? `active` : ``}
                                     onClick={() => scrollHandler(section)}
+                                    id={`p-${section}`}
                                 >
                                     {section}
                                 </p>
