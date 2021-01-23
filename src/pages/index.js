@@ -24,6 +24,8 @@ const IndexPage = () => {
         window.scrollTo(0, 0);
         gsap.registerPlugin(ScrollTrigger)
 
+        
+
         ScrollTrigger.create({
             trigger: "#about",
             // markers: true,

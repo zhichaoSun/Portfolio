@@ -24,7 +24,7 @@ header {
     display: block;
     position: fixed;
     top: 0;
-    z-index: 100;
+    z-index: 10;
     overflow: hidden;
     visibility: hidden;
     box-shadow: 0px 2px 10px $black;
@@ -76,7 +76,7 @@ header {
     .divider {
         height: 50px;
         border: 1px solid $white;
-        // border: 1px solid #ff5722;
+        border: 1px solid $orange;
     }
 
     section {
@@ -85,14 +85,9 @@ header {
         font-family: 'Poppins', sans-serif;
         font-weight: 800;
         font-size: 3rem;
-    
-        
     }
     
     section.home {
-        // height: calc(100vh - 100px);
-
-        // transform: perspective(1000px);
 
         display: grid;
         grid-template-columns: 4em 1fr 1fr 4em;
@@ -121,7 +116,7 @@ header {
             display: flex;
             align-items: center;
             justify-content: center;
-            
+
             transform-style: preserve-3d;
             transform: perspective(1000px);
             .circle {
@@ -130,7 +125,6 @@ header {
                 top: 20%;
                 border-radius: 50%;
                 box-shadow: -2px -2px 40px $black;
-
             }
             .circle1 {
                 width: 400px;
@@ -156,19 +150,12 @@ header {
                 transform: translate(50px, -150px);
                 background-color: #603629;
             }
-
-            img {
-                position: absolute;
-                top: 0;
-                right: 0;
-            }
-
         }
     }
     
     section.about {
         display: grid;
-        grid-template-columns: 4em 1fr 1fr 4em;
+        grid-template-columns: 2em 1fr 1fr 2em;
         grid-template-rows: 1fr;
         gap: 0px 10px;
         grid-template-areas: ". rects content .";
@@ -176,18 +163,71 @@ header {
         .content {
             grid-area: content;
             align-self: center;
+            justify-self: right;
             z-index: 1;
+            
+            transform-style: preserve-3d;
+            transform: perspective(1000px);
+            div {
+                overflow: hidden;
+                p {
+                    visibility: hidden;
+                }
+            }
         }
     
         .rects {
             position: relative;
-            height: 100%;
+            left: 10%;
+            // height: 80%;
             grid-area: rects;
             align-self: center;
-            img {
+            justify-self: center;
+
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            
+            transform-style: preserve-3d;
+            transform: perspective(1000px);
+            .rect {
+                visibility: hidden;
+                background: #f7f7f7;
+                position: relative;
+                box-shadow: -2px -2px 40px $black;
+            }
+            .rect1 {
                 position: absolute;
                 top: 0;
-                left: 0;
+                width: 270px;
+                height: 200px;
+                transform: translate(200px, 0px) rotateZ(20deg);
+                background-color: #ff5722;
+            }
+            .rect2 {
+                position: absolute;
+                top: 0;
+                width: 300px;
+                height: 300px;
+                transform: translate(150px, -180px) rotateZ(0deg);
+                background-color: #CA4C24;
+            }
+            .rect3 {
+                position: absolute;
+                top: 0;
+                width: 500px;
+                height: 300px;
+                transform: translate(0px, -150px) rotateZ(-15deg);;
+                background-color: #954127;
+            }
+            .rect4 {
+                position: absolute;
+                top: -50px;
+                width: 700px;
+                height: 500px;
+                transform: translate(50px, -200px) rotateZ(75deg);;
+                background-color: #603629;
             }
         }
     }
@@ -256,7 +296,6 @@ header {
                     }
                 }
             }
-            
         }
     }
 }

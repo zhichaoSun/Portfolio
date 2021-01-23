@@ -1,20 +1,19 @@
 import React, { useEffect } from 'react'
 import { gsap, ScrollTrigger, Power3 } from "gsap/all";
-
 import VanillaTilt from "vanilla-tilt";
 
 const Home = () => {
 
     useEffect(() => {
 
-        VanillaTilt.init(document.querySelector(".circles"), {
+        VanillaTilt.init(document.querySelector(".home .circles"), {
             max: 5,
             speed: 400,
             reverse: true,
             "full-page-listening": true
         })
 
-        VanillaTilt.init(document.querySelector(".content"), {
+        VanillaTilt.init(document.querySelector(".home .content"), {
             max: 5,
             speed: 1000,
             reverse: true,
@@ -22,10 +21,10 @@ const Home = () => {
         })
 
         gsap.timeline()
-        .set([".circles", ".content"], {
+        .set([".home .circles", ".home .content"], {
             autoAlpha: 1,
         })
-        .from(".circle", {
+        .from(".home .circle", {
             autoAlpha: 0,
             scale: 0.6,
             duration: 1,
@@ -36,19 +35,19 @@ const Home = () => {
                 from: "end"
             }
         })
-        .to(".circle1", {
+        .to(".home .circle1", {
             z: 150,
         }, "<")
-        .to(".circle2", {
+        .to(".home .circle2", {
             z: 110,
         }, "<")
-        .to(".circle3", {
+        .to(".home .circle3", {
             z: 70,
         }, "<")
-        .to(".circle4", {
+        .to(".home .circle4", {
             z: 30,
         }, "<")
-        .from(".content", {
+        .from(".home .content", {
             autoAlpha: 0,
             duration: 1,
             xPercent: -150,
