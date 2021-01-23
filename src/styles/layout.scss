@@ -87,6 +87,31 @@ section.home {
     }
 }
 
+section.about {
+    display: grid;
+    grid-template-columns: 4em 1fr 1fr 4em;
+    grid-template-rows: 1fr;
+    gap: 0px 10px;
+    grid-template-areas: ". rects content .";
+
+    .content {
+        grid-area: content;
+        align-self: center;
+    }
+
+    .rects {
+        position: relative;
+        height: 829px;
+        grid-area: rects;
+        align-self: center;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+
 footer {
     height: 50px;
     // width: 90vw;

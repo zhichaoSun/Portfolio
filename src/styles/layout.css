@@ -136,10 +136,9 @@ section.home {
 
 section.home .content {
   -ms-grid-row: 1;
-  -ms-grid-column: 2;
+  -ms-grid-column: 3;
   grid-area: content;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
       align-self: center;
 }
 
@@ -155,6 +154,43 @@ section.home .circles {
 }
 
 section.home .circles img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+section.about {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 4em 1fr 1fr 4em;
+      grid-template-columns: 4em 1fr 1fr 4em;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  gap: 0px 10px;
+      grid-template-areas: ". rects content .";
+}
+
+section.about .content {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: content;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+section.about .rects {
+  position: relative;
+  height: 829px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: rects;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+section.about .rects img {
   position: absolute;
   top: 0;
   left: 0;
