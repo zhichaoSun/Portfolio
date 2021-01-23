@@ -1,11 +1,6 @@
 import React, { useEffect } from 'react'
 import { gsap, ScrollTrigger, Power3 } from "gsap/all";
 
-import C1 from "../../static/images/C1.svg"
-import C2 from "../../static/images/C2.svg"
-import C3 from "../../static/images/C3.svg"
-import C4 from "../../static/images/C4.svg"
-
 const Home = () => {
 
     useEffect(() => {
@@ -21,6 +16,7 @@ const Home = () => {
             ease: Power3.easeInOut,
             stagger: {
                 amount: 0.3,
+                from: "end"
             }
         })
     }, [])

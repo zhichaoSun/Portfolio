@@ -185,8 +185,6 @@ header .header-container .links ul li .active {
 }
 
 .sectionContainer section.home .circles .circle {
-  width: 400px;
-  height: 400px;
   background: #f7f7f7;
   position: absolute;
   top: 20%;
@@ -196,26 +194,34 @@ header .header-container .links ul li .active {
 }
 
 .sectionContainer section.home .circles .circle1 {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  width: 400px;
+  height: 400px;
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
   background-color: #ff5722;
 }
 
 .sectionContainer section.home .circles .circle2 {
-  -webkit-transform: scale(1.25);
-          transform: scale(1.25);
+  width: 500px;
+  height: 500px;
+  -webkit-transform: translate(0, -100px);
+          transform: translate(0, -100px);
   background-color: #CA4C24;
 }
 
 .sectionContainer section.home .circles .circle3 {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  width: 600px;
+  height: 600px;
+  -webkit-transform: translate(50px, -150px);
+          transform: translate(50px, -150px);
   background-color: #954127;
 }
 
 .sectionContainer section.home .circles .circle4 {
-  -webkit-transform: scale(1.75);
-          transform: scale(1.75);
+  width: 700px;
+  height: 700px;
+  -webkit-transform: translate(50px, -150px);
+          transform: translate(50px, -150px);
   background-color: #603629;
 }
 

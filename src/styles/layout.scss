@@ -115,8 +115,6 @@ header {
             align-items: center;
             justify-content: center;
             .circle {
-                width: 400px;
-                height: 400px;
                 background: #f7f7f7;
                 position: absolute;
                 top: 20%;
@@ -124,19 +122,27 @@ header {
                 box-shadow: -2px -2px 10px $black;
             }
             .circle1 {
-                transform: scale(1);
+                width: 400px;
+                height: 400px;
+                transform: translate(0px, 0px);
                 background-color: #ff5722;
             }
             .circle2 {
-                transform: scale(1.25);
+                width: 500px;
+                height: 500px;
+                transform: translate(0, -100px);
                 background-color: #CA4C24;
             }
             .circle3 {
-                transform: scale(1.5);
+                width: 600px;
+                height: 600px;
+                transform: translate(50px, -150px);
                 background-color: #954127;
             }
             .circle4 {
-                transform: scale(1.75);
+                width: 700px;
+                height: 700px;
+                transform: translate(50px, -150px);
                 background-color: #603629;
             }
 
