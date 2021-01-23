@@ -1,5 +1,10 @@
 import React from 'react'
 
+import { Formik, Form } from "formik";
+import * as yup from "yup"
+
+import { TextField, Button } from "@material-ui/core";
+
 import C1 from "../../static/images/C1.svg"
 import C3 from "../../static/images/C3.svg"
 import R2 from "../../static/images/R2.svg"
@@ -8,6 +13,7 @@ import R4 from "../../static/images/R4.svg"
 const Contact = () => {
     return (
         <>
+            <div className="divider" id="contact"></div>
             <section id="contact">
                 <div className="contact-grid-container">
                     <div className="contactL">

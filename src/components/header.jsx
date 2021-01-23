@@ -1,17 +1,24 @@
-import React, { useState, useEffect } from "react"
-import { Link } from "gatsby"
+import React from "react"
+// import { Link } from "gatsby"
+
+import { gsap, Power3, ScrollToPlugin } from "gsap/all";
 
 import { SiLinkedin, SiGithub } from "react-icons/si";
 
 const sections = ["home", "about", "work", "contact"]
 
-const Header = () => {
+const Header = ({ activeSection, setActiveSection }) => {
 
-    const [currenthash, setCurrenthash] = useState("")
+    gsap.registerPlugin(ScrollToPlugin);
 
-    useEffect(() => {
-        setCurrenthash(window.location.hash)
-    }, [window.location.hash])
+    const scrollHandler = (section) => {
+        // setActiveSection(section)
+        gsap.to(window, {
+            duration: 0.5, 
+            scrollTo: `#${section}`,
+            ease: Power3.easeInOut
+        });
+    }
 
     return (
         <header>
@@ -33,19 +40,17 @@ const Header = () => {
                 <div className="links section-links">
                     <ul>
                     {
-                        
                         sections.map(section => (
                             <li key={section}>
-                                <Link 
-                                    href={`#${section}`} 
-                                    style={{
-                                        color: ("#"+section === currenthash) || (currenthash==="" && section==="home") 
-                                                ? "#FF5722" 
-                                                : "#FFFFFF"
-                                    }}
+                                <p 
+                                    // style={{
+                                    //     color: activeSection === section ? "#FF5722" : "#FFFFFF"
+                                    // }}
+                                    className={activeSection===section ? `active` : ``}
+                                    onClick={() => scrollHandler(section)}
                                 >
                                     {section}
-                                </Link>
+                                </p>
                             </li>
                         ))
                     }

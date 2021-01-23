@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react"
 
+import { gsap, ScrollTrigger, Power3 } from "gsap/all";
+
 import SEO from "../components/seo"
 
 import Layout from "../components/layout"
@@ -10,17 +12,15 @@ import Contact from "../components/sections/contact"
 
 const IndexPage = () => {
 
+    const [activeSection, setActiveSection] = useState("home") 
+
     useEffect(() => {
-        let initHash = document.location.hash
-        setTimeout(()=> {
-            document
-                .querySelector(initHash==="" ? "#home" : initHash)
-                .scrollIntoView({ behavior: "smooth", block: "start" })
-        }, 0)
-    }, [document.location.hash])
+        window.scrollTo(0, 0);
+        gsap.registerPlugin(ScrollTrigger)
+    }, []);
 
     return(
-        <Layout>
+        <Layout activeSection={activeSection} setActiveSection={setActiveSection}>
             <SEO title="Home" />
 
             <Home />

@@ -3,10 +3,10 @@ import React from 'react'
 const Work = () => {
     return (
         <>
-            <section className="work" id="work">
+            <div className="divider" id="work"></div>
+            <section className="work">
                 Work Section
             </section>
-            <div className="divider"></div>
         </>
     )
 }
