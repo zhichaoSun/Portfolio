@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 import Layout from "../components/layout"
 import Home from "../components/sections/home"
 import About from "../components/sections/about"
+import Work from "../components/sections/work"
 
 const IndexPage = () => {
 
@@ -24,6 +25,8 @@ const IndexPage = () => {
             <Home />
 
             <About />
+
+            <Work />
 
             {/* <Link to="/page-2/">Go to page 2</Link> */}
         </Layout>
