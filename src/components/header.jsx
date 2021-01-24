@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 // import { Link } from "gatsby"
-import { gsap, Power3, ScrollToPlugin } from "gsap/all";
+import { gsap, Power3, ScrollToPlugin, ScrollTrigger } from "gsap/all";
 
 import { SiLinkedin, SiGithub } from "react-icons/si";
 
@@ -9,13 +9,14 @@ const sections = ["home", "about", "work", "contact"]
 const colors = {
     white: "#f7f7f7",
     black: "#1b1b1b",
+    gray: "#2b2b2b88",
     orange: "#ff5722"
 }
 
-const Header = ({ activeSection, setActiveSection }) => {
+const Header = () => {
 
     useEffect(() => {
-        gsap.registerPlugin(ScrollToPlugin);
+        gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
         gsap.timeline()
         .set([".links p", ".links a"], {
@@ -50,6 +51,21 @@ const Header = ({ activeSection, setActiveSection }) => {
                 from: "end",
             }
         }, "<")
+
+        gsap.to("header", { 
+            scrollTrigger: {
+                markers: true,
+                trigger: "#home",
+                start: "bottom top",
+                end: "bottom top",
+                toggleActions: "play none reverse none"
+            },
+            duration: 0.5,
+            ease: Power3.easeInOut,
+            backgroundColor: colors.gray,
+            boxShadow: "0px 2px 10px $black"
+        })
+
     }, [])
 
     const scrollHandler = (section) => {
@@ -83,11 +99,7 @@ const Header = ({ activeSection, setActiveSection }) => {
                     {
                         sections.map(section => (
                             <li key={section}>
-                                <p 
-                                    // style={{
-                                    //     color: activeSection === section ? "#FF5722" : "#FFFFFF"
-                                    // }}
-                                    // className={activeSection===section ? `active` : ``}
+                                <p
                                     onClick={() => scrollHandler(section)}
                                     id={`p-${section}`}
                                 >
