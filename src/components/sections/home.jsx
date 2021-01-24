@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { gsap, ScrollTrigger, Power3 } from "gsap/all";
+import { gsap, Power3 } from "gsap/all";
 import VanillaTilt from "vanilla-tilt";
 
 const Home = () => {
@@ -41,21 +41,29 @@ const Home = () => {
         .to(".home .circle4", { z: -800,}, "<")
     }, [])
 
-    
 
     return (
         <>
             <div className="divider" id="home"></div>
             <section className="home" >
                 <div className="layers">
+                <div className="todo">
+                    <ul>
+                        #TODO:
+                        <li>To fix section overflowing issue (circles and rects are out of the boundary before the translate())</li>
+                        <li>
+                            To add real content into the work section
+                        </li>
+                    </ul>
+                </div>
                     <div className="layerCircle circle4"></div>
                     <div className="layerCircle circle3"></div>
                     <div className="layerCircle circle2"></div>
                     <div className="layerCircle circle1"></div>
                     <div className="layerContent">
-                        <div><p className="name">Home Content</p></div>
-                        <div><p className="name">Home Content</p></div>
-                        <div><p className="name">Home Content</p></div>
+                        <div><p className="name1">My Name</p></div>
+                        <div><p className="name2">Sth. else</p></div>
+                        <div><p className="name3">Lorem ipsum dolor sit amet.</p></div>
                     </div>
                 </div>
             </section>

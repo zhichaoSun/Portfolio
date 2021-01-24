@@ -59,9 +59,9 @@ function About() {
                     <div className="rect rect2"></div>
                     <div className="rect rect1"></div>
                     <div className="rectContent">
-                        <div><p>About Content</p></div>
-                        <div><p>About Content</p></div>
-                        <div><p>About Content</p></div>
+                        <div><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta perspiciatis suscipit ex neque veritatis, fugiat pariatur ab ad dolorum error?</p></div>
+                        <div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium facilis, mollitia veritatis natus temporibus modi?</p></div>
+                        <div><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa quidem nemo unde corrupti totam quisquam, error reprehenderit repellendus laudantium modi eum. Eius excepturi voluptate facere?</p></div>
                     </div>
                 </div>
             </section>
