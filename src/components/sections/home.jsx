@@ -6,25 +6,18 @@ const Home = () => {
 
     useEffect(() => {
 
-        VanillaTilt.init(document.querySelector(".home .circles"), {
+        VanillaTilt.init(document.querySelector(".home .layers"), {
             max: 5,
             speed: 400,
             reverse: true,
             "full-page-listening": true
         })
 
-        VanillaTilt.init(document.querySelector(".home .content"), {
-            max: 5,
-            speed: 1000,
-            reverse: true,
-            "full-page-listening": true
-        })
-
         gsap.timeline()
-        .set([".home .circles", ".home .content"], {
+        .set([".layerContent p", ], {
             autoAlpha: 1,
         })
-        .from(".home .circle", {
+        .from(".home .layerCircle", {
             autoAlpha: 0,
             scale: 0.6,
             duration: 1,
@@ -35,23 +28,26 @@ const Home = () => {
                 from: "end"
             }
         })
-        .to(".home .circle1", {
-            z: 150,
-        }, "<")
-        .to(".home .circle2", {
-            z: 110,
-        }, "<")
-        .to(".home .circle3", {
-            z: 70,
-        }, "<")
-        .to(".home .circle4", {
-            z: 30,
-        }, "<")
-        .from(".home .content", {
+        .from(".home .layerContent", {
             autoAlpha: 0,
             duration: 1,
-            xPercent: -150,
+            xPercent: -50,
             ease: Power3.easeInOut,
+        }, "<")
+        .to(".home .layerContent", {
+            z: 0,
+        }, "<")
+        .to(".home .circle1", {
+            z: -200,
+        }, "<")
+        .to(".home .circle2", {
+            z: -400,
+        }, "<")
+        .to(".home .circle3", {
+            z: -600,
+        }, "<")
+        .to(".home .circle4", {
+            z: -800,
         }, "<")
     }, [])
 
@@ -61,17 +57,18 @@ const Home = () => {
         <>
             <div className="divider" id="home"></div>
             <section className="home" >
-                <div className="content">
-                    <p className="name">SUN</p>
-                </div>
-                <div className="circles">
-                    <div className="circle circle4"></div>
-                    <div className="circle circle3"></div>
-                    <div className="circle circle2"></div>
-                    <div className="circle circle1"></div>
+                <div className="layers">
+                    <div className="layerCircle circle4">C4</div>
+                    <div className="layerCircle circle3">C3</div>
+                    <div className="layerCircle circle2">C2</div>
+                    <div className="layerCircle circle1">C1</div>
+                    <div className="layerContent">
+                        <div><p className="name">Home Content</p></div>
+                        <div><p className="name">Home Content</p></div>
+                        <div><p className="name">Home Content</p></div>
+                    </div>
                 </div>
             </section>
-            {/* <section className="divider"></section> */}
         </>
     )
 }

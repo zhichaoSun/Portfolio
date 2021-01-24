@@ -75,7 +75,6 @@ function About() {
                     </div>
                 </div>
             </section>
-            {/* <div className="divider"></div> */}
         </>
     )
 }

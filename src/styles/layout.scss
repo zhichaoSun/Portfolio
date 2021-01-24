@@ -89,65 +89,67 @@ header {
     
     section.home {
 
-        display: grid;
-        grid-template-columns: 4em 1fr 1fr 4em;
-        grid-template-rows: 1fr;
-        gap: 0px 10px;
-        grid-template-areas: ". content circles .";
-
-        .content {
-            grid-area: content;
-            align-self: center;
-            z-index: 1;
-            visibility: hidden;
-            
+        .layers {
             transform-style: preserve-3d;
             transform: perspective(1000px);
-        }
-
-        .circles {
+    
             position: relative;
-            // top: 10%;
-            height: 80%;
-            grid-area: circles;
-            align-self: center;
-            visibility: hidden;
-            
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            height: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
 
-            transform-style: preserve-3d;
-            transform: perspective(1000px);
-            .circle {
-                background: #f7f7f7;
+            .layerContent {
                 position: absolute;
-                top: 20%;
+                top: 15%;
+                left: 0;
+                width: 50%;
+                height: 70%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+                // outline: 1px solid $white;
+                div {
+                    overflow: hidden;
+                    p {
+                        visibility: hidden;
+                    }
+                }
+            }
+
+            .layerCircle {
+                position: absolute;
+                top: 12%;
+                left: 50%;
+                background: #f7f7f7;
                 border-radius: 50%;
                 box-shadow: -2px -2px 40px $black;
+                display: grid;
+                place-items: center;
+                visibility: hidden;
             }
             .circle1 {
-                width: 400px;
-                height: 400px;
-                transform: translate(0px, 0px);
+                width: 40vh;
+                height: 40vh;
+                transform: translate(50%, -20%);
                 background-color: #ff5722;
             }
             .circle2 {
-                width: 500px;
-                height: 500px;
-                transform: translate(0, -100px);
+                width: 60vh;
+                height: 60vh;
+                transform: translate(-20%, -15%);
                 background-color: #CA4C24;
             }
             .circle3 {
-                width: 600px;
-                height: 600px;
-                transform: translate(50px, -150px);
+                width: 80vh;
+                height: 80vh;
+                transform: translate(-20%, 10%);
                 background-color: #954127;
             }
             .circle4 {
-                width: 700px;
-                height: 700px;
-                transform: translate(50px, -150px);
+                width: 100vh;
+                height: 100vh;
+                transform: translate(15%, 6%);
                 background-color: #603629;
             }
         }

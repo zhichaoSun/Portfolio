@@ -146,94 +146,89 @@ header .header-container .links ul li .active {
   font-size: 3rem;
 }
 
-.sectionContainer section.home {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 4em 1fr 1fr 4em;
-      grid-template-columns: 4em 1fr 1fr 4em;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
-  gap: 0px 10px;
-      grid-template-areas: ". content circles .";
-}
-
-.sectionContainer section.home .content {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: content;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  z-index: 1;
-  visibility: hidden;
+.sectionContainer section.home .layers {
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   -webkit-transform: perspective(1000px);
           transform: perspective(1000px);
+  position: relative;
+  height: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
-.sectionContainer section.home .circles {
-  position: relative;
-  height: 80%;
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-  grid-area: circles;
-  -ms-flex-item-align: center;
-      align-self: center;
-  visibility: hidden;
+.sectionContainer section.home .layers .layerContent {
+  position: absolute;
+  top: 15%;
+  left: 0;
+  width: 50%;
+  height: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-transform: perspective(1000px);
-          transform: perspective(1000px);
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
-.sectionContainer section.home .circles .circle {
-  background: #f7f7f7;
+.sectionContainer section.home .layers .layerContent div {
+  overflow: hidden;
+}
+
+.sectionContainer section.home .layers .layerContent div p {
+  visibility: hidden;
+}
+
+.sectionContainer section.home .layers .layerCircle {
   position: absolute;
-  top: 20%;
+  top: 12%;
+  left: 50%;
+  background: #f7f7f7;
   border-radius: 50%;
   -webkit-box-shadow: -2px -2px 40px #1b1b1b;
           box-shadow: -2px -2px 40px #1b1b1b;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  visibility: hidden;
 }
 
-.sectionContainer section.home .circles .circle1 {
-  width: 400px;
-  height: 400px;
-  -webkit-transform: translate(0px, 0px);
-          transform: translate(0px, 0px);
+.sectionContainer section.home .layers .circle1 {
+  width: 40vh;
+  height: 40vh;
+  -webkit-transform: translate(50%, -20%);
+          transform: translate(50%, -20%);
   background-color: #ff5722;
 }
 
-.sectionContainer section.home .circles .circle2 {
-  width: 500px;
-  height: 500px;
-  -webkit-transform: translate(0, -100px);
-          transform: translate(0, -100px);
+.sectionContainer section.home .layers .circle2 {
+  width: 60vh;
+  height: 60vh;
+  -webkit-transform: translate(-20%, -15%);
+          transform: translate(-20%, -15%);
   background-color: #CA4C24;
 }
 
-.sectionContainer section.home .circles .circle3 {
-  width: 600px;
-  height: 600px;
-  -webkit-transform: translate(50px, -150px);
-          transform: translate(50px, -150px);
+.sectionContainer section.home .layers .circle3 {
+  width: 80vh;
+  height: 80vh;
+  -webkit-transform: translate(-20%, 10%);
+          transform: translate(-20%, 10%);
   background-color: #954127;
 }
 
-.sectionContainer section.home .circles .circle4 {
-  width: 700px;
-  height: 700px;
-  -webkit-transform: translate(50px, -150px);
-          transform: translate(50px, -150px);
+.sectionContainer section.home .layers .circle4 {
+  width: 100vh;
+  height: 100vh;
+  -webkit-transform: translate(15%, 6%);
+          transform: translate(15%, 6%);
   background-color: #603629;
 }
 
