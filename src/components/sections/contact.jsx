@@ -1,11 +1,7 @@
 import React, { useEffect } from 'react'
 
 import { gsap, Power3, CSSRulePlugin, ScrollTrigger } from "gsap/all";
-
-import { Formik, Form } from "formik";
-import * as yup from "yup"
-
-import { TextField, Button } from "@material-ui/core";
+import ContactForm from '../form/contactForm';
 
 const Contact = () => {
 
@@ -41,29 +37,30 @@ const Contact = () => {
     useEffect(() => {
         
         gsap.timeline({ scrollTrigger: {
-            markers: true,
+            // markers: true,
             trigger: "#contact",
             start: "center center",
             end: "center center",
-            toggleActions: "play none none none"
+            toggleActions: "play none reverse none"
         }})
         .set([rectL, circleL, rectR, circleR], { autoAlpha: 1})
         .from([rectL, circleL], {
-            cssRule: { xPercent: -200, autoAlpha: 0,},
+            cssRule: { scale: 0.1, autoAlpha: 0,},
             stagger: {
                 amount: 0.2, from: "start"
             },
             ease: Power3.easeInOut  
         })
         .from([rectR, circleR], {
-            cssRule: { xPercent: 200, autoAlpha: 0,},
+            cssRule: { scale: 0.1, autoAlpha: 0,},
             stagger: {
                 amount: 0.2, from: "end"
             },
             ease: Power3.easeInOut  
         }, "<")
-
     }, [])
+
+    
     
     return (
         <>
@@ -94,7 +91,7 @@ const Contact = () => {
                             <h1>Contact <span>Me</span></h1>
                         </div>
                         <div className="form">
-                            123
+                            <ContactForm />
                         </div>
                     </div>
 

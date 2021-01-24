@@ -67,13 +67,13 @@ body {
 header {
   width: 100vw;
   height: 50px;
-  background-color: #1b1b1b;
   display: block;
   position: fixed;
   top: 0;
   z-index: 10;
   overflow: hidden;
   visibility: hidden;
+  background-color: #1b1b1b;
   -webkit-box-shadow: 0px 2px 10px #1b1b1b;
           box-shadow: 0px 2px 10px #1b1b1b;
 }
@@ -136,7 +136,6 @@ header .header-container .links ul li .active {
   height: 50px;
   width: 100vh;
   margin: 0 auto;
-  border: 1px solid #f7f7f7;
 }
 
 .sectionContainer section {
@@ -156,6 +155,15 @@ header .header-container .links ul li .active {
   height: 100%;
   max-width: 1280px;
   margin: 0 auto;
+}
+
+.sectionContainer section.home .layers .todo {
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
+
+.sectionContainer section.home .layers .todo li {
+  list-style: circle;
 }
 
 .sectionContainer section.home .layers .layerContent {
@@ -185,6 +193,18 @@ header .header-container .links ul li .active {
 
 .sectionContainer section.home .layers .layerContent div p {
   visibility: hidden;
+}
+
+.sectionContainer section.home .layers .layerContent div .name1 {
+  font-size: 7rem;
+}
+
+.sectionContainer section.home .layers .layerContent div .name2 {
+  font-size: 4rem;
+}
+
+.sectionContainer section.home .layers .layerContent div .name3 {
+  font-size: 2rem;
 }
 
 .sectionContainer section.home .layers .layerCircle {
@@ -256,7 +276,7 @@ header .header-container .links ul li .active {
 .sectionContainer section.about .rects .rectContent {
   position: absolute;
   top: 15%;
-  width: 50%;
+  width: 40%;
   height: 70%;
   -webkit-transform: translate(100%, 0px);
           transform: translate(100%, 0px);
@@ -283,6 +303,7 @@ header .header-container .links ul li .active {
 
 .sectionContainer section.about .rects .rectContent div p {
   visibility: hidden;
+  font-size: 1.25rem;
 }
 
 .sectionContainer section.about .rects .rect1 {
@@ -335,6 +356,16 @@ header .header-container .links ul li .active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.sectionContainer section.work h1 {
+  width: 200px;
+}
+
+.sectionContainer section.work p {
+  width: 600px;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .sectionContainer section.contact {
@@ -498,7 +529,111 @@ header .header-container .links ul li .active {
 }
 
 .sectionContainer section.contact .contact-grid-container .contactForm .form {
-  border: 1px solid #f7f7f7;
+  text-align: center;
+}
+
+.sectionContainer section.contact .contact-grid-container .contactForm .form .form-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sectionContainer section.contact .contact-grid-container .contactForm .form .form-control .formTitle {
+  color: #f7f7f7;
+  font-size: 1.25rem;
+  margin: 30px 0 10px 0;
+  text-align: center;
+}
+
+.sectionContainer section.contact .contact-grid-container .contactForm .form .form-control .inputField {
+  margin: 0;
+  height: 30px;
+  width: 100%;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+  outline: 3px solid #f7f7f7;
+  background-color: transparent;
+  color: #f7f7f7;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.sectionContainer section.contact .contact-grid-container .contactForm .form .form-control .inputTextArea {
+  margin: 0;
+  height: 95px;
+  width: 100%;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+  outline: 3px solid #f7f7f7;
+  background-color: transparent;
+  color: #f7f7f7;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  resize: none;
+}
+
+.sectionContainer section.contact .contact-grid-container .contactForm .form .form-control .formError {
+  color: #ff5722;
+  font-size: 1.25rem;
+  margin-top: 10px;
+  text-align: end;
+}
+
+.sectionContainer section.contact .contact-grid-container .contactForm .form .submitBtnEnabled {
+  padding: 10px 20px;
+  margin-top: 40px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  color: #ff5722;
+  background: #1b1b1b;
+  border: none;
+  outline: none;
+  -webkit-box-shadow: 0px 2px 10px #1b1b1b;
+          box-shadow: 0px 2px 10px #1b1b1b;
+}
+
+.sectionContainer section.contact .contact-grid-container .contactForm .form .submitBtnDisabled {
+  padding: 10px 20px;
+  margin-top: 40px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  color: #2b2b2b;
+  background: #1b1b1b;
+  border: none;
+  outline: none;
+  -webkit-box-shadow: 0px 2px 10px #1b1b1b;
+          box-shadow: 0px 2px 10px #1b1b1b;
+}
+
+.sectionContainer section.contact .contact-grid-container .contactForm .form p {
+  font-size: 1rem;
+  margin-top: 30px;
+  line-height: 2rem;
+}
+
+.sectionContainer section.contact .contact-grid-container .contactForm .form .submitFailed {
+  color: #ff5722;
+}
+
+.sectionContainer section.contact .contact-grid-container .contactForm .form .submitSuccess {
+  color: #f7f7f7;
 }
 
 footer {
