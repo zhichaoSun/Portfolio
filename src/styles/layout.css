@@ -159,9 +159,10 @@ header .header-container .links ul li .active {
 
 .sectionContainer section.home .content {
   -ms-grid-row: 1;
-  -ms-grid-column: 3;
+  -ms-grid-column: 2;
   grid-area: content;
   -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
       align-self: center;
   z-index: 1;
   visibility: hidden;
@@ -236,61 +237,11 @@ header .header-container .links ul li .active {
   background-color: #603629;
 }
 
-.sectionContainer section.about {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 2em 1fr 1fr 2em;
-      grid-template-columns: 2em 1fr 1fr 2em;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
-  gap: 0px 10px;
-      grid-template-areas: ". rects content .";
-}
-
-.sectionContainer section.about .content {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-  grid-area: content;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  -ms-grid-column-align: right;
-      justify-self: right;
-  z-index: 1;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-transform: perspective(1000px);
-          transform: perspective(1000px);
-}
-
-.sectionContainer section.about .content div {
-  overflow: hidden;
-}
-
-.sectionContainer section.about .content div p {
-  visibility: hidden;
-}
-
 .sectionContainer section.about .rects {
   position: relative;
-  left: 10%;
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: rects;
-  -ms-flex-item-align: center;
-      align-self: center;
-  justify-self: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  height: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   -webkit-transform: perspective(1000px);
@@ -305,13 +256,45 @@ header .header-container .links ul li .active {
           box-shadow: -2px -2px 40px #1b1b1b;
 }
 
+.sectionContainer section.about .rects .rectContent {
+  position: absolute;
+  top: 15%;
+  width: 50%;
+  height: 70%;
+  -webkit-transform: translate(100%, 0px);
+          transform: translate(100%, 0px);
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sectionContainer section.about .rects .rectContent div {
+  overflow: hidden;
+  margin: 0.5rem 0;
+}
+
+.sectionContainer section.about .rects .rectContent div p {
+  visibility: hidden;
+}
+
 .sectionContainer section.about .rects .rect1 {
   position: absolute;
   top: 0;
   width: 270px;
   height: 200px;
-  -webkit-transform: translate(200px, 0px) rotateZ(20deg);
-          transform: translate(200px, 0px) rotateZ(20deg);
+  -webkit-transform: translate(230%, 250%) rotateZ(20deg);
+          transform: translate(230%, 250%) rotateZ(20deg);
   background-color: #ff5722;
 }
 
@@ -320,28 +303,28 @@ header .header-container .links ul li .active {
   top: 0;
   width: 300px;
   height: 300px;
-  -webkit-transform: translate(150px, -180px) rotateZ(0deg);
-          transform: translate(150px, -180px) rotateZ(0deg);
+  -webkit-transform: translate(150%, 80%) rotateZ(0deg);
+          transform: translate(150%, 80%) rotateZ(0deg);
   background-color: #CA4C24;
 }
 
 .sectionContainer section.about .rects .rect3 {
   position: absolute;
   top: 0;
-  width: 500px;
-  height: 300px;
-  -webkit-transform: translate(0px, -150px) rotateZ(-15deg);
-          transform: translate(0px, -150px) rotateZ(-15deg);
+  width: 850px;
+  height: 600px;
+  -webkit-transform: translate(-20%, 30%) rotateZ(-10deg);
+          transform: translate(-20%, 30%) rotateZ(-10deg);
   background-color: #954127;
 }
 
 .sectionContainer section.about .rects .rect4 {
   position: absolute;
-  top: -50px;
-  width: 700px;
-  height: 500px;
-  -webkit-transform: translate(50px, -200px) rotateZ(75deg);
-          transform: translate(50px, -200px) rotateZ(75deg);
+  top: 0px;
+  width: 1200px;
+  height: 700px;
+  -webkit-transform: translate(-20%, 10%) rotateZ(75deg);
+          transform: translate(-20%, 10%) rotateZ(75deg);
   background-color: #603629;
 }
 

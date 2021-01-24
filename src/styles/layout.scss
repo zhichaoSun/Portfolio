@@ -154,41 +154,12 @@ header {
     }
     
     section.about {
-        display: grid;
-        grid-template-columns: 2em 1fr 1fr 2em;
-        grid-template-rows: 1fr;
-        gap: 0px 10px;
-        grid-template-areas: ". rects content .";
-    
-        .content {
-            grid-area: content;
-            align-self: center;
-            justify-self: right;
-            z-index: 1;
-            
-            transform-style: preserve-3d;
-            transform: perspective(1000px);
-            div {
-                overflow: hidden;
-                p {
-                    visibility: hidden;
-                }
-            }
-        }
     
         .rects {
             position: relative;
-            left: 10%;
-            // height: 80%;
-            grid-area: rects;
-            align-self: center;
-            justify-self: center;
-
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            
+            height: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
             transform-style: preserve-3d;
             transform: perspective(1000px);
             .rect {
@@ -197,12 +168,33 @@ header {
                 position: relative;
                 box-shadow: -2px -2px 40px $black;
             }
+            .rectContent {
+                position: absolute;
+                top: 15%;
+                width: 50%;
+                height: 70%;
+                transform: translate(100%, 0px);;
+                background-color: transparent;
+                // outline: 1px solid $white;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                div {
+                    overflow: hidden;
+                    margin: 0.5rem 0;
+                    p {
+                        visibility: hidden;
+                    }
+                }
+            }
             .rect1 {
                 position: absolute;
                 top: 0;
                 width: 270px;
                 height: 200px;
-                transform: translate(200px, 0px) rotateZ(20deg);
+                transform: translate(230%, 250%) rotateZ(20deg);
                 background-color: #ff5722;
             }
             .rect2 {
@@ -210,23 +202,23 @@ header {
                 top: 0;
                 width: 300px;
                 height: 300px;
-                transform: translate(150px, -180px) rotateZ(0deg);
+                transform: translate(150%, 80%) rotateZ(0deg);
                 background-color: #CA4C24;
             }
             .rect3 {
                 position: absolute;
                 top: 0;
-                width: 500px;
-                height: 300px;
-                transform: translate(0px, -150px) rotateZ(-15deg);;
+                width: 850px;
+                height: 600px;
+                transform: translate(-20%, 30%) rotateZ(-10deg);;
                 background-color: #954127;
             }
             .rect4 {
                 position: absolute;
-                top: -50px;
-                width: 700px;
-                height: 500px;
-                transform: translate(50px, -200px) rotateZ(75deg);;
+                top: 0px;
+                width: 1200px;
+                height: 700px;
+                transform: translate(-20%, 10%) rotateZ(75deg);;
                 background-color: #603629;
             }
         }

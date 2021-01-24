@@ -39,23 +39,29 @@ function About() {
             xPercent: -150,
             autoAlpha: 0
         })
-        .from(".about .content p", {
+        .from(".about .rectContent p", {
             duration: 0.5,
             ease: Power3.easeInOut,
+            stagger: {
+                amount: 0.2,
+            },
+            autoAlpha: 0,
             yPercent: 100,
-            autoAlpha: 0
         }, ">")
+        .to(".about .rectContent", {
+            z: 0,
+        }, "<")
         .to(".about .rect1", {
-            z: 150,
+            z: -200,
         }, "<-1")
         .to(".about .rect2", {
-            z: 110,
+            z: -400,
         }, "<")
         .to(".about .rect3", {
-            z: 70,
+            z: -600,
         }, "<")
         .to(".about .rect4", {
-            z: 30,
+            z: -800,
         }, "<")
     }, [])
 
@@ -68,12 +74,12 @@ function About() {
                     <div className="rect rect4">r4</div>
                     <div className="rect rect3">r3</div>
                     <div className="rect rect2">r2</div>
-                    <div className="rect rect1"></div>
-                </div>
-                <div className="content">
-                    <div><p>About Content</p></div>
-                    <div><p>About Content</p></div>
-                    <div><p>About Content</p></div>
+                    <div className="rect rect1">r1</div>
+                    <div className="rectContent">
+                        <div><p>About Content</p></div>
+                        <div><p>About Content</p></div>
+                        <div><p>About Content</p></div>
+                    </div>
                 </div>
             </section>
             {/* <div className="divider"></div> */}
