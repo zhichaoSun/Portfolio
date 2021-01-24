@@ -345,8 +345,8 @@ header .header-container .links ul li .active {
   height: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1em 1fr 2fr 1fr 1em;
-      grid-template-columns: 1em 1fr 2fr 1fr 1em;
+  -ms-grid-columns: 1em 1fr 1fr 1fr 1em;
+      grid-template-columns: 1em 1fr 1fr 1fr 1em;
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
   gap: 0px 10px;
