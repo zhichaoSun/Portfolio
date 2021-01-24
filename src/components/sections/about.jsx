@@ -13,13 +13,6 @@ function About() {
             "full-page-listening": true
         })
 
-        VanillaTilt.init(document.querySelector(".about .content"), {
-            max: 5,
-            speed: 1000,
-            reverse: true,
-            "full-page-listening": true
-        })
-
         gsap.registerPlugin(ScrollTrigger)
 
         gsap.timeline({ scrollTrigger: {
