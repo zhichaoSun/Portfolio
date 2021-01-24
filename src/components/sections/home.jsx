@@ -34,21 +34,11 @@ const Home = () => {
             xPercent: -50,
             ease: Power3.easeInOut,
         }, "<")
-        .to(".home .layerContent", {
-            z: 0,
-        }, "<")
-        .to(".home .circle1", {
-            z: -200,
-        }, "<")
-        .to(".home .circle2", {
-            z: -400,
-        }, "<")
-        .to(".home .circle3", {
-            z: -600,
-        }, "<")
-        .to(".home .circle4", {
-            z: -800,
-        }, "<")
+        .to(".home .layerContent", { z: 0,}, "<")
+        .to(".home .circle1", { z: -200,}, "<")
+        .to(".home .circle2", { z: -400,}, "<")
+        .to(".home .circle3", { z: -600,}, "<")
+        .to(".home .circle4", { z: -800,}, "<")
     }, [])
 
     
@@ -58,10 +48,10 @@ const Home = () => {
             <div className="divider" id="home"></div>
             <section className="home" >
                 <div className="layers">
-                    <div className="layerCircle circle4">C4</div>
-                    <div className="layerCircle circle3">C3</div>
-                    <div className="layerCircle circle2">C2</div>
-                    <div className="layerCircle circle1">C1</div>
+                    <div className="layerCircle circle4"></div>
+                    <div className="layerCircle circle3"></div>
+                    <div className="layerCircle circle2"></div>
+                    <div className="layerCircle circle1"></div>
                     <div className="layerContent">
                         <div><p className="name">Home Content</p></div>
                         <div><p className="name">Home Content</p></div>

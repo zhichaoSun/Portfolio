@@ -16,7 +16,7 @@ function About() {
         gsap.registerPlugin(ScrollTrigger)
 
         gsap.timeline({ scrollTrigger: {
-            markers: true,
+            // markers: true,
             trigger: "#about",
             start: "center center",
             end: "center center",
@@ -41,21 +41,11 @@ function About() {
             autoAlpha: 0,
             yPercent: 100,
         }, ">")
-        .to(".about .rectContent", {
-            z: 0,
-        }, "<")
-        .to(".about .rect1", {
-            z: -200,
-        }, "<-1")
-        .to(".about .rect2", {
-            z: -400,
-        }, "<")
-        .to(".about .rect3", {
-            z: -600,
-        }, "<")
-        .to(".about .rect4", {
-            z: -800,
-        }, "<")
+        .to(".about .rectContent", { z: 0,}, "<")
+        .to(".about .rect1", { z: -200,}, "<-1")
+        .to(".about .rect2", { z: -400,}, "<")
+        .to(".about .rect3", { z: -600,}, "<")
+        .to(".about .rect4", { z: -800,}, "<")
     }, [])
 
 
@@ -64,10 +54,10 @@ function About() {
             <div className="divider" id="about"></div>
             <section className="about">
                 <div className="rects">
-                    <div className="rect rect4">r4</div>
-                    <div className="rect rect3">r3</div>
-                    <div className="rect rect2">r2</div>
-                    <div className="rect rect1">r1</div>
+                    <div className="rect rect4"></div>
+                    <div className="rect rect3"></div>
+                    <div className="rect rect2"></div>
+                    <div className="rect rect1"></div>
                     <div className="rectContent">
                         <div><p>About Content</p></div>
                         <div><p>About Content</p></div>

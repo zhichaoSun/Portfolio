@@ -269,6 +269,7 @@ header {
                     position: absolute;
                     left: 0;
                     top: 0;
+                    visibility: hidden;
                 }
                 .circleL {
                     position: absolute;
@@ -276,7 +277,7 @@ header {
                     height: 35vh;
                     z-index: -1;
                     &::before {
-                        content: 'L';
+                        content: '';
                         position: absolute;
                         top: 0;
                         width: 100%;
@@ -293,7 +294,7 @@ header {
                     height: 50vh;
                     z-index: -2;
                     &::before {
-                        content: 'L';
+                        content: '';
                         position: absolute;
                         top: 0;
                         width: 100%;
@@ -312,6 +313,7 @@ header {
                     position: absolute;
                     bottom: 0;
                     right: 0;
+                    visibility: hidden;
                 }
                 .circleR {
                     position: absolute;
@@ -319,7 +321,7 @@ header {
                     height: 50vh;
                     z-index: -2;
                     &::before {
-                        content: 'R';
+                        content: '';
                         position: absolute;
                         top: 0;
                         width: 100%;
@@ -336,7 +338,7 @@ header {
                     height: 50vh;
                     z-index: -1;
                     &::before {
-                        content: 'R';
+                        content: '';
                         position: absolute;
                         top: 0;
                         width: 100%;

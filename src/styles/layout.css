@@ -365,6 +365,7 @@ header .header-container .links ul li .active {
   position: absolute;
   left: 0;
   top: 0;
+  visibility: hidden;
 }
 
 .sectionContainer section.contact .contact-grid-container .contactL .circleL {
@@ -375,7 +376,7 @@ header .header-container .links ul li .active {
 }
 
 .sectionContainer section.contact .contact-grid-container .contactL .circleL::before {
-  content: 'L';
+  content: '';
   position: absolute;
   top: 0;
   width: 100%;
@@ -396,7 +397,7 @@ header .header-container .links ul li .active {
 }
 
 .sectionContainer section.contact .contact-grid-container .contactL .rectL::before {
-  content: 'L';
+  content: '';
   position: absolute;
   top: 0;
   width: 100%;
@@ -420,6 +421,7 @@ header .header-container .links ul li .active {
   position: absolute;
   bottom: 0;
   right: 0;
+  visibility: hidden;
 }
 
 .sectionContainer section.contact .contact-grid-container .contactR .circleR {
@@ -430,7 +432,7 @@ header .header-container .links ul li .active {
 }
 
 .sectionContainer section.contact .contact-grid-container .contactR .circleR::before {
-  content: 'R';
+  content: '';
   position: absolute;
   top: 0;
   width: 100%;
@@ -451,7 +453,7 @@ header .header-container .links ul li .active {
 }
 
 .sectionContainer section.contact .contact-grid-container .contactR .rectR::before {
-  content: 'R';
+  content: '';
   position: absolute;
   top: 0;
   width: 100%;

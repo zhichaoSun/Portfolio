@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 
-import { gsap, Power3, CSSRulePlugin } from "gsap/all";
+import { gsap, Power3, CSSRulePlugin, ScrollTrigger } from "gsap/all";
 
 import { Formik, Form } from "formik";
 import * as yup from "yup"
@@ -9,37 +9,62 @@ import { TextField, Button } from "@material-ui/core";
 
 const Contact = () => {
 
-    gsap.registerPlugin(CSSRulePlugin)
+    gsap.registerPlugin(CSSRulePlugin, ScrollTrigger)
 
     let rectL = CSSRulePlugin.getRule(".sectionContainer section.contact .contact-grid-container .contactL .rectL")
-    let rectR = CSSRulePlugin.getRule(".sectionContainer section.contact .contact-grid-container .contactR .rectR")
     let circleL = CSSRulePlugin.getRule(".sectionContainer section.contact .contact-grid-container .contactL .circleL")
-    let circleR = CSSRulePlugin.getRule(".sectionContainer section.contact .contact-grid-container .contactR .circleR")
-
     const enterL = () => {
         gsap.timeline({ defaults: { duration: 0.5, ease: Power3.easeInOut,}})
         .to(rectL, { cssRule: { yPercent: 20, rotation: -5 }})
         .to(circleL, { cssRule: { yPercent: -20, xPercent: 7 }}, "<")
     }
-
     const leaveL = () => {
         gsap.timeline({ defaults: { duration: 0.5, ease: Power3.easeInOut,}})
         .to(rectL, { cssRule: { yPercent: 0, rotation: 0 }})
         .to(circleL, { cssRule: { yPercent: 0, xPercent: 0 }}, "<")
     }
 
+
+    let rectR = CSSRulePlugin.getRule(".sectionContainer section.contact .contact-grid-container .contactR .rectR")
+    let circleR = CSSRulePlugin.getRule(".sectionContainer section.contact .contact-grid-container .contactR .circleR")
     const enterR = () => {
         gsap.timeline({ defaults: { duration: 0.5, ease: Power3.easeInOut,}})
         .to(rectR, { cssRule: { yPercent: -20, rotation: -5 }})
         .to(circleR, { cssRule: { yPercent: 20, xPercent: -7 }}, "<")
     }
-
     const leaveR = () => {
         gsap.timeline({ defaults: { duration: 0.5, ease: Power3.easeInOut,}})
         .to(rectR, { cssRule: { yPercent: 0, rotation: 0 }})
         .to(circleR, { cssRule: { yPercent: 0, xPercent: 0 }}, "<")
     }
 
+    useEffect(() => {
+        
+        gsap.timeline({ scrollTrigger: {
+            markers: true,
+            trigger: "#contact",
+            start: "center center",
+            end: "center center",
+            toggleActions: "play none none none"
+        }})
+        .set([rectL, circleL, rectR, circleR], { autoAlpha: 1})
+        .from([rectL, circleL], {
+            cssRule: { xPercent: -200, autoAlpha: 0,},
+            stagger: {
+                amount: 0.2, from: "start"
+            },
+            ease: Power3.easeInOut  
+        })
+        .from([rectR, circleR], {
+            cssRule: { xPercent: 200, autoAlpha: 0,},
+            stagger: {
+                amount: 0.2, from: "end"
+            },
+            ease: Power3.easeInOut  
+        }, "<")
+
+    }, [])
+    
     return (
         <>
             <div className="divider" id="contact"></div>
