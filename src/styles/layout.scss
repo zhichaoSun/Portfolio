@@ -94,7 +94,43 @@ header {
     }
     
     section.home {
+        position: relative;
+        .scrollIndicator {
+            position: absolute;
+            bottom: 2rem;
+            left: calc(50% - 1rem);
+            .icon {
+                height: 1.5rem;
+            }
+            .first {
+                animation: first 1s ease-in-out infinite 0s;
+            }
+            .second {
+                animation: second 1s ease-in-out infinite 0.33s;
+            }
+            .third {
+                animation: third 1s ease-in-out infinite 0.66s;
+            }
 
+            @keyframes first {
+                0% { color: $white; };
+                50% { color: $orange; };
+                100% { color: $white; };
+            }
+
+            @keyframes second {
+                0% { color: $white; };
+                50% { color: $orange; };
+                100% { color: $white; };
+            }
+
+            @keyframes third {
+                0% { color: $white; };
+                50% { color: $orange; };
+                100% { color: $white; };
+            }
+            
+        }
 
         .layers {
             transform-style: preserve-3d;
