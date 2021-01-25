@@ -450,7 +450,7 @@ header .header-container .links ul li .active {
 
 .sectionContainer section.contact .contact-grid-container .contactR .circleR, .sectionContainer section.contact .contact-grid-container .contactR .rectR {
   position: absolute;
-  bottom: 0;
+  top: 0;
   right: 0;
   visibility: hidden;
 }
@@ -472,8 +472,8 @@ header .header-container .links ul li .active {
   -webkit-box-shadow: -2px -2px 40px #1b1b1b;
           box-shadow: -2px -2px 40px #1b1b1b;
   border-radius: 50%;
-  -webkit-transform: translate(0%, -15%);
-          transform: translate(0%, -15%);
+  -webkit-transform: translate(0%, 15%);
+          transform: translate(0%, 15%);
 }
 
 .sectionContainer section.contact .contact-grid-container .contactR .rectR {
@@ -492,8 +492,8 @@ header .header-container .links ul li .active {
   background-color: #CA4C24;
   -webkit-box-shadow: -2px -2px 40px #1b1b1b;
           box-shadow: -2px -2px 40px #1b1b1b;
-  -webkit-transform: translate(-10%, -55%) rotate(-5deg);
-          transform: translate(-10%, -55%) rotate(-5deg);
+  -webkit-transform: translate(-10%, 55%) rotate(-5deg);
+          transform: translate(-10%, 55%) rotate(-5deg);
 }
 
 .sectionContainer section.contact .contact-grid-container .contactForm {

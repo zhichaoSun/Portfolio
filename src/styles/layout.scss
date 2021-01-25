@@ -340,7 +340,7 @@ header {
                 height: 100%; 
                 .circleR, .rectR {
                     position: absolute;
-                    bottom: 0;
+                    top: 0;
                     right: 0;
                     visibility: hidden;
                 }
@@ -358,7 +358,7 @@ header {
                         background-color: #954127;
                         box-shadow: -2px -2px 40px $black;
                         border-radius: 50%;
-                        transform: translate(0%, -15%);
+                        transform: translate(0%, 15%);
                     }
                 }
                 .rectR {
@@ -374,7 +374,7 @@ header {
                         height: 100%;
                         background-color: #CA4C24;
                         box-shadow: -2px -2px 40px $black;
-                        transform: translate(-10%, -55%) rotate(-5deg);
+                        transform: translate(-10%, 55%) rotate(-5deg);
                     }
                 }
             }
@@ -386,6 +386,7 @@ header {
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+                // visibility: hidden;
                 .title {
                     width: 100%;
                     display: grid;

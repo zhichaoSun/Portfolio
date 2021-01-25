@@ -16,7 +16,7 @@ const colors = {
 const Header = () => {
 
     useEffect(() => {
-        gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
+        // gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
         gsap.timeline()
         .set([".links p", ".links a"], {
@@ -54,7 +54,7 @@ const Header = () => {
 
         gsap.to("header", { 
             scrollTrigger: {
-                markers: true,
+                // markers: true,
                 trigger: "#home",
                 start: "bottom top",
                 end: "bottom top",

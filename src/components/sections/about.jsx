@@ -13,7 +13,7 @@ function About() {
             "full-page-listening": true
         })
 
-        gsap.registerPlugin(ScrollTrigger)
+        // gsap.registerPlugin(ScrollTrigger)
 
         gsap.timeline({ scrollTrigger: {
             // markers: true,

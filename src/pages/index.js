@@ -22,9 +22,7 @@ const IndexPage = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-        gsap.registerPlugin(ScrollTrigger)
-
-        
+        // gsap.registerPlugin(ScrollTrigger)
 
         ScrollTrigger.create({
             trigger: "#about",

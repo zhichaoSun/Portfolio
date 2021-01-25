@@ -51,9 +51,8 @@ const Home = () => {
                     <ul>
                         #TODO:
                         <li>To fix section overflowing issue (circles and rects are out of the boundary before the translate())</li>
-                        <li>
-                            To add real content into the work section
-                        </li>
+                        <li>To add real content</li>
+                        <li>To add responsible for mobile devices</li>
                     </ul>
                 </div>
                     <div className="layerCircle circle4"></div>

@@ -5,37 +5,16 @@ import ContactForm from '../form/contactForm';
 
 const Contact = () => {
 
-    gsap.registerPlugin(CSSRulePlugin, ScrollTrigger)
-
-    let rectL = CSSRulePlugin.getRule(".sectionContainer section.contact .contact-grid-container .contactL .rectL")
-    let circleL = CSSRulePlugin.getRule(".sectionContainer section.contact .contact-grid-container .contactL .circleL")
-    const enterL = () => {
-        gsap.timeline({ defaults: { duration: 0.5, ease: Power3.easeInOut,}})
-        .to(rectL, { cssRule: { yPercent: 20, rotation: -5 }})
-        .to(circleL, { cssRule: { yPercent: -20, xPercent: 7 }}, "<")
-    }
-    const leaveL = () => {
-        gsap.timeline({ defaults: { duration: 0.5, ease: Power3.easeInOut,}})
-        .to(rectL, { cssRule: { yPercent: 0, rotation: 0 }})
-        .to(circleL, { cssRule: { yPercent: 0, xPercent: 0 }}, "<")
-    }
-
-
-    let rectR = CSSRulePlugin.getRule(".sectionContainer section.contact .contact-grid-container .contactR .rectR")
-    let circleR = CSSRulePlugin.getRule(".sectionContainer section.contact .contact-grid-container .contactR .circleR")
-    const enterR = () => {
-        gsap.timeline({ defaults: { duration: 0.5, ease: Power3.easeInOut,}})
-        .to(rectR, { cssRule: { yPercent: -20, rotation: -5 }})
-        .to(circleR, { cssRule: { yPercent: 20, xPercent: -7 }}, "<")
-    }
-    const leaveR = () => {
-        gsap.timeline({ defaults: { duration: 0.5, ease: Power3.easeInOut,}})
-        .to(rectR, { cssRule: { yPercent: 0, rotation: 0 }})
-        .to(circleR, { cssRule: { yPercent: 0, xPercent: 0 }}, "<")
-    }
+    var rectL, circleL, rectR, circleR
 
     useEffect(() => {
-        
+        // gsap.registerPlugin(CSSRulePlugin, ScrollTrigger)
+
+        rectL = CSSRulePlugin.getRule(".sectionContainer section.contact .contact-grid-container .contactL .rectL")
+        circleL = CSSRulePlugin.getRule(".sectionContainer section.contact .contact-grid-container .contactL .circleL")   
+        rectR = CSSRulePlugin.getRule(".sectionContainer section.contact .contact-grid-container .contactR .rectR")
+        circleR = CSSRulePlugin.getRule(".sectionContainer section.contact .contact-grid-container .contactR .circleR")
+
         gsap.timeline({ scrollTrigger: {
             // markers: true,
             trigger: "#contact",
@@ -60,7 +39,27 @@ const Contact = () => {
         }, "<")
     }, [])
 
-    
+    const enterL = () => {
+        console.log("L")
+        gsap.timeline({ defaults: { duration: 0.5, ease: Power3.easeInOut,}})
+        .to(rectL, { cssRule: { yPercent: 20, rotation: -5 }})
+        .to(circleL, { cssRule: { yPercent: -20, xPercent: 7 }}, "<")
+    }
+    const leaveL = () => {
+        gsap.timeline({ defaults: { duration: 0.5, ease: Power3.easeInOut,}})
+        .to(rectL, { cssRule: { yPercent: 0, rotation: 0 }})
+        .to(circleL, { cssRule: { yPercent: 0, xPercent: 0 }}, "<")
+    }
+    const enterR = () => {
+        gsap.timeline({ defaults: { duration: 0.5, ease: Power3.easeInOut,}})
+        .to(rectR, { cssRule: { yPercent: -20, rotation: -5 }})
+        .to(circleR, { cssRule: { yPercent: 20, xPercent: -7 }}, "<")
+    }
+    const leaveR = () => {
+        gsap.timeline({ defaults: { duration: 0.5, ease: Power3.easeInOut,}})
+        .to(rectR, { cssRule: { yPercent: 0, rotation: 0 }})
+        .to(circleR, { cssRule: { yPercent: 0, xPercent: 0 }}, "<")
+    }
     
     return (
         <>
