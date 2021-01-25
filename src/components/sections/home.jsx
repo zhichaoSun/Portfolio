@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import { gsap, Power3 } from "gsap/all";
 import VanillaTilt from "vanilla-tilt";
 
+import { BsCaretDownFill } from "react-icons/bs";
+
 const Home = () => {
 
     useEffect(() => {
@@ -14,8 +16,12 @@ const Home = () => {
         })
 
         gsap.timeline()
-        .set([".layerContent p", ], {
+        .set(".layerContent p", {
             autoAlpha: 1,
+        })
+        .to("html", {
+            opacity: 1,
+            duration: 0.5,
         })
         .from(".home .layerCircle", {
             autoAlpha: 0,
@@ -39,18 +45,33 @@ const Home = () => {
         .to(".home .circle2", { z: -200,}, "<")
         .to(".home .circle3", { z: -400,}, "<")
         .to(".home .circle4", { z: -600,}, "<")
+
+        gsap.to(".home .scrollIndicator .icon", { 
+            scrollTrigger: {
+                // markers: true,
+                trigger: ".home .third svg",
+                start: "bottom bottom",
+                end: "bottom center",
+                toggleActions: "play none none none",
+                scrub: 0,
+                // once: true
+            },
+            opacity: 0,
+            y: "10vh"
+        })
     }, [])
 
 
     return (
         <>
             <div className="divider" id="home"></div>
-            <section className="home" >
+            <section className="home">
                 <div className="layers">
                     <div className="todo">
                         <ul>
                             #TODO:
                             <li>To add real content</li>
+                            <li>To add reCAPTCHA for message form submission</li>
                             <li>To add responsible for mobile devices</li>
                         </ul>
                     </div>
@@ -63,6 +84,11 @@ const Home = () => {
                         <div><p className="name2">Sth. else</p></div>
                         <div><p className="name3">Lorem ipsum dolor sit amet.</p></div>
                     </div>
+                </div>
+                <div className="scrollIndicator">
+                    <div className="icon first"><BsCaretDownFill size="2rem"/></div>
+                    <div className="icon second"><BsCaretDownFill size="2rem"/></div>
+                    <div className="icon third"><BsCaretDownFill size="2rem"/></div>
                 </div>
             </section>
         </>

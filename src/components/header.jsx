@@ -69,7 +69,6 @@ const Header = () => {
     }, [])
 
     const scrollHandler = (section) => {
-        // setActiveSection(section)
         gsap.to(window, {
             duration: 0.5, 
             scrollTo: `#${section}`,

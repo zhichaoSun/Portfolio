@@ -18,8 +18,6 @@ const colors = {
 
 const IndexPage = () => {
 
-    const [activeSection, setActiveSection] = useState("home") 
-
     useEffect(() => {
         window.scrollTo(0, 0);
         // gsap.registerPlugin(ScrollTrigger)
@@ -137,7 +135,7 @@ const IndexPage = () => {
     }, []);
 
     return(
-        <Layout activeSection={activeSection} setActiveSection={setActiveSection}>
+        <Layout>
             <SEO title="Home" />
 
             <Home />

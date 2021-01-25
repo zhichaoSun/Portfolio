@@ -5,11 +5,11 @@ import Footer from "./footer"
 
 import "../styles/layout.css"
 
-const Layout = ({ children, activeSection, setActiveSection }) => {
+const Layout = ({ children }) => {
 
     return (
         <>
-            <Header activeSection={activeSection} setActiveSection={setActiveSection}/>
+            <Header/>
             <div className="sectionContainer">
                 <main>{children}</main>
             </div>

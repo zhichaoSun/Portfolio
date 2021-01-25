@@ -6,14 +6,14 @@ import ContactForm from '../form/contactForm';
 const Contact = () => {
 
     useEffect(() => {
-        // gsap.registerPlugin(CSSRulePlugin, ScrollTrigger)
+        gsap.registerPlugin(ScrollTrigger)
 
         gsap.timeline({ scrollTrigger: {
-            // markers: true,
+            markers: true,
             trigger: "#contact",
             start: "center center",
             end: "center center",
-            toggleActions: "play none reverse none"
+            toggleActions: "play none reverse none",
         }})
         .set([".rectL", ".circleL", ".rectR", ".circleR"], { autoAlpha: 1})
         .from([".rectL", ".circleL"], {
@@ -32,17 +32,33 @@ const Contact = () => {
             },
             ease: Power3.easeInOut  
         }, "<")
+        .from(".formComponent", {
+            stagger: {
+                amount: 0.2
+            },
+            ease: Power3.easeInOut,
+            autoAlpha: 0,
+            yPercent: 100
+        }, "<0.5")
+        .to(".contactForm .title span", {
+            color: "#ff5722",
+            ease: Power3.easeInOut,
+        })
+        .from(".contactForm button", {
+            color: "#1b1b1b",
+            ease: Power3.easeInOut,
+        }, "<")
     }, [])
 
     const enterL = () => {
         console.log("L")
         gsap.timeline({ defaults: { duration: 0.5, ease: Power3.easeInOut,}})
-        .to(".rectL", { yPercent: 20, rotation: -5 })
+        .to(".rectL", { yPercent: 20, rotation: -5})
         .to(".circleL", { yPercent: -20, xPercent: 7}, "<")
     }
     const leaveL = () => {
         gsap.timeline({ defaults: { duration: 0.5, ease: Power3.easeInOut,}})
-        .to(".rectL", { yPercent: 0, rotation: 0})
+        .to(".rectL", { yPercent: 0, rotation: -15})
         .to(".circleL", { yPercent: 0, xPercent: 0}, "<")
     }
     const enterR = () => {
@@ -52,7 +68,7 @@ const Contact = () => {
     }
     const leaveR = () => {
         gsap.timeline({ defaults: { duration: 0.5, ease: Power3.easeInOut,}})
-        .to(".rectR", { yPercent: 0, rotation: 0})
+        .to(".rectR", { yPercent: 0, rotation: -15})
         .to(".circleR", { yPercent: 0, xPercent: 0}, "<")
     }
     
@@ -82,7 +98,9 @@ const Contact = () => {
 
                     <div className="contactForm">
                         <div className="title">
-                            <h1>Contact <span>Me</span></h1>
+                            <div className="mask">
+                                <h1 className="formComponent">Contact <span>Me</span></h1>
+                            </div>
                         </div>
                         <div className="form">
                             <ContactForm />

@@ -61,6 +61,8 @@ table {
 html {
   overflow-x: hidden;
   overflow-y: scroll;
+  opacity: 0;
+  background-color: #1b1b1b;
 }
 
 body {
@@ -148,6 +150,107 @@ header .header-container .links ul li .active {
   font-family: 'Poppins', sans-serif;
   font-weight: 800;
   font-size: 3rem;
+}
+
+.sectionContainer section.home {
+  position: relative;
+}
+
+.sectionContainer section.home .scrollIndicator {
+  position: absolute;
+  bottom: 2rem;
+  left: calc(50% - 1rem);
+}
+
+.sectionContainer section.home .scrollIndicator .icon {
+  height: 1.5rem;
+}
+
+.sectionContainer section.home .scrollIndicator .first {
+  -webkit-animation: first 1s ease-in-out infinite 1s;
+          animation: first 1s ease-in-out infinite 1s;
+}
+
+.sectionContainer section.home .scrollIndicator .second {
+  -webkit-animation: second 1s ease-in-out infinite 1.33s;
+          animation: second 1s ease-in-out infinite 1.33s;
+}
+
+.sectionContainer section.home .scrollIndicator .third {
+  -webkit-animation: third 1s ease-in-out infinite 1.66s;
+          animation: third 1s ease-in-out infinite 1.66s;
+}
+
+@-webkit-keyframes first {
+  0% {
+    color: #f7f7f7;
+  }
+  50% {
+    color: #ff5722;
+  }
+  100% {
+    color: #f7f7f7;
+  }
+}
+
+@keyframes first {
+  0% {
+    color: #f7f7f7;
+  }
+  50% {
+    color: #ff5722;
+  }
+  100% {
+    color: #f7f7f7;
+  }
+}
+
+@-webkit-keyframes second {
+  0% {
+    color: #f7f7f7;
+  }
+  50% {
+    color: #ff5722;
+  }
+  100% {
+    color: #f7f7f7;
+  }
+}
+
+@keyframes second {
+  0% {
+    color: #f7f7f7;
+  }
+  50% {
+    color: #ff5722;
+  }
+  100% {
+    color: #f7f7f7;
+  }
+}
+
+@-webkit-keyframes third {
+  0% {
+    color: #f7f7f7;
+  }
+  50% {
+    color: #ff5722;
+  }
+  100% {
+    color: #f7f7f7;
+  }
+}
+
+@keyframes third {
+  0% {
+    color: #f7f7f7;
+  }
+  50% {
+    color: #ff5722;
+  }
+  100% {
+    color: #f7f7f7;
+  }
 }
 
 .sectionContainer section.home .layers {
@@ -403,16 +506,8 @@ header .header-container .links ul li .active {
   position: absolute;
   width: 35vh;
   height: 35vh;
-  z-index: -1;
-}
-
-.sectionContainer section.contact .contact-grid-container .contactL .circleL::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
   background-color: #ff5722;
+  border-radius: 50%;
   -webkit-box-shadow: -2px -2px 40px #1b1b1b;
           box-shadow: -2px -2px 40px #1b1b1b;
   border-radius: 50%;
@@ -424,15 +519,6 @@ header .header-container .links ul li .active {
   position: absolute;
   width: 45vh;
   height: 50vh;
-  z-index: -2;
-}
-
-.sectionContainer section.contact .contact-grid-container .contactL .rectL::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
   background-color: #603629;
   -webkit-box-shadow: -2px -2px 40px #1b1b1b;
           box-shadow: -2px -2px 40px #1b1b1b;
@@ -459,19 +545,11 @@ header .header-container .links ul li .active {
   position: absolute;
   width: 50vh;
   height: 50vh;
-  z-index: -2;
-}
-
-.sectionContainer section.contact .contact-grid-container .contactR .circleR::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  z-index: 0;
   background-color: #954127;
+  border-radius: 50%;
   -webkit-box-shadow: -2px -2px 40px #1b1b1b;
           box-shadow: -2px -2px 40px #1b1b1b;
-  border-radius: 50%;
   -webkit-transform: translate(0%, 15%);
           transform: translate(0%, 15%);
 }
@@ -480,20 +558,12 @@ header .header-container .links ul li .active {
   position: absolute;
   width: 30vh;
   height: 50vh;
-  z-index: -1;
-}
-
-.sectionContainer section.contact .contact-grid-container .contactR .rectR::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  z-index: 0;
   background-color: #CA4C24;
   -webkit-box-shadow: -2px -2px 40px #1b1b1b;
           box-shadow: -2px -2px 40px #1b1b1b;
-  -webkit-transform: translate(-10%, 55%) rotate(-5deg);
-          transform: translate(-10%, 55%) rotate(-5deg);
+  -webkit-transform: translate(-10%, 55%) rotate(-15deg);
+          transform: translate(-10%, 55%) rotate(-15deg);
 }
 
 .sectionContainer section.contact .contact-grid-container .contactForm {
@@ -514,6 +584,11 @@ header .header-container .links ul li .active {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 1;
+}
+
+.sectionContainer section.contact .contact-grid-container .contactForm div.mask {
+  overflow: hidden;
 }
 
 .sectionContainer section.contact .contact-grid-container .contactForm .title {
@@ -522,10 +597,6 @@ header .header-container .links ul li .active {
   display: grid;
   place-items: center;
   color: #f7f7f7;
-}
-
-.sectionContainer section.contact .contact-grid-container .contactForm .title span {
-  color: #ff5722;
 }
 
 .sectionContainer section.contact .contact-grid-container .contactForm .form {
@@ -561,12 +632,16 @@ header .header-container .links ul li .active {
   padding: 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: none;
-  outline: 3px solid #f7f7f7;
+  border: 3px solid #f7f7f7;
   background-color: transparent;
   color: #f7f7f7;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
+}
+
+.sectionContainer section.contact .contact-grid-container .contactForm .form .form-control .inputField:focus {
+  outline: none;
+  border: 3px solid #ff5722;
 }
 
 .sectionContainer section.contact .contact-grid-container .contactForm .form .form-control .inputTextArea {
@@ -576,13 +651,21 @@ header .header-container .links ul li .active {
   padding: 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: none;
-  outline: 3px solid #f7f7f7;
+  border: 3px solid #f7f7f7;
   background-color: transparent;
   color: #f7f7f7;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   resize: none;
+}
+
+.sectionContainer section.contact .contact-grid-container .contactForm .form .form-control .inputTextArea:focus {
+  outline: none;
+  border: 3px solid #ff5722;
+}
+
+.sectionContainer section.contact .contact-grid-container .contactForm .form .form-control .inputTextArea:valid {
+  background-color: transparent;
 }
 
 .sectionContainer section.contact .contact-grid-container .contactForm .form .form-control .formError {
@@ -605,6 +688,7 @@ header .header-container .links ul li .active {
   outline: none;
   -webkit-box-shadow: 0px 2px 10px #1b1b1b;
           box-shadow: 0px 2px 10px #1b1b1b;
+  cursor: pointer;
 }
 
 .sectionContainer section.contact .contact-grid-container .contactForm .form .submitBtnDisabled {
@@ -620,6 +704,7 @@ header .header-container .links ul li .active {
   outline: none;
   -webkit-box-shadow: 0px 2px 10px #1b1b1b;
           box-shadow: 0px 2px 10px #1b1b1b;
+  cursor: no-drop;
 }
 
 .sectionContainer section.contact .contact-grid-container .contactForm .form p {
