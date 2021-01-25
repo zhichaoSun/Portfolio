@@ -6,10 +6,10 @@ import ContactForm from '../form/contactForm';
 const Contact = () => {
 
     useEffect(() => {
-        // gsap.registerPlugin(CSSRulePlugin, ScrollTrigger)
+        gsap.registerPlugin(ScrollTrigger)
 
         gsap.timeline({ scrollTrigger: {
-            // markers: true,
+            markers: true,
             trigger: "#contact",
             start: "center center",
             end: "center center",
@@ -37,12 +37,12 @@ const Contact = () => {
     const enterL = () => {
         console.log("L")
         gsap.timeline({ defaults: { duration: 0.5, ease: Power3.easeInOut,}})
-        .to(".rectL", { yPercent: 20, rotation: -5 })
+        .to(".rectL", { yPercent: 20, rotation: -5})
         .to(".circleL", { yPercent: -20, xPercent: 7}, "<")
     }
     const leaveL = () => {
         gsap.timeline({ defaults: { duration: 0.5, ease: Power3.easeInOut,}})
-        .to(".rectL", { yPercent: 0, rotation: 0})
+        .to(".rectL", { yPercent: 0, rotation: -15})
         .to(".circleL", { yPercent: 0, xPercent: 0}, "<")
     }
     const enterR = () => {
@@ -52,7 +52,7 @@ const Contact = () => {
     }
     const leaveR = () => {
         gsap.timeline({ defaults: { duration: 0.5, ease: Power3.easeInOut,}})
-        .to(".rectR", { yPercent: 0, rotation: 0})
+        .to(".rectR", { yPercent: 0, rotation: -15})
         .to(".circleR", { yPercent: 0, xPercent: 0}, "<")
     }
     

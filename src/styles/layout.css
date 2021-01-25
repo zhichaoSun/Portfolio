@@ -167,18 +167,18 @@ header .header-container .links ul li .active {
 }
 
 .sectionContainer section.home .scrollIndicator .first {
-  -webkit-animation: first 1s ease-in-out infinite 0s;
-          animation: first 1s ease-in-out infinite 0s;
+  -webkit-animation: first 1s ease-in-out infinite 1s;
+          animation: first 1s ease-in-out infinite 1s;
 }
 
 .sectionContainer section.home .scrollIndicator .second {
-  -webkit-animation: second 1s ease-in-out infinite 0.33s;
-          animation: second 1s ease-in-out infinite 0.33s;
+  -webkit-animation: second 1s ease-in-out infinite 1.33s;
+          animation: second 1s ease-in-out infinite 1.33s;
 }
 
 .sectionContainer section.home .scrollIndicator .third {
-  -webkit-animation: third 1s ease-in-out infinite 0.66s;
-          animation: third 1s ease-in-out infinite 0.66s;
+  -webkit-animation: third 1s ease-in-out infinite 1.66s;
+          animation: third 1s ease-in-out infinite 1.66s;
 }
 
 @-webkit-keyframes first {
@@ -506,16 +506,8 @@ header .header-container .links ul li .active {
   position: absolute;
   width: 35vh;
   height: 35vh;
-  z-index: -1;
-}
-
-.sectionContainer section.contact .contact-grid-container .contactL .circleL::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
   background-color: #ff5722;
+  border-radius: 50%;
   -webkit-box-shadow: -2px -2px 40px #1b1b1b;
           box-shadow: -2px -2px 40px #1b1b1b;
   border-radius: 50%;
@@ -527,15 +519,6 @@ header .header-container .links ul li .active {
   position: absolute;
   width: 45vh;
   height: 50vh;
-  z-index: -2;
-}
-
-.sectionContainer section.contact .contact-grid-container .contactL .rectL::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
   background-color: #603629;
   -webkit-box-shadow: -2px -2px 40px #1b1b1b;
           box-shadow: -2px -2px 40px #1b1b1b;
@@ -562,19 +545,11 @@ header .header-container .links ul li .active {
   position: absolute;
   width: 50vh;
   height: 50vh;
-  z-index: -2;
-}
-
-.sectionContainer section.contact .contact-grid-container .contactR .circleR::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  z-index: 0;
   background-color: #954127;
+  border-radius: 50%;
   -webkit-box-shadow: -2px -2px 40px #1b1b1b;
           box-shadow: -2px -2px 40px #1b1b1b;
-  border-radius: 50%;
   -webkit-transform: translate(0%, 15%);
           transform: translate(0%, 15%);
 }
@@ -583,20 +558,12 @@ header .header-container .links ul li .active {
   position: absolute;
   width: 30vh;
   height: 50vh;
-  z-index: -1;
-}
-
-.sectionContainer section.contact .contact-grid-container .contactR .rectR::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  z-index: 0;
   background-color: #CA4C24;
   -webkit-box-shadow: -2px -2px 40px #1b1b1b;
           box-shadow: -2px -2px 40px #1b1b1b;
-  -webkit-transform: translate(-10%, 55%) rotate(-5deg);
-          transform: translate(-10%, 55%) rotate(-5deg);
+  -webkit-transform: translate(-10%, 55%) rotate(-15deg);
+          transform: translate(-10%, 55%) rotate(-15deg);
 }
 
 .sectionContainer section.contact .contact-grid-container .contactForm {
@@ -617,6 +584,7 @@ header .header-container .links ul li .active {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 1;
 }
 
 .sectionContainer section.contact .contact-grid-container .contactForm .title {

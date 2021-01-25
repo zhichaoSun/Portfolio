@@ -46,10 +46,10 @@ const Home = () => {
         .to(".home .circle3", { z: -400,}, "<")
         .to(".home .circle4", { z: -600,}, "<")
 
-        gsap.to(".scrollIndicator .icon", { 
+        gsap.to(".home .scrollIndicator .icon", { 
             scrollTrigger: {
                 // markers: true,
-                trigger: ".third svg",
+                trigger: ".home .third svg",
                 start: "bottom bottom",
                 end: "bottom center",
                 toggleActions: "play none none none",

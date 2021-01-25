@@ -103,13 +103,13 @@ header {
                 height: 1.5rem;
             }
             .first {
-                animation: first 1s ease-in-out infinite 0s;
+                animation: first 1s ease-in-out infinite 1s;
             }
             .second {
-                animation: second 1s ease-in-out infinite 0.33s;
+                animation: second 1s ease-in-out infinite 1.33s;
             }
             .third {
-                animation: third 1s ease-in-out infinite 0.66s;
+                animation: third 1s ease-in-out infinite 1.66s;
             }
 
             @keyframes first {
@@ -337,34 +337,41 @@ header {
                     position: absolute;
                     width: 35vh;
                     height: 35vh;
-                    z-index: -1;
-                    &::before {
-                        content: '';
-                        position: absolute;
-                        top: 0;
-                        width: 100%;
-                        height: 100%;
-                        background-color: #ff5722;
-                        box-shadow: -2px -2px 40px $black;
-                        border-radius: 50%;
-                        transform: translate(10%, 25%);
-                    }
+                    background-color: #ff5722;
+                    border-radius: 50%;
+                    box-shadow: -2px -2px 40px $black;
+                    border-radius: 50%;
+                    transform: translate(10%, 25%);
+                    // &::before {
+                    //     content: '';
+                    //     position: absolute;
+                    //     top: 0;
+                    //     width: 100%;
+                    //     height: 100%;
+                    //     background-color: #ff5722;
+                    //     box-shadow: -2px -2px 40px $black;
+                    //     border-radius: 50%;
+                    //     transform: translate(10%, 25%);
+                    // }
                 }
                 .rectL {
                     position: absolute;
                     width: 45vh;
                     height: 50vh;
-                    z-index: -2;
-                    &::before {
-                        content: '';
-                        position: absolute;
-                        top: 0;
-                        width: 100%;
-                        height: 100%;
-                        background-color: #603629;
-                        box-shadow: -2px -2px 40px $black;
-                        transform: translate(10%, 55%) rotate(-15deg);
-                    }
+                    // z-index: 0;
+                    background-color: #603629;
+                    box-shadow: -2px -2px 40px $black;
+                    transform: translate(10%, 55%) rotate(-15deg);
+                    // &::before {
+                    //     content: '';
+                    //     position: absolute;
+                    //     top: 0;
+                    //     width: 100%;
+                    //     height: 100%;
+                    //     background-color: #603629;
+                    //     box-shadow: -2px -2px 40px $black;
+                    //     transform: translate(10%, 55%) rotate(-15deg);
+                    // }
                 }
             }
             .contactR { 
@@ -381,34 +388,41 @@ header {
                     position: absolute;
                     width: 50vh;
                     height: 50vh;
-                    z-index: -2;
-                    &::before {
-                        content: '';
-                        position: absolute;
-                        top: 0;
-                        width: 100%;
-                        height: 100%;
-                        background-color: #954127;
-                        box-shadow: -2px -2px 40px $black;
-                        border-radius: 50%;
-                        transform: translate(0%, 15%);
-                    }
+                    z-index: 0;
+                    background-color: #954127;
+                    border-radius: 50%;
+                    box-shadow: -2px -2px 40px $black;
+                    transform: translate(0%, 15%);
+                    // &::before {
+                    //     content: '';
+                    //     position: absolute;
+                    //     top: 0;
+                    //     width: 100%;
+                    //     height: 100%;
+                    //     background-color: #954127;
+                    //     box-shadow: -2px -2px 40px $black;
+                    //     border-radius: 50%;
+                    //     transform: translate(0%, 15%);
+                    // }
                 }
                 .rectR {
                     position: absolute;
                     width: 30vh;
                     height: 50vh;
-                    z-index: -1;
-                    &::before {
-                        content: '';
-                        position: absolute;
-                        top: 0;
-                        width: 100%;
-                        height: 100%;
-                        background-color: #CA4C24;
-                        box-shadow: -2px -2px 40px $black;
-                        transform: translate(-10%, 55%) rotate(-5deg);
-                    }
+                    z-index: 0;
+                    background-color: #CA4C24;
+                    box-shadow: -2px -2px 40px $black;
+                    transform: translate(-10%, 55%) rotate(-15deg)
+                    // &::before {
+                    //     content: '';
+                    //     position: absolute;
+                    //     top: 0;
+                    //     width: 100%;
+                    //     height: 100%;
+                    //     background-color: #CA4C24;
+                    //     box-shadow: -2px -2px 40px $black;
+                    //     transform: translate(-10%, 55%) rotate(-5deg);
+                    // }
                 }
             }
 
@@ -419,6 +433,7 @@ header {
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+                z-index: 1;
                 // visibility: hidden;
                 .title {
                     width: 100%;
