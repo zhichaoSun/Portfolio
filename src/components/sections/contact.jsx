@@ -10,28 +10,25 @@ const Contact = () => {
     useEffect(() => {
         // gsap.registerPlugin(CSSRulePlugin, ScrollTrigger)
 
-        rectL = CSSRulePlugin.getRule(".sectionContainer section.contact .contact-grid-container .contactL .rectL")
-        circleL = CSSRulePlugin.getRule(".sectionContainer section.contact .contact-grid-container .contactL .circleL")   
-        rectR = CSSRulePlugin.getRule(".sectionContainer section.contact .contact-grid-container .contactR .rectR")
-        circleR = CSSRulePlugin.getRule(".sectionContainer section.contact .contact-grid-container .contactR .circleR")
-
         gsap.timeline({ scrollTrigger: {
-            // markers: true,
+            markers: true,
             trigger: "#contact",
             start: "center center",
             end: "center center",
             toggleActions: "play none reverse none"
         }})
-        .set([rectL, circleL, rectR, circleR], { autoAlpha: 1})
-        .from([rectL, circleL], {
-            cssRule: { scale: 0.1, autoAlpha: 0,},
+        .set([".rectL", ".circleL", ".rectR", ".circleR"], { autoAlpha: 1})
+        .from([".rectL", ".circleL"], {
+            scale: 0, 
+            autoAlpha: 0,
             stagger: {
                 amount: 0.2, from: "start"
             },
             ease: Power3.easeInOut  
         })
-        .from([rectR, circleR], {
-            cssRule: { scale: 0.1, autoAlpha: 0,},
+        .from([".rectR", ".circleR"], {
+            scale: 0, 
+            autoAlpha: 0,
             stagger: {
                 amount: 0.2, from: "end"
             },
@@ -42,23 +39,23 @@ const Contact = () => {
     const enterL = () => {
         console.log("L")
         gsap.timeline({ defaults: { duration: 0.5, ease: Power3.easeInOut,}})
-        .to(rectL, { cssRule: { yPercent: 20, rotation: -5 }})
-        .to(circleL, { cssRule: { yPercent: -20, xPercent: 7 }}, "<")
+        .to(".rectL", { yPercent: 20, rotation: -5 })
+        .to(".circleL", { yPercent: -20, xPercent: 7}, "<")
     }
     const leaveL = () => {
         gsap.timeline({ defaults: { duration: 0.5, ease: Power3.easeInOut,}})
-        .to(rectL, { cssRule: { yPercent: 0, rotation: 0 }})
-        .to(circleL, { cssRule: { yPercent: 0, xPercent: 0 }}, "<")
+        .to(".rectL", { yPercent: 0, rotation: 0})
+        .to(".circleL", { yPercent: 0, xPercent: 0}, "<")
     }
     const enterR = () => {
         gsap.timeline({ defaults: { duration: 0.5, ease: Power3.easeInOut,}})
-        .to(rectR, { cssRule: { yPercent: -20, rotation: -5 }})
-        .to(circleR, { cssRule: { yPercent: 20, xPercent: -7 }}, "<")
+        .to(".rectR", { yPercent: -20, rotation: -5})
+        .to(".circleR", { yPercent: 20, xPercent: -7}, "<")
     }
     const leaveR = () => {
         gsap.timeline({ defaults: { duration: 0.5, ease: Power3.easeInOut,}})
-        .to(rectR, { cssRule: { yPercent: 0, rotation: 0 }})
-        .to(circleR, { cssRule: { yPercent: 0, xPercent: 0 }}, "<")
+        .to(".rectR", { yPercent: 0, rotation: 0})
+        .to(".circleR", { yPercent: 0, xPercent: 0}, "<")
     }
     
     return (
