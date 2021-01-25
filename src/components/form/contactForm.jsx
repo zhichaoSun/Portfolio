@@ -64,13 +64,18 @@ function ContactForm() {
             formik => {
                 return (
                     <Form>
-                        <FormikControl control='input' type='text' label='How do I address you?' name='name' />
-                        <FormikControl control='input' type='email' label='Your Email' name='email' />
-                        <FormikControl control='textarea' label='Feel free to leave a message' name='message' />
-                        <button 
-                            type='submit' disabled={!formik.isValid} 
-                            className={(formik.isValid && !serverState.ok) ? "submitBtnEnabled" : "submitBtnDisabled"}
-                        >Submit</button>
+                        <div className="mask"><FormikControl control='input' type='text' label='How do I address you?' name='name' /></div>
+                        <div className="mask"><FormikControl control='input' type='email' label='Your Email' name='email' /></div>
+                        <div className="mask"><FormikControl control='textarea' label='Feel free to leave a message' name='message' /></div>
+                        
+                        <div className="mask">
+                            <button 
+                                type='submit'
+                                disabled={!formik.isValid} 
+                                className={(formik.isValid && !serverState.ok) ? "submitBtnEnabled formComponent" : "submitBtnDisabled formComponent"}
+                            >Submit</button>
+                        </div>
+                        
                         {
                             serverState.submitted
                             &&

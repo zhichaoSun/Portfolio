@@ -13,7 +13,7 @@ const Contact = () => {
             trigger: "#contact",
             start: "center center",
             end: "center center",
-            toggleActions: "play none reverse none"
+            toggleActions: "play none reverse none",
         }})
         .set([".rectL", ".circleL", ".rectR", ".circleR"], { autoAlpha: 1})
         .from([".rectL", ".circleL"], {
@@ -31,6 +31,22 @@ const Contact = () => {
                 amount: 0.2, from: "end"
             },
             ease: Power3.easeInOut  
+        }, "<")
+        .from(".formComponent", {
+            stagger: {
+                amount: 0.2
+            },
+            ease: Power3.easeInOut,
+            autoAlpha: 0,
+            yPercent: 100
+        }, "<0.5")
+        .to(".contactForm .title span", {
+            color: "#ff5722",
+            ease: Power3.easeInOut,
+        })
+        .from(".contactForm button", {
+            color: "#1b1b1b",
+            ease: Power3.easeInOut,
         }, "<")
     }, [])
 
@@ -82,7 +98,9 @@ const Contact = () => {
 
                     <div className="contactForm">
                         <div className="title">
-                            <h1>Contact <span>Me</span></h1>
+                            <div className="mask">
+                                <h1 className="formComponent">Contact <span>Me</span></h1>
+                            </div>
                         </div>
                         <div className="form">
                             <ContactForm />
