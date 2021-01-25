@@ -4,7 +4,7 @@ import { Formik, Form } from "formik";
 import * as yup from "yup"
 import axios from "axios";
 
-import FormikControl from './FormikControl';
+import FormikControl from './formikControl';
 
 
 const initialValues = {
