@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 
-import { gsap, Power3, CSSRulePlugin, ScrollTrigger } from "gsap/all";
+import { gsap, Power3, ScrollTrigger } from "gsap/all";
 import ContactForm from '../form/contactForm';
 
 const Contact = () => {
@@ -9,7 +9,7 @@ const Contact = () => {
         // gsap.registerPlugin(CSSRulePlugin, ScrollTrigger)
 
         gsap.timeline({ scrollTrigger: {
-            markers: true,
+            // markers: true,
             trigger: "#contact",
             start: "center center",
             end: "center center",
