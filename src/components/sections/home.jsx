@@ -14,7 +14,7 @@ const Home = () => {
         })
 
         gsap.timeline()
-        .set([".layerContent p", ], {
+        .set(".layerContent p", {
             autoAlpha: 1,
         })
         .to("html", {
@@ -55,6 +55,7 @@ const Home = () => {
                         <ul>
                             #TODO:
                             <li>To add real content</li>
+                            <li>To add reCAPTCHA for message form submission</li>
                             <li>To add responsible for mobile devices</li>
                         </ul>
                     </div>
