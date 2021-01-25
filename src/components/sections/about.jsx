@@ -41,11 +41,11 @@ function About() {
             autoAlpha: 0,
             yPercent: 100,
         }, ">")
-        .to(".about .rectContent", { z: 0,}, "<")
-        .to(".about .rect1", { z: -200,}, "<-1")
-        .to(".about .rect2", { z: -400,}, "<")
-        .to(".about .rect3", { z: -600,}, "<")
-        .to(".about .rect4", { z: -800,}, "<")
+        .to(".about .rectContent", { z: 200,}, "<")
+        .to(".about .rect1", { z: 0,}, "<-1")
+        .to(".about .rect2", { z: -200,}, "<")
+        .to(".about .rect3", { z: -400,}, "<")
+        .to(".about .rect4", { z: -600,}, "<")
     }, [])
 
 

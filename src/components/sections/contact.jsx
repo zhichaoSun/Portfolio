@@ -5,8 +5,6 @@ import ContactForm from '../form/contactForm';
 
 const Contact = () => {
 
-    var rectL, circleL, rectR, circleR
-
     useEffect(() => {
         // gsap.registerPlugin(CSSRulePlugin, ScrollTrigger)
 

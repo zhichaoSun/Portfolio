@@ -34,11 +34,11 @@ const Home = () => {
             xPercent: -50,
             ease: Power3.easeInOut,
         }, "<")
-        .to(".home .layerContent", { z: 0,}, "<")
-        .to(".home .circle1", { z: -200,}, "<")
-        .to(".home .circle2", { z: -400,}, "<")
-        .to(".home .circle3", { z: -600,}, "<")
-        .to(".home .circle4", { z: -800,}, "<")
+        .to(".home .layerContent", { z: 200,}, "<")
+        .to(".home .circle1", { z: 0,}, "<")
+        .to(".home .circle2", { z: -200,}, "<")
+        .to(".home .circle3", { z: -400,}, "<")
+        .to(".home .circle4", { z: -600,}, "<")
     }, [])
 
 
@@ -47,14 +47,14 @@ const Home = () => {
             <div className="divider" id="home"></div>
             <section className="home" >
                 <div className="layers">
-                <div className="todo">
-                    <ul>
-                        #TODO:
-                        <li>To fix section overflowing issue (circles and rects are out of the boundary before the translate())</li>
-                        <li>To add real content</li>
-                        <li>To add responsible for mobile devices</li>
-                    </ul>
-                </div>
+                    <div className="todo">
+                        <ul>
+                            #TODO:
+                            <li>To fix section overflowing issue (circles and rects are out of the boundary before the translate())</li>
+                            <li>To add real content</li>
+                            <li>To add responsible for mobile devices</li>
+                        </ul>
+                    </div>
                     <div className="layerCircle circle4"></div>
                     <div className="layerCircle circle3"></div>
                     <div className="layerCircle circle2"></div>
