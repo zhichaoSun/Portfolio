@@ -17,6 +17,10 @@ const Home = () => {
         .set([".layerContent p", ], {
             autoAlpha: 1,
         })
+        .to("html", {
+            opacity: 1,
+            duration: 0.5,
+        })
         .from(".home .layerCircle", {
             autoAlpha: 0,
             scale: 0.6,
