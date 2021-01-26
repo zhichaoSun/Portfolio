@@ -52,7 +52,7 @@ const Home = () => {
         .to(".home .circle3", { z: -400,}, "<")
         .to(".home .circle4", { z: -600,}, "<")
 
-        gsap.to(".home .scrollIndicator .icon", { 
+        gsap.to(".home .scrollDownIndicator .icon", { 
             scrollTrigger: {
                 // markers: true,
                 trigger: ".home .third svg",
@@ -91,7 +91,7 @@ const Home = () => {
                         <div><p className="name3">Lorem ipsum dolor sit amet.</p></div>
                     </div>
                 </div>
-                <div className="scrollIndicator">
+                <div className="scrollDownIndicator">
                     <div className="icon first"><BsCaretDownFill size="2rem"/></div>
                     <div className="icon second"><BsCaretDownFill size="2rem"/></div>
                     <div className="icon third"><BsCaretDownFill size="2rem"/></div>

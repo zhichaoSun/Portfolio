@@ -164,27 +164,27 @@ header .header-container .toggle {
   position: relative;
 }
 
-.sectionContainer section.home .scrollIndicator {
+.sectionContainer section.home .scrollDownIndicator {
   position: absolute;
   bottom: 2rem;
   left: calc(50% - 1rem);
 }
 
-.sectionContainer section.home .scrollIndicator .icon {
+.sectionContainer section.home .scrollDownIndicator .icon {
   height: 1.5rem;
 }
 
-.sectionContainer section.home .scrollIndicator .first {
+.sectionContainer section.home .scrollDownIndicator .first {
   -webkit-animation: first 1s ease-in-out infinite 1s;
           animation: first 1s ease-in-out infinite 1s;
 }
 
-.sectionContainer section.home .scrollIndicator .second {
+.sectionContainer section.home .scrollDownIndicator .second {
   -webkit-animation: second 1s ease-in-out infinite 1.33s;
           animation: second 1s ease-in-out infinite 1.33s;
 }
 
-.sectionContainer section.home .scrollIndicator .third {
+.sectionContainer section.home .scrollDownIndicator .third {
   -webkit-animation: third 1s ease-in-out infinite 1.66s;
           animation: third 1s ease-in-out infinite 1.66s;
 }
@@ -367,6 +367,71 @@ header .header-container .toggle {
   background-color: #603629;
 }
 
+.sectionContainer section.about {
+  position: relative;
+}
+
+.sectionContainer section.about .scrollDownIndicator {
+  position: absolute;
+  bottom: 2rem;
+  left: calc(50% - 1rem);
+}
+
+.sectionContainer section.about .scrollDownIndicator .icon {
+  height: 1.5rem;
+}
+
+.sectionContainer section.about .scrollDownIndicator .first {
+  -webkit-animation: first 1s ease-in-out infinite 1s;
+          animation: first 1s ease-in-out infinite 1s;
+}
+
+.sectionContainer section.about .scrollDownIndicator .second {
+  -webkit-animation: second 1s ease-in-out infinite 1.33s;
+          animation: second 1s ease-in-out infinite 1.33s;
+}
+
+.sectionContainer section.about .scrollDownIndicator .third {
+  -webkit-animation: third 1s ease-in-out infinite 1.66s;
+          animation: third 1s ease-in-out infinite 1.66s;
+}
+
+@keyframes first {
+  0% {
+    color: #f7f7f7;
+  }
+  50% {
+    color: #ff5722;
+  }
+  100% {
+    color: #f7f7f7;
+  }
+}
+
+@keyframes second {
+  0% {
+    color: #f7f7f7;
+  }
+  50% {
+    color: #ff5722;
+  }
+  100% {
+    color: #f7f7f7;
+  }
+}
+
+@keyframes third {
+  0% {
+    color: #f7f7f7;
+  }
+  50% {
+    color: #ff5722;
+  }
+  100% {
+    color: #f7f7f7;
+  }
+}
+
 .sectionContainer section.about .rects {
   position: relative;
   height: 100%;
@@ -467,6 +532,7 @@ header .header-container .toggle {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 .sectionContainer section.work h1 {
@@ -477,6 +543,67 @@ header .header-container .toggle {
   width: 600px;
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.sectionContainer section.work .scrollDownIndicator {
+  position: absolute;
+  bottom: 2rem;
+  left: calc(50% - 1rem);
+}
+
+.sectionContainer section.work .scrollDownIndicator .icon {
+  height: 1.5rem;
+}
+
+.sectionContainer section.work .scrollDownIndicator .first {
+  -webkit-animation: first 1s ease-in-out infinite 1s;
+          animation: first 1s ease-in-out infinite 1s;
+}
+
+.sectionContainer section.work .scrollDownIndicator .second {
+  -webkit-animation: second 1s ease-in-out infinite 1.33s;
+          animation: second 1s ease-in-out infinite 1.33s;
+}
+
+.sectionContainer section.work .scrollDownIndicator .third {
+  -webkit-animation: third 1s ease-in-out infinite 1.66s;
+          animation: third 1s ease-in-out infinite 1.66s;
+}
+
+@keyframes first {
+  0% {
+    color: #f7f7f7;
+  }
+  50% {
+    color: #ff5722;
+  }
+  100% {
+    color: #f7f7f7;
+  }
+}
+
+@keyframes second {
+  0% {
+    color: #f7f7f7;
+  }
+  50% {
+    color: #ff5722;
+  }
+  100% {
+    color: #f7f7f7;
+  }
+}
+
+@keyframes third {
+  0% {
+    color: #f7f7f7;
+  }
+  50% {
+    color: #ff5722;
+  }
+  100% {
+    color: #f7f7f7;
+  }
 }
 
 .sectionContainer section.contact {

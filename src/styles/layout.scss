@@ -102,7 +102,7 @@ header {
     
     section.home {
         position: relative;
-        .scrollIndicator {
+        .scrollDownIndicator {
             position: absolute;
             bottom: 2rem;
             left: calc(50% - 1rem);
@@ -231,7 +231,44 @@ header {
     }
     
     section.about {
-    
+        position: relative;
+
+        .scrollDownIndicator {
+            position: absolute;
+            bottom: 2rem;
+            left: calc(50% - 1rem);
+            .icon {
+                height: 1.5rem;
+            }
+            .first {
+                animation: first 1s ease-in-out infinite 1s;
+            }
+            .second {
+                animation: second 1s ease-in-out infinite 1.33s;
+            }
+            .third {
+                animation: third 1s ease-in-out infinite 1.66s;
+            }
+
+            @keyframes first {
+                0% { color: $white; };
+                50% { color: $orange; };
+                100% { color: $white; };
+            }
+
+            @keyframes second {
+                0% { color: $white; };
+                50% { color: $orange; };
+                100% { color: $white; };
+            }
+
+            @keyframes third {
+                0% { color: $white; };
+                50% { color: $orange; };
+                100% { color: $white; };
+            }
+        }
+
         .rects {
             position: relative;
             height: 100%;
@@ -306,6 +343,7 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
         h1 {
             width: 200px;
         }
@@ -313,6 +351,42 @@ header {
             width: 600px;
             font-size: 1.5rem;
             line-height: 2rem;
+        }
+
+        .scrollDownIndicator {
+            position: absolute;
+            bottom: 2rem;
+            left: calc(50% - 1rem);
+            .icon {
+                height: 1.5rem;
+            }
+            .first {
+                animation: first 1s ease-in-out infinite 1s;
+            }
+            .second {
+                animation: second 1s ease-in-out infinite 1.33s;
+            }
+            .third {
+                animation: third 1s ease-in-out infinite 1.66s;
+            }
+
+            @keyframes first {
+                0% { color: $white; };
+                50% { color: $orange; };
+                100% { color: $white; };
+            }
+
+            @keyframes second {
+                0% { color: $white; };
+                50% { color: $orange; };
+                100% { color: $white; };
+            }
+
+            @keyframes third {
+                0% { color: $white; };
+                50% { color: $orange; };
+                100% { color: $white; };
+            }
         }
     }
     
