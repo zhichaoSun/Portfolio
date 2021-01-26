@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react'
+import { Link } from "gatsby";
 
 import { gsap } from "gsap";
 
 import { BsCaretDownFill, BsCaretUpFill } from "react-icons/bs";
+import { FaHandPointRight } from "react-icons/fa";
 
 const Work = () => {
 
@@ -45,6 +47,11 @@ const Work = () => {
                     <div className="icon first"><BsCaretUpFill size="2rem"/></div>
                     <div className="icon second"><BsCaretUpFill size="2rem"/></div>
                     <div className="icon third"><BsCaretUpFill size="2rem"/></div>
+                </div>
+                <div className="scrollRightIndicator">
+                    <div className="icon">
+                        <Link><FaHandPointRight size="2rem"/></Link>
+                    </div>
                 </div>
                 <div className="scrollDownIndicator">
                     <div className="icon first"><BsCaretDownFill size="2rem"/></div>

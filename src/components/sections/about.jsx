@@ -70,7 +70,7 @@ function About() {
         })
         gsap.to(".about .scrollDownIndicator", { 
             scrollTrigger: {
-                markers: true,
+                // markers: true,
                 trigger: ".about .scrollDownIndicator .third svg",
                 start: "bottom bottom",
                 end: "bottom center",

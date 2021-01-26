@@ -118,8 +118,7 @@ header {
             .third {
                 animation: blink 1s ease-in-out infinite 1.66s;
             }
-
-            @keyframes blink {
+            @keyframes blink { // @keyframes does not cascade, one is enough
                 0% { color: $white; };
                 50% { color: $orange; };
                 100% { color: $white; };
@@ -236,12 +235,6 @@ header {
             .third {
                 animation: blink 1s ease-in-out infinite 1s;
             }
-
-            @keyframes blink {
-                0% { color: $white; };
-                50% { color: $orange; };
-                100% { color: $white; };
-            }
         }
 
         .scrollDownIndicator {
@@ -259,12 +252,6 @@ header {
             }
             .third {
                 animation: blink 1s ease-in-out infinite 1.66s;
-            }
-
-            @keyframes blink {
-                0% { color: $white; };
-                50% { color: $orange; };
-                100% { color: $white; };
             }
         }
 
@@ -369,11 +356,24 @@ header {
             .third {
                 animation: blink 1s ease-in-out infinite 1s;
             }
+        }
 
-            @keyframes blink {
-                0% { color: $white; };
-                50% { color: $orange; };
-                100% { color: $white; };
+        .scrollRightIndicator {
+            position: absolute;
+            top: calc(50% - 1rem);
+            right: 1rem;
+            display: flex;
+            .icon {
+                height: 1.5rem;
+                margin: 0 -0.2rem;
+                padding: 0;
+                animation: right 1s ease-in-out infinite;
+            }
+
+            @keyframes right {
+                0% { color: $white; transform: translateX(0%);};
+                50% { color: $white; transform: translateX(100%);};
+                100% { color: $white; transform: translateX(0%);};
             }
         }
 
@@ -392,12 +392,6 @@ header {
             }
             .third {
                 animation: blink 1s ease-in-out infinite 1.66s;
-            }
-
-            @keyframes blink {
-                0% { color: $white; };
-                50% { color: $orange; };
-                100% { color: $white; };
             }
         }
     }
@@ -422,12 +416,6 @@ header {
             }
             .third {
                 animation: blink 1s ease-in-out infinite 1s;
-            }
-
-            @keyframes blink {
-                0% { color: $white; };
-                50% { color: $orange; };
-                100% { color: $white; };
             }
         }
     
@@ -698,3 +686,8 @@ footer {
     position: relative;
     bottom: 0;
 }
+
+.scrollUpIndicator, .scrollRightIndicator, .scrollDownIndicator {
+    cursor: pointer;
+}
+
