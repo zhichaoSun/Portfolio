@@ -127,6 +127,10 @@ header .header-container .links ul li .active {
   color: #ff5722;
 }
 
+header .header-container .section-links {
+  margin: 0 50px;
+}
+
 header .header-container .toggle {
   font-size: 1.5em;
 }

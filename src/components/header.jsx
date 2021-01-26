@@ -111,7 +111,7 @@ const Header = () => {
                     }
                     </ul>
                 </div>
-                <div className="links toggle">
+                {/* <div className="links toggle">
                     <ul>
                         <li onClick={() => alert("Do not click on me")}>
                             <p><CgDarkMode /></p>
@@ -120,7 +120,7 @@ const Header = () => {
                             <p><IoLanguage /></p>
                         </li>
                     </ul>
-                </div>
+                </div> */}
             </div>
         </header>
     );
