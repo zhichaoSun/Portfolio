@@ -363,13 +363,15 @@ header {
             top: calc(50% - 1rem);
             right: 1rem;
             display: flex;
+            a {
+                color: $white;
+            }
             .icon {
                 height: 1.5rem;
                 margin: 0 -0.2rem;
                 padding: 0;
                 animation: right 1s ease-in-out infinite;
             }
-
             @keyframes right {
                 0% { color: $white; transform: translateX(0%);};
                 50% { color: $white; transform: translateX(100%);};

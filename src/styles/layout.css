@@ -520,6 +520,10 @@ header .header-container .toggle {
   display: flex;
 }
 
+.sectionContainer section.work .scrollRightIndicator a {
+  color: #f7f7f7;
+}
+
 .sectionContainer section.work .scrollRightIndicator .icon {
   height: 1.5rem;
   margin: 0 -0.2rem;

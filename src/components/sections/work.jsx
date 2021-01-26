@@ -50,7 +50,7 @@ const Work = () => {
                 </div>
                 <div className="scrollRightIndicator">
                     <div className="icon">
-                        <Link><FaHandPointRight size="2rem"/></Link>
+                        <Link to="toyPage"><FaHandPointRight size="2rem"/></Link>
                     </div>
                 </div>
                 <div className="scrollDownIndicator">
