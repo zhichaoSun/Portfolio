@@ -9,11 +9,11 @@ const Contact = () => {
         gsap.registerPlugin(ScrollTrigger)
 
         gsap.timeline({ scrollTrigger: {
-            markers: true,
+            // markers: true,
             trigger: "#contact",
             start: "center center",
             end: "center center",
-            toggleActions: "play none reverse none",
+            toggleActions: "play none none none",
         }})
         .set([".rectL", ".circleL", ".rectR", ".circleR"], { autoAlpha: 1})
         .from([".rectL", ".circleL"], {
@@ -44,9 +44,11 @@ const Contact = () => {
             color: "#ff5722",
             ease: Power3.easeInOut,
         })
-        .from(".contactForm button", {
+        .fromTo(".contactForm button", {
             color: "#1b1b1b",
             ease: Power3.easeInOut,
+        }, {
+            color: "#ff5722",
         }, "<")
     }, [])
 
