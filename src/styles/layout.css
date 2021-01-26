@@ -513,23 +513,28 @@ header .header-container .toggle {
 
 .sectionContainer section.work .scrollRightIndicator {
   position: absolute;
-  top: calc(50% - 1rem);
+  top: calc(50% - 3rem);
   right: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.sectionContainer section.work .scrollRightIndicator a {
-  color: #f7f7f7;
-}
-
 .sectionContainer section.work .scrollRightIndicator .icon {
-  height: 1.5rem;
+  position: relative;
+  height: 6rem;
+  width: 6rem;
   margin: 0 -0.2rem;
   padding: 0;
-  -webkit-animation: right 1s ease-in-out infinite;
-          animation: right 1s ease-in-out infinite;
+  -webkit-animation: right 1.5s ease-in-out infinite;
+          animation: right 1.5s ease-in-out infinite;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.sectionContainer section.work .scrollRightIndicator .icon a {
+  color: #f7f7f7;
 }
 
 @-webkit-keyframes right {
@@ -540,8 +545,8 @@ header .header-container .toggle {
   }
   50% {
     color: #f7f7f7;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    -webkit-transform: translateX(33%);
+            transform: translateX(33%);
   }
   100% {
     color: #f7f7f7;
@@ -558,8 +563,8 @@ header .header-container .toggle {
   }
   50% {
     color: #f7f7f7;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    -webkit-transform: translateX(33%);
+            transform: translateX(33%);
   }
   100% {
     color: #f7f7f7;

@@ -360,21 +360,26 @@ header {
 
         .scrollRightIndicator {
             position: absolute;
-            top: calc(50% - 1rem);
+            top: calc(50% - 3rem);
             right: 1rem;
             display: flex;
-            a {
-                color: $white;
-            }
             .icon {
-                height: 1.5rem;
+                position: relative;
+                height: 6rem;
+                width: 6rem;
                 margin: 0 -0.2rem;
                 padding: 0;
-                animation: right 1s ease-in-out infinite;
+                animation: right 1.5s ease-in-out infinite;
+                
+                display: grid;
+                place-items: center;
+                a {
+                    color: $white;
+                }
             }
             @keyframes right {
                 0% { color: $white; transform: translateX(0%);};
-                50% { color: $white; transform: translateX(100%);};
+                50% { color: $white; transform: translateX(33%);};
                 100% { color: $white; transform: translateX(0%);};
             }
         }
