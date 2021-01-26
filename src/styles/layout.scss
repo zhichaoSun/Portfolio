@@ -110,33 +110,20 @@ header {
                 height: 1.5rem;
             }
             .first {
-                animation: first 1s ease-in-out infinite 1s;
+                animation: blink 1s ease-in-out infinite 1s;
             }
             .second {
-                animation: second 1s ease-in-out infinite 1.33s;
+                animation: blink 1s ease-in-out infinite 1.33s;
             }
             .third {
-                animation: third 1s ease-in-out infinite 1.66s;
+                animation: blink 1s ease-in-out infinite 1.66s;
             }
 
-            @keyframes first {
+            @keyframes blink {
                 0% { color: $white; };
                 50% { color: $orange; };
                 100% { color: $white; };
             }
-
-            @keyframes second {
-                0% { color: $white; };
-                50% { color: $orange; };
-                100% { color: $white; };
-            }
-
-            @keyframes third {
-                0% { color: $white; };
-                50% { color: $orange; };
-                100% { color: $white; };
-            }
-            
         }
 
         .layers {
@@ -241,28 +228,16 @@ header {
                 height: 1.5rem;
             }
             .first {
-                animation: first 1s ease-in-out infinite 1.66s;
+                animation: blink 1s ease-in-out infinite 1.66s;
             }
             .second {
-                animation: second 1s ease-in-out infinite 1.33s;
+                animation: blink 1s ease-in-out infinite 1.33s;
             }
             .third {
-                animation: third 1s ease-in-out infinite 1s;
+                animation: blink 1s ease-in-out infinite 1s;
             }
 
-            @keyframes first {
-                0% { color: $white; };
-                50% { color: $orange; };
-                100% { color: $white; };
-            }
-
-            @keyframes second {
-                0% { color: $white; };
-                50% { color: $orange; };
-                100% { color: $white; };
-            }
-
-            @keyframes third {
+            @keyframes blink {
                 0% { color: $white; };
                 50% { color: $orange; };
                 100% { color: $white; };
@@ -277,28 +252,16 @@ header {
                 height: 1.5rem;
             }
             .first {
-                animation: first 1s ease-in-out infinite 1s;
+                animation: blink 1s ease-in-out infinite 1s;
             }
             .second {
-                animation: second 1s ease-in-out infinite 1.33s;
+                animation: blink 1s ease-in-out infinite 1.33s;
             }
             .third {
-                animation: third 1s ease-in-out infinite 1.66s;
+                animation: blink 1s ease-in-out infinite 1.66s;
             }
 
-            @keyframes first {
-                0% { color: $white; };
-                50% { color: $orange; };
-                100% { color: $white; };
-            }
-
-            @keyframes second {
-                0% { color: $white; };
-                50% { color: $orange; };
-                100% { color: $white; };
-            }
-
-            @keyframes third {
+            @keyframes blink {
                 0% { color: $white; };
                 50% { color: $orange; };
                 100% { color: $white; };
@@ -398,28 +361,16 @@ header {
                 height: 1.5rem;
             }
             .first {
-                animation: first 1s ease-in-out infinite 1.66s;
+                animation: blink 1s ease-in-out infinite 1.66s;
             }
             .second {
-                animation: second 1s ease-in-out infinite 1.33s;
+                animation: blink 1s ease-in-out infinite 1.33s;
             }
             .third {
-                animation: third 1s ease-in-out infinite 1s;
+                animation: blink 1s ease-in-out infinite 1s;
             }
 
-            @keyframes first {
-                0% { color: $white; };
-                50% { color: $orange; };
-                100% { color: $white; };
-            }
-
-            @keyframes second {
-                0% { color: $white; };
-                50% { color: $orange; };
-                100% { color: $white; };
-            }
-
-            @keyframes third {
+            @keyframes blink {
                 0% { color: $white; };
                 50% { color: $orange; };
                 100% { color: $white; };
@@ -434,28 +385,16 @@ header {
                 height: 1.5rem;
             }
             .first {
-                animation: first 1s ease-in-out infinite 1s;
+                animation: blink 1s ease-in-out infinite 1s;
             }
             .second {
-                animation: second 1s ease-in-out infinite 1.33s;
+                animation: blink 1s ease-in-out infinite 1.33s;
             }
             .third {
-                animation: third 1s ease-in-out infinite 1.66s;
+                animation: blink 1s ease-in-out infinite 1.66s;
             }
 
-            @keyframes first {
-                0% { color: $white; };
-                50% { color: $orange; };
-                100% { color: $white; };
-            }
-
-            @keyframes second {
-                0% { color: $white; };
-                50% { color: $orange; };
-                100% { color: $white; };
-            }
-
-            @keyframes third {
+            @keyframes blink {
                 0% { color: $white; };
                 50% { color: $orange; };
                 100% { color: $white; };
@@ -476,28 +415,16 @@ header {
                 height: 1.5rem;
             }
             .first {
-                animation: first 1s ease-in-out infinite 1.66s;
+                animation: blink 1s ease-in-out infinite 1.66s;
             }
             .second {
-                animation: second 1s ease-in-out infinite 1.33s;
+                animation: blink 1s ease-in-out infinite 1.33s;
             }
             .third {
-                animation: third 1s ease-in-out infinite 1s;
+                animation: blink 1s ease-in-out infinite 1s;
             }
 
-            @keyframes first {
-                0% { color: $white; };
-                50% { color: $orange; };
-                100% { color: $white; };
-            }
-
-            @keyframes second {
-                0% { color: $white; };
-                50% { color: $orange; };
-                100% { color: $white; };
-            }
-
-            @keyframes third {
+            @keyframes blink {
                 0% { color: $white; };
                 50% { color: $orange; };
                 100% { color: $white; };

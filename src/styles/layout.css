@@ -175,21 +175,21 @@ header .header-container .toggle {
 }
 
 .sectionContainer section.home .scrollDownIndicator .first {
-  -webkit-animation: first 1s ease-in-out infinite 1s;
-          animation: first 1s ease-in-out infinite 1s;
+  -webkit-animation: blink 1s ease-in-out infinite 1s;
+          animation: blink 1s ease-in-out infinite 1s;
 }
 
 .sectionContainer section.home .scrollDownIndicator .second {
-  -webkit-animation: second 1s ease-in-out infinite 1.33s;
-          animation: second 1s ease-in-out infinite 1.33s;
+  -webkit-animation: blink 1s ease-in-out infinite 1.33s;
+          animation: blink 1s ease-in-out infinite 1.33s;
 }
 
 .sectionContainer section.home .scrollDownIndicator .third {
-  -webkit-animation: third 1s ease-in-out infinite 1.66s;
-          animation: third 1s ease-in-out infinite 1.66s;
+  -webkit-animation: blink 1s ease-in-out infinite 1.66s;
+          animation: blink 1s ease-in-out infinite 1.66s;
 }
 
-@-webkit-keyframes first {
+@-webkit-keyframes blink {
   0% {
     color: #f7f7f7;
   }
@@ -201,55 +201,7 @@ header .header-container .toggle {
   }
 }
 
-@keyframes first {
-  0% {
-    color: #f7f7f7;
-  }
-  50% {
-    color: #ff5722;
-  }
-  100% {
-    color: #f7f7f7;
-  }
-}
-
-@-webkit-keyframes second {
-  0% {
-    color: #f7f7f7;
-  }
-  50% {
-    color: #ff5722;
-  }
-  100% {
-    color: #f7f7f7;
-  }
-}
-
-@keyframes second {
-  0% {
-    color: #f7f7f7;
-  }
-  50% {
-    color: #ff5722;
-  }
-  100% {
-    color: #f7f7f7;
-  }
-}
-
-@-webkit-keyframes third {
-  0% {
-    color: #f7f7f7;
-  }
-  50% {
-    color: #ff5722;
-  }
-  100% {
-    color: #f7f7f7;
-  }
-}
-
-@keyframes third {
+@keyframes blink {
   0% {
     color: #f7f7f7;
   }
@@ -382,45 +334,21 @@ header .header-container .toggle {
 }
 
 .sectionContainer section.about .scrollUpIndicator .first {
-  -webkit-animation: first 1s ease-in-out infinite 1.66s;
-          animation: first 1s ease-in-out infinite 1.66s;
+  -webkit-animation: blink 1s ease-in-out infinite 1.66s;
+          animation: blink 1s ease-in-out infinite 1.66s;
 }
 
 .sectionContainer section.about .scrollUpIndicator .second {
-  -webkit-animation: second 1s ease-in-out infinite 1.33s;
-          animation: second 1s ease-in-out infinite 1.33s;
+  -webkit-animation: blink 1s ease-in-out infinite 1.33s;
+          animation: blink 1s ease-in-out infinite 1.33s;
 }
 
 .sectionContainer section.about .scrollUpIndicator .third {
-  -webkit-animation: third 1s ease-in-out infinite 1s;
-          animation: third 1s ease-in-out infinite 1s;
+  -webkit-animation: blink 1s ease-in-out infinite 1s;
+          animation: blink 1s ease-in-out infinite 1s;
 }
 
-@keyframes first {
-  0% {
-    color: #f7f7f7;
-  }
-  50% {
-    color: #ff5722;
-  }
-  100% {
-    color: #f7f7f7;
-  }
-}
-
-@keyframes second {
-  0% {
-    color: #f7f7f7;
-  }
-  50% {
-    color: #ff5722;
-  }
-  100% {
-    color: #f7f7f7;
-  }
-}
-
-@keyframes third {
+@keyframes blink {
   0% {
     color: #f7f7f7;
   }
@@ -443,45 +371,21 @@ header .header-container .toggle {
 }
 
 .sectionContainer section.about .scrollDownIndicator .first {
-  -webkit-animation: first 1s ease-in-out infinite 1s;
-          animation: first 1s ease-in-out infinite 1s;
+  -webkit-animation: blink 1s ease-in-out infinite 1s;
+          animation: blink 1s ease-in-out infinite 1s;
 }
 
 .sectionContainer section.about .scrollDownIndicator .second {
-  -webkit-animation: second 1s ease-in-out infinite 1.33s;
-          animation: second 1s ease-in-out infinite 1.33s;
+  -webkit-animation: blink 1s ease-in-out infinite 1.33s;
+          animation: blink 1s ease-in-out infinite 1.33s;
 }
 
 .sectionContainer section.about .scrollDownIndicator .third {
-  -webkit-animation: third 1s ease-in-out infinite 1.66s;
-          animation: third 1s ease-in-out infinite 1.66s;
+  -webkit-animation: blink 1s ease-in-out infinite 1.66s;
+          animation: blink 1s ease-in-out infinite 1.66s;
 }
 
-@keyframes first {
-  0% {
-    color: #f7f7f7;
-  }
-  50% {
-    color: #ff5722;
-  }
-  100% {
-    color: #f7f7f7;
-  }
-}
-
-@keyframes second {
-  0% {
-    color: #f7f7f7;
-  }
-  50% {
-    color: #ff5722;
-  }
-  100% {
-    color: #f7f7f7;
-  }
-}
-
-@keyframes third {
+@keyframes blink {
   0% {
     color: #f7f7f7;
   }
@@ -617,45 +521,21 @@ header .header-container .toggle {
 }
 
 .sectionContainer section.work .scrollUpIndicator .first {
-  -webkit-animation: first 1s ease-in-out infinite 1.66s;
-          animation: first 1s ease-in-out infinite 1.66s;
+  -webkit-animation: blink 1s ease-in-out infinite 1.66s;
+          animation: blink 1s ease-in-out infinite 1.66s;
 }
 
 .sectionContainer section.work .scrollUpIndicator .second {
-  -webkit-animation: second 1s ease-in-out infinite 1.33s;
-          animation: second 1s ease-in-out infinite 1.33s;
+  -webkit-animation: blink 1s ease-in-out infinite 1.33s;
+          animation: blink 1s ease-in-out infinite 1.33s;
 }
 
 .sectionContainer section.work .scrollUpIndicator .third {
-  -webkit-animation: third 1s ease-in-out infinite 1s;
-          animation: third 1s ease-in-out infinite 1s;
+  -webkit-animation: blink 1s ease-in-out infinite 1s;
+          animation: blink 1s ease-in-out infinite 1s;
 }
 
-@keyframes first {
-  0% {
-    color: #f7f7f7;
-  }
-  50% {
-    color: #ff5722;
-  }
-  100% {
-    color: #f7f7f7;
-  }
-}
-
-@keyframes second {
-  0% {
-    color: #f7f7f7;
-  }
-  50% {
-    color: #ff5722;
-  }
-  100% {
-    color: #f7f7f7;
-  }
-}
-
-@keyframes third {
+@keyframes blink {
   0% {
     color: #f7f7f7;
   }
@@ -678,45 +558,21 @@ header .header-container .toggle {
 }
 
 .sectionContainer section.work .scrollDownIndicator .first {
-  -webkit-animation: first 1s ease-in-out infinite 1s;
-          animation: first 1s ease-in-out infinite 1s;
+  -webkit-animation: blink 1s ease-in-out infinite 1s;
+          animation: blink 1s ease-in-out infinite 1s;
 }
 
 .sectionContainer section.work .scrollDownIndicator .second {
-  -webkit-animation: second 1s ease-in-out infinite 1.33s;
-          animation: second 1s ease-in-out infinite 1.33s;
+  -webkit-animation: blink 1s ease-in-out infinite 1.33s;
+          animation: blink 1s ease-in-out infinite 1.33s;
 }
 
 .sectionContainer section.work .scrollDownIndicator .third {
-  -webkit-animation: third 1s ease-in-out infinite 1.66s;
-          animation: third 1s ease-in-out infinite 1.66s;
+  -webkit-animation: blink 1s ease-in-out infinite 1.66s;
+          animation: blink 1s ease-in-out infinite 1.66s;
 }
 
-@keyframes first {
-  0% {
-    color: #f7f7f7;
-  }
-  50% {
-    color: #ff5722;
-  }
-  100% {
-    color: #f7f7f7;
-  }
-}
-
-@keyframes second {
-  0% {
-    color: #f7f7f7;
-  }
-  50% {
-    color: #ff5722;
-  }
-  100% {
-    color: #f7f7f7;
-  }
-}
-
-@keyframes third {
+@keyframes blink {
   0% {
     color: #f7f7f7;
   }
@@ -744,45 +600,21 @@ header .header-container .toggle {
 }
 
 .sectionContainer section.contact .scrollUpIndicator .first {
-  -webkit-animation: first 1s ease-in-out infinite 1.66s;
-          animation: first 1s ease-in-out infinite 1.66s;
+  -webkit-animation: blink 1s ease-in-out infinite 1.66s;
+          animation: blink 1s ease-in-out infinite 1.66s;
 }
 
 .sectionContainer section.contact .scrollUpIndicator .second {
-  -webkit-animation: second 1s ease-in-out infinite 1.33s;
-          animation: second 1s ease-in-out infinite 1.33s;
+  -webkit-animation: blink 1s ease-in-out infinite 1.33s;
+          animation: blink 1s ease-in-out infinite 1.33s;
 }
 
 .sectionContainer section.contact .scrollUpIndicator .third {
-  -webkit-animation: third 1s ease-in-out infinite 1s;
-          animation: third 1s ease-in-out infinite 1s;
+  -webkit-animation: blink 1s ease-in-out infinite 1s;
+          animation: blink 1s ease-in-out infinite 1s;
 }
 
-@keyframes first {
-  0% {
-    color: #f7f7f7;
-  }
-  50% {
-    color: #ff5722;
-  }
-  100% {
-    color: #f7f7f7;
-  }
-}
-
-@keyframes second {
-  0% {
-    color: #f7f7f7;
-  }
-  50% {
-    color: #ff5722;
-  }
-  100% {
-    color: #f7f7f7;
-  }
-}
-
-@keyframes third {
+@keyframes blink {
   0% {
     color: #f7f7f7;
   }
