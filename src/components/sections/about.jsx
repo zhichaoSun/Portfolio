@@ -10,7 +10,13 @@ function About() {
             max: 5,
             speed: 400,
             reverse: true,
-            "full-page-listening": true
+            "full-page-listening": true,
+            reset: false,
+            gyroscope: true,
+            gyroscopeMinAngleX: -45,
+            gyroscopeMaxAngleX: 45,    
+            gyroscopeMinAngleY: -45,  
+            gyroscopeMaxAngleY: 45, 
         })
 
         // gsap.registerPlugin(ScrollTrigger)
