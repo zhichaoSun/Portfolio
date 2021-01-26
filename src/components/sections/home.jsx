@@ -12,7 +12,13 @@ const Home = () => {
             max: 5,
             speed: 400,
             reverse: true,
-            "full-page-listening": true
+            "full-page-listening": true,
+            reset: false,
+            gyroscope: true,
+            gyroscopeMinAngleX: -45,
+            gyroscopeMaxAngleX: 45,    
+            gyroscopeMinAngleY: -45,  
+            gyroscopeMaxAngleY: 45, 
         })
 
         gsap.timeline()
@@ -46,10 +52,10 @@ const Home = () => {
         .to(".home .circle3", { z: -400,}, "<")
         .to(".home .circle4", { z: -600,}, "<")
 
-        gsap.to(".home .scrollIndicator .icon", { 
+        gsap.to(".home .scrollDownIndicator", { 
             scrollTrigger: {
                 // markers: true,
-                trigger: ".home .third svg",
+                trigger: ".home .scrollDownIndicator .third svg",
                 start: "bottom bottom",
                 end: "bottom center",
                 toggleActions: "play none none none",
@@ -85,7 +91,7 @@ const Home = () => {
                         <div><p className="name3">Lorem ipsum dolor sit amet.</p></div>
                     </div>
                 </div>
-                <div className="scrollIndicator">
+                <div className="scrollDownIndicator">
                     <div className="icon first"><BsCaretDownFill size="2rem"/></div>
                     <div className="icon second"><BsCaretDownFill size="2rem"/></div>
                     <div className="icon third"><BsCaretDownFill size="2rem"/></div>

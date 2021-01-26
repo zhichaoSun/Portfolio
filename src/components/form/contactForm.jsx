@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 
 import { Formik, Form } from "formik";
 import * as yup from "yup"
@@ -72,8 +72,9 @@ function ContactForm() {
                             <button 
                                 type='submit'
                                 disabled={!formik.isValid} 
-                                className={(formik.isValid && !serverState.ok) ? "submitBtnEnabled formComponent" : "submitBtnDisabled formComponent"}
-                            >Submit</button>
+                                className={`formComponent`}
+                                style={{color: `${(formik.isValid && !serverState.ok) ? "#ff5722" : "#2b2b2b"}`}}
+                            >Submit</button> 
                         </div>
                         
                         {

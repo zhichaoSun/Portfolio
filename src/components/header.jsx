@@ -3,6 +3,8 @@ import React, { useEffect } from "react"
 import { gsap, Power3, ScrollToPlugin, ScrollTrigger } from "gsap/all";
 
 import { SiLinkedin, SiGithub } from "react-icons/si";
+import { CgDarkMode } from "react-icons/cg";
+import { IoLanguage } from "react-icons/io5";
 
 const sections = ["home", "about", "work", "contact"]
 
@@ -109,6 +111,16 @@ const Header = () => {
                     }
                     </ul>
                 </div>
+                {/* <div className="links toggle">
+                    <ul>
+                        <li onClick={() => alert("Do not click on me")}>
+                            <p><CgDarkMode /></p>
+                        </li>
+                        <li onClick={() => alert("Do not click on me")}>
+                            <p><IoLanguage /></p>
+                        </li>
+                    </ul>
+                </div> */}
             </div>
         </header>
     );

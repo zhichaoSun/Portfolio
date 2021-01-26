@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 
 import { gsap, Power3, ScrollTrigger } from "gsap/all";
 import ContactForm from '../form/contactForm';
+import { BsCaretUpFill } from 'react-icons/bs';
 
 const Contact = () => {
 
@@ -9,11 +10,11 @@ const Contact = () => {
         gsap.registerPlugin(ScrollTrigger)
 
         gsap.timeline({ scrollTrigger: {
-            markers: true,
+            // markers: true,
             trigger: "#contact",
             start: "center center",
             end: "center center",
-            toggleActions: "play none reverse none",
+            toggleActions: "play none none none",
         }})
         .set([".rectL", ".circleL", ".rectR", ".circleR"], { autoAlpha: 1})
         .from([".rectL", ".circleL"], {
@@ -44,10 +45,26 @@ const Contact = () => {
             color: "#ff5722",
             ease: Power3.easeInOut,
         })
-        .from(".contactForm button", {
+        .fromTo(".contactForm button", {
             color: "#1b1b1b",
             ease: Power3.easeInOut,
+        }, {
+            color: "#ff5722",
         }, "<")
+
+        gsap.from(".contact .scrollUpIndicator", { 
+            scrollTrigger: {
+                // markers: true,
+                trigger: ".contact .scrollUpIndicator .third svg",
+                start: "bottom bottom",
+                end: "bottom center",
+                toggleActions: "play none none none",
+                scrub: 0,
+                // once: true
+            },
+            opacity: 0,
+            y: "-10vh"
+        })
     }, [])
 
     const enterL = () => {
@@ -107,6 +124,12 @@ const Contact = () => {
                         </div>
                     </div>
 
+                </div>
+
+                <div className="scrollUpIndicator">
+                    <div className="icon first"><BsCaretUpFill size="2rem"/></div>
+                    <div className="icon second"><BsCaretUpFill size="2rem"/></div>
+                    <div className="icon third"><BsCaretUpFill size="2rem"/></div>
                 </div>
             </section>
         </>
