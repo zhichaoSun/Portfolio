@@ -52,10 +52,10 @@ const Home = () => {
         .to(".home .circle3", { z: -400,}, "<")
         .to(".home .circle4", { z: -600,}, "<")
 
-        gsap.to(".home .scrollDownIndicator .icon", { 
+        gsap.to(".home .scrollDownIndicator", { 
             scrollTrigger: {
                 // markers: true,
-                trigger: ".home .third svg",
+                trigger: ".home .scrollDownIndicator .third svg",
                 start: "bottom bottom",
                 end: "bottom center",
                 toggleActions: "play none none none",

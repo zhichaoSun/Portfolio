@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 
 import { gsap, Power3, ScrollTrigger } from "gsap/all";
 import ContactForm from '../form/contactForm';
+import { BsCaretUpFill } from 'react-icons/bs';
 
 const Contact = () => {
 
@@ -50,6 +51,20 @@ const Contact = () => {
         }, {
             color: "#ff5722",
         }, "<")
+
+        gsap.from(".contact .scrollUpIndicator", { 
+            scrollTrigger: {
+                // markers: true,
+                trigger: ".contact .scrollUpIndicator .third svg",
+                start: "bottom bottom",
+                end: "bottom center",
+                toggleActions: "play none none none",
+                scrub: 0,
+                // once: true
+            },
+            opacity: 0,
+            y: "-10vh"
+        })
     }, [])
 
     const enterL = () => {
@@ -109,6 +124,12 @@ const Contact = () => {
                         </div>
                     </div>
 
+                </div>
+
+                <div className="scrollUpIndicator">
+                    <div className="icon first"><BsCaretUpFill size="2rem"/></div>
+                    <div className="icon second"><BsCaretUpFill size="2rem"/></div>
+                    <div className="icon third"><BsCaretUpFill size="2rem"/></div>
                 </div>
             </section>
         </>

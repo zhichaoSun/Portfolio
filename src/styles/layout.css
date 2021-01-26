@@ -371,6 +371,67 @@ header .header-container .toggle {
   position: relative;
 }
 
+.sectionContainer section.about .scrollUpIndicator {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 1rem);
+}
+
+.sectionContainer section.about .scrollUpIndicator .icon {
+  height: 1.5rem;
+}
+
+.sectionContainer section.about .scrollUpIndicator .first {
+  -webkit-animation: first 1s ease-in-out infinite 1.66s;
+          animation: first 1s ease-in-out infinite 1.66s;
+}
+
+.sectionContainer section.about .scrollUpIndicator .second {
+  -webkit-animation: second 1s ease-in-out infinite 1.33s;
+          animation: second 1s ease-in-out infinite 1.33s;
+}
+
+.sectionContainer section.about .scrollUpIndicator .third {
+  -webkit-animation: third 1s ease-in-out infinite 1s;
+          animation: third 1s ease-in-out infinite 1s;
+}
+
+@keyframes first {
+  0% {
+    color: #f7f7f7;
+  }
+  50% {
+    color: #ff5722;
+  }
+  100% {
+    color: #f7f7f7;
+  }
+}
+
+@keyframes second {
+  0% {
+    color: #f7f7f7;
+  }
+  50% {
+    color: #ff5722;
+  }
+  100% {
+    color: #f7f7f7;
+  }
+}
+
+@keyframes third {
+  0% {
+    color: #f7f7f7;
+  }
+  50% {
+    color: #ff5722;
+  }
+  100% {
+    color: #f7f7f7;
+  }
+}
+
 .sectionContainer section.about .scrollDownIndicator {
   position: absolute;
   bottom: 2rem;
@@ -545,6 +606,67 @@ header .header-container .toggle {
   line-height: 2rem;
 }
 
+.sectionContainer section.work .scrollUpIndicator {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 1rem);
+}
+
+.sectionContainer section.work .scrollUpIndicator .icon {
+  height: 1.5rem;
+}
+
+.sectionContainer section.work .scrollUpIndicator .first {
+  -webkit-animation: first 1s ease-in-out infinite 1.66s;
+          animation: first 1s ease-in-out infinite 1.66s;
+}
+
+.sectionContainer section.work .scrollUpIndicator .second {
+  -webkit-animation: second 1s ease-in-out infinite 1.33s;
+          animation: second 1s ease-in-out infinite 1.33s;
+}
+
+.sectionContainer section.work .scrollUpIndicator .third {
+  -webkit-animation: third 1s ease-in-out infinite 1s;
+          animation: third 1s ease-in-out infinite 1s;
+}
+
+@keyframes first {
+  0% {
+    color: #f7f7f7;
+  }
+  50% {
+    color: #ff5722;
+  }
+  100% {
+    color: #f7f7f7;
+  }
+}
+
+@keyframes second {
+  0% {
+    color: #f7f7f7;
+  }
+  50% {
+    color: #ff5722;
+  }
+  100% {
+    color: #f7f7f7;
+  }
+}
+
+@keyframes third {
+  0% {
+    color: #f7f7f7;
+  }
+  50% {
+    color: #ff5722;
+  }
+  100% {
+    color: #f7f7f7;
+  }
+}
+
 .sectionContainer section.work .scrollDownIndicator {
   position: absolute;
   bottom: 2rem;
@@ -608,6 +730,68 @@ header .header-container .toggle {
 
 .sectionContainer section.contact {
   height: calc(100vh - 100px);
+  position: relative;
+}
+
+.sectionContainer section.contact .scrollUpIndicator {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 1rem);
+}
+
+.sectionContainer section.contact .scrollUpIndicator .icon {
+  height: 1.5rem;
+}
+
+.sectionContainer section.contact .scrollUpIndicator .first {
+  -webkit-animation: first 1s ease-in-out infinite 1.66s;
+          animation: first 1s ease-in-out infinite 1.66s;
+}
+
+.sectionContainer section.contact .scrollUpIndicator .second {
+  -webkit-animation: second 1s ease-in-out infinite 1.33s;
+          animation: second 1s ease-in-out infinite 1.33s;
+}
+
+.sectionContainer section.contact .scrollUpIndicator .third {
+  -webkit-animation: third 1s ease-in-out infinite 1s;
+          animation: third 1s ease-in-out infinite 1s;
+}
+
+@keyframes first {
+  0% {
+    color: #f7f7f7;
+  }
+  50% {
+    color: #ff5722;
+  }
+  100% {
+    color: #f7f7f7;
+  }
+}
+
+@keyframes second {
+  0% {
+    color: #f7f7f7;
+  }
+  50% {
+    color: #ff5722;
+  }
+  100% {
+    color: #f7f7f7;
+  }
+}
+
+@keyframes third {
+  0% {
+    color: #f7f7f7;
+  }
+  50% {
+    color: #ff5722;
+  }
+  100% {
+    color: #f7f7f7;
+  }
 }
 
 .sectionContainer section.contact .contact-grid-container {

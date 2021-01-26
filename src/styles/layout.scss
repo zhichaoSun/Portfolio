@@ -233,6 +233,42 @@ header {
     section.about {
         position: relative;
 
+        .scrollUpIndicator {
+            position: absolute;
+            top: 0;
+            left: calc(50% - 1rem);
+            .icon {
+                height: 1.5rem;
+            }
+            .first {
+                animation: first 1s ease-in-out infinite 1.66s;
+            }
+            .second {
+                animation: second 1s ease-in-out infinite 1.33s;
+            }
+            .third {
+                animation: third 1s ease-in-out infinite 1s;
+            }
+
+            @keyframes first {
+                0% { color: $white; };
+                50% { color: $orange; };
+                100% { color: $white; };
+            }
+
+            @keyframes second {
+                0% { color: $white; };
+                50% { color: $orange; };
+                100% { color: $white; };
+            }
+
+            @keyframes third {
+                0% { color: $white; };
+                50% { color: $orange; };
+                100% { color: $white; };
+            }
+        }
+
         .scrollDownIndicator {
             position: absolute;
             bottom: 2rem;
@@ -353,6 +389,43 @@ header {
             line-height: 2rem;
         }
 
+
+        .scrollUpIndicator {
+            position: absolute;
+            top: 0;
+            left: calc(50% - 1rem);
+            .icon {
+                height: 1.5rem;
+            }
+            .first {
+                animation: first 1s ease-in-out infinite 1.66s;
+            }
+            .second {
+                animation: second 1s ease-in-out infinite 1.33s;
+            }
+            .third {
+                animation: third 1s ease-in-out infinite 1s;
+            }
+
+            @keyframes first {
+                0% { color: $white; };
+                50% { color: $orange; };
+                100% { color: $white; };
+            }
+
+            @keyframes second {
+                0% { color: $white; };
+                50% { color: $orange; };
+                100% { color: $white; };
+            }
+
+            @keyframes third {
+                0% { color: $white; };
+                50% { color: $orange; };
+                100% { color: $white; };
+            }
+        }
+
         .scrollDownIndicator {
             position: absolute;
             bottom: 2rem;
@@ -393,6 +466,43 @@ header {
     section.contact {
         height: calc(100vh - 100px);
         // overflow: hidden;
+
+        position: relative;
+        .scrollUpIndicator {
+            position: absolute;
+            top: 0;
+            left: calc(50% - 1rem);
+            .icon {
+                height: 1.5rem;
+            }
+            .first {
+                animation: first 1s ease-in-out infinite 1.66s;
+            }
+            .second {
+                animation: second 1s ease-in-out infinite 1.33s;
+            }
+            .third {
+                animation: third 1s ease-in-out infinite 1s;
+            }
+
+            @keyframes first {
+                0% { color: $white; };
+                50% { color: $orange; };
+                100% { color: $white; };
+            }
+
+            @keyframes second {
+                0% { color: $white; };
+                50% { color: $orange; };
+                100% { color: $white; };
+            }
+
+            @keyframes third {
+                0% { color: $white; };
+                50% { color: $orange; };
+                100% { color: $white; };
+            }
+        }
     
         .contact-grid-container {
             height: 100%;

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { gsap, ScrollTrigger, Power3 } from "gsap/all";
 import VanillaTilt from "vanilla-tilt";
 
-import { BsCaretDownFill } from "react-icons/bs";
+import { BsCaretDownFill, BsCaretUpFill } from "react-icons/bs";
 
 function About() {
     
@@ -55,10 +55,23 @@ function About() {
         .to(".about .rect3", { z: -400,}, "<")
         .to(".about .rect4", { z: -600,}, "<")
 
-        gsap.to(".about .scrollDownIndicator .icon", { 
+        gsap.from(".about .scrollUpIndicator", { 
             scrollTrigger: {
                 // markers: true,
-                trigger: ".about .third svg",
+                trigger: ".about .scrollUpIndicator .third svg",
+                start: "bottom bottom",
+                end: "bottom center",
+                toggleActions: "play none none none",
+                scrub: 0,
+                // once: true
+            },
+            opacity: 0,
+            y: "-10vh"
+        })
+        gsap.to(".about .scrollDownIndicator", { 
+            scrollTrigger: {
+                markers: true,
+                trigger: ".about .scrollDownIndicator .third svg",
                 start: "bottom bottom",
                 end: "bottom center",
                 toggleActions: "play none none none",
@@ -68,6 +81,7 @@ function About() {
             opacity: 0,
             y: "10vh"
         })
+
     }, [])
 
 
@@ -85,6 +99,11 @@ function About() {
                         <div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium facilis, mollitia veritatis natus temporibus modi?</p></div>
                         <div><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa quidem nemo unde corrupti totam quisquam, error reprehenderit repellendus laudantium modi eum. Eius excepturi voluptate facere?</p></div>
                     </div>
+                </div>
+                <div className="scrollUpIndicator">
+                    <div className="icon first"><BsCaretUpFill size="2rem"/></div>
+                    <div className="icon second"><BsCaretUpFill size="2rem"/></div>
+                    <div className="icon third"><BsCaretUpFill size="2rem"/></div>
                 </div>
                 <div className="scrollDownIndicator">
                     <div className="icon first"><BsCaretDownFill size="2rem"/></div>
