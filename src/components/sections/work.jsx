@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react'
-import { Link } from "gatsby";
 
 import { gsap } from "gsap";
+
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 import { BsCaretDownFill, BsCaretUpFill } from "react-icons/bs";
 import { FaHandPointRight } from "react-icons/fa";
 
-const Work = () => {
+const Work = ({scrollTo}) => {
 
     useEffect(() => {
         gsap.from(".work .scrollUpIndicator", { 
@@ -43,17 +44,22 @@ const Work = () => {
             <section className="work">
                 <h1>TBD</h1>
                 <p>Will put some recent work here. Might do a page transition using barba.js to another page to show something else like my photagraphy or some toys written by javascript.</p>
-                <div className="scrollUpIndicator">
+                <div className="scrollUpIndicator" onClick={()=>scrollTo("about")}>
                     <div className="icon first"><BsCaretUpFill size="2rem"/></div>
                     <div className="icon second"><BsCaretUpFill size="2rem"/></div>
                     <div className="icon third"><BsCaretUpFill size="2rem"/></div>
                 </div>
                 <div className="scrollRightIndicator">
-                    <div className="icon">
-                        <Link to="toyPage"><FaHandPointRight size="2rem"/></Link>
-                    </div>
+                    <AniLink 
+                        cover to="/toyPage"
+                        duration={1.5}
+                        direction="right"
+                        bg="#ff5722"
+                    >
+                        <FaHandPointRight />
+                    </AniLink>
                 </div>
-                <div className="scrollDownIndicator">
+                <div className="scrollDownIndicator" onClick={()=>scrollTo("contact")}>
                     <div className="icon first"><BsCaretDownFill size="2rem"/></div>
                     <div className="icon second"><BsCaretDownFill size="2rem"/></div>
                     <div className="icon third"><BsCaretDownFill size="2rem"/></div>

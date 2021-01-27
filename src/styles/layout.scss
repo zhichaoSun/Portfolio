@@ -74,7 +74,6 @@ header {
     }
 }
 
-
 .sectionContainer{
     margin: 0 auto;
     max-width: 1280px;
@@ -362,21 +361,26 @@ header {
             position: absolute;
             top: calc(50% - 3rem);
             right: 1rem;
+            
             display: flex;
-            .icon {
-                position: relative;
-                height: 6rem;
-                width: 6rem;
-                margin: 0 -0.2rem;
-                padding: 0;
-                animation: right 1.5s ease-in-out infinite;
-                
-                display: grid;
-                place-items: center;
-                a {
-                    color: $white;
-                }
+            align-items: center;
+            justify-content: center;
+
+            height: 6rem;
+            width: 6rem;
+            margin: 0 -0.2rem;
+            padding: 0;
+            font-size: 2rem;
+
+            // border: 1px solid $white;
+            
+            a {
+                text-decoration: none;
+                color: $white;
+                // border: 1px solid $white;
             }
+
+            animation: right 1.5s ease-in-out infinite;
             @keyframes right {
                 0% { color: $white; transform: translateX(0%);};
                 50% { color: $white; transform: translateX(33%);};
@@ -696,5 +700,22 @@ footer {
 
 .scrollUpIndicator, .scrollRightIndicator, .scrollDownIndicator {
     cursor: pointer;
+    z-index: 10;
 }
 
+.toyPage {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem;
+    font-weight: 800;
+
+    a {
+        text-decoration: none;
+        color: $white;
+    }
+}

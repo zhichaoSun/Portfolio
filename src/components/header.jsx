@@ -70,7 +70,7 @@ const Header = () => {
 
     }, [])
 
-    const scrollHandler = (section) => {
+    const scrollTo = (section) => {
         gsap.to(window, {
             duration: 0.5, 
             scrollTo: `#${section}`,
@@ -101,7 +101,7 @@ const Header = () => {
                         sections.map(section => (
                             <li key={section}>
                                 <p
-                                    onClick={() => scrollHandler(section)}
+                                    onClick={() => scrollTo(section)}
                                     id={`p-${section}`}
                                 >
                                     {section}

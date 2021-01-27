@@ -4,7 +4,7 @@ import { gsap, Power3, ScrollTrigger } from "gsap/all";
 import ContactForm from '../form/contactForm';
 import { BsCaretUpFill } from 'react-icons/bs';
 
-const Contact = () => {
+const Contact = ({scrollTo}) => {
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger)
@@ -126,7 +126,7 @@ const Contact = () => {
 
                 </div>
 
-                <div className="scrollUpIndicator">
+                <div className="scrollUpIndicator" onClick={()=>scrollTo("work")}>
                     <div className="icon first"><BsCaretUpFill size="2rem"/></div>
                     <div className="icon second"><BsCaretUpFill size="2rem"/></div>
                     <div className="icon third"><BsCaretUpFill size="2rem"/></div>
