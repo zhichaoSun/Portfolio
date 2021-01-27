@@ -134,17 +134,26 @@ const IndexPage = () => {
         })
     }, []);
 
+    const scrollTo = (id) => {
+        gsap.to(window, {
+            duration: 0.5, 
+            scrollTo: `#${id}`,
+            ease: Power3.easeInOut
+        });
+    }
+
+
     return(
-        <Layout>
+        <Layout scrollTo={scrollTo} >
             <SEO title="Home" />
 
-            <Home />
+            <Home scrollTo={scrollTo} />
 
-            <About />
+            <About scrollTo={scrollTo} />
 
-            <Work />
+            <Work scrollTo={scrollTo} />
 
-            <Contact />
+            <Contact scrollTo={scrollTo} />
 
             {/* <Link to="/page-2/">Go to page 2</Link> */}
         </Layout>

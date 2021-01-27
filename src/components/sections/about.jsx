@@ -4,7 +4,7 @@ import VanillaTilt from "vanilla-tilt";
 
 import { BsCaretDownFill, BsCaretUpFill } from "react-icons/bs";
 
-function About() {
+function About({scrollTo}) {
     
     useEffect(() => {
 
@@ -100,12 +100,12 @@ function About() {
                         <div><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa quidem nemo unde corrupti totam quisquam, error reprehenderit repellendus laudantium modi eum. Eius excepturi voluptate facere?</p></div>
                     </div>
                 </div>
-                <div className="scrollUpIndicator">
+                <div className="scrollUpIndicator" onClick={()=>scrollTo("home")}>
                     <div className="icon first"><BsCaretUpFill size="2rem"/></div>
                     <div className="icon second"><BsCaretUpFill size="2rem"/></div>
                     <div className="icon third"><BsCaretUpFill size="2rem"/></div>
                 </div>
-                <div className="scrollDownIndicator">
+                <div className="scrollDownIndicator" onClick={()=>scrollTo("work")}>
                     <div className="icon first"><BsCaretDownFill size="2rem"/></div>
                     <div className="icon second"><BsCaretDownFill size="2rem"/></div>
                     <div className="icon third"><BsCaretDownFill size="2rem"/></div>
