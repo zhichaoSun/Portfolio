@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
-import { Link } from "gatsby";
+import TransitionLink from "gatsby-plugin-transition-link";
 
 import { gsap } from "gsap";
 
@@ -9,14 +9,14 @@ const toyPage = () => {
 
     return (
         <>
-            <div
-                style={{
-                    width: "100vw", height: "100vh",
-                    display: "flex", justifyContent: "center", alignItems: "center",
-                    color: "#f7f7f7", fontFamily: "Poppins", fontSize: "4rem", fontWeight: "800"
-                }}
-            >
-                <Link to="/" style={{textDecoration: "none", color: "#f7f7f7"}}>{`<-`}</Link>
+            <div className="toyPage">
+                <TransitionLink 
+                    to="/"
+                    exit={{length: 1}}
+                    entry={{delay: 1}}
+                >
+                {`<-`}
+                </TransitionLink>
             </div>
         </>
     )

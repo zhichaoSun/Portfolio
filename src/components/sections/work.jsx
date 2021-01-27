@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
-import { Link } from "gatsby";
 
 import { gsap } from "gsap";
+
+import TransitionLink from "gatsby-plugin-transition-link";
 
 import { BsCaretDownFill, BsCaretUpFill } from "react-icons/bs";
 import { FaHandPointRight } from "react-icons/fa";
@@ -49,7 +50,13 @@ const Work = ({scrollTo}) => {
                     <div className="icon third"><BsCaretUpFill size="2rem"/></div>
                 </div>
                 <div className="scrollRightIndicator">
-                    <Link to="toyPage"><FaHandPointRight /></Link>
+                    <TransitionLink 
+                        to="/toyPage"
+                        exit={{length: 1}}
+                        entry={{delay: 1}}
+                    >
+                        <FaHandPointRight />
+                    </TransitionLink>
                 </div>
                 <div className="scrollDownIndicator" onClick={()=>scrollTo("contact")}>
                     <div className="icon first"><BsCaretDownFill size="2rem"/></div>
