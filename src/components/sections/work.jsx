@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 
 import { gsap } from "gsap";
 
-import TransitionLink from "gatsby-plugin-transition-link";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 import { BsCaretDownFill, BsCaretUpFill } from "react-icons/bs";
 import { FaHandPointRight } from "react-icons/fa";
@@ -50,13 +50,14 @@ const Work = ({scrollTo}) => {
                     <div className="icon third"><BsCaretUpFill size="2rem"/></div>
                 </div>
                 <div className="scrollRightIndicator">
-                    <TransitionLink 
-                        to="/toyPage"
-                        exit={{length: 1}}
-                        entry={{delay: 1}}
+                    <AniLink 
+                        cover to="/toyPage"
+                        duration={1.5}
+                        direction="right"
+                        bg="#ff5722"
                     >
                         <FaHandPointRight />
-                    </TransitionLink>
+                    </AniLink>
                 </div>
                 <div className="scrollDownIndicator" onClick={()=>scrollTo("contact")}>
                     <div className="icon first"><BsCaretDownFill size="2rem"/></div>
