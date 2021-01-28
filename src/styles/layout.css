@@ -536,6 +536,11 @@ header .header-container .toggle {
 .sectionContainer section.work .scrollRightIndicator a {
   text-decoration: none;
   color: #f7f7f7;
+  height: 100%;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
 }
 
 @-webkit-keyframes right {
