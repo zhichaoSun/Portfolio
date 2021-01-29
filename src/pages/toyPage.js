@@ -13,28 +13,28 @@ const ToyPage = () => {
                 <TransitionLink 
                     to="/"
                     exit={{
-                        length: 1,
+                        length: 0.8,
                         trigger: ({node}) => (
                             gsap.timeline()
                             .to(node.querySelector(".toyPageCover"), {
-                                duration: 1, 
+                                duration: 0.8, 
                                 xPercent: 100, 
                                 ease: Power3.easeIn,
                             })
                         )
                     }}
                     entry={{
-                        delay: 1,
-                        length: 1.5,
+                        delay: 0.8,
+                        length: 1.6,
                         trigger: ({node}) => (
                             gsap.timeline()
                             .from(node.querySelector(".workSectionCover"), {
                                 xPercent: -100,
-                                duration: 1, 
+                                duration: 0.8, 
                                 ease: Power3.easeOut
                             })
                             .to(window, {
-                                duration: 0.5, 
+                                duration: 0.8, 
                                 scrollTo: `#work`,
                                 ease: Power3.easeInOut
                             })
