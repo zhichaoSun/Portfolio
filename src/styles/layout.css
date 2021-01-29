@@ -76,6 +76,7 @@ header {
   display: block;
   position: fixed;
   top: 0;
+  left: 0;
   z-index: 10;
   overflow: hidden;
   visibility: hidden;
@@ -96,6 +97,7 @@ header .header-container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 10;
 }
 
 header .header-container .links {
@@ -536,6 +538,11 @@ header .header-container .toggle {
 .sectionContainer section.work .scrollRightIndicator a {
   text-decoration: none;
   color: #f7f7f7;
+  height: 100%;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
 }
 
 @-webkit-keyframes right {
@@ -597,6 +604,16 @@ header .header-container .toggle {
 .sectionContainer section.work .scrollDownIndicator .third {
   -webkit-animation: blink 1s ease-in-out infinite 1.66s;
           animation: blink 1s ease-in-out infinite 1.66s;
+}
+
+.sectionContainer .workSectionCover {
+  position: absolute;
+  top: 0;
+  left: 100vw;
+  background-color: #ff5722;
+  width: 100vw;
+  height: 100%;
+  z-index: 20;
 }
 
 .sectionContainer section.contact {
@@ -882,6 +899,17 @@ footer {
 .scrollUpIndicator, .scrollRightIndicator, .scrollDownIndicator {
   cursor: pointer;
   z-index: 10;
+}
+
+.toyPageCover {
+  position: absolute;
+  top: 0;
+  left: -100vw;
+  background-color: #ff5722;
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+  color: #f7f7f7;
 }
 
 .toyPage {
