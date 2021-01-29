@@ -127,6 +127,8 @@ header {
         .layers {
             transform-style: preserve-3d;
             transform: perspective(1000px);
+
+            // transition: all 0.3s ease-in-out; TODO: for mobile devices
     
             position: relative;
             height: 100%;
@@ -410,6 +412,17 @@ header {
                 animation: blink 1s ease-in-out infinite 1.66s;
             }
         }
+    }
+
+    .workSectionCover {
+        position: absolute;
+        top: 0;
+        left: 100vw;
+        // left: 0;
+        background-color: $orange;
+        width: 100vw;
+        height: 100%;
+        z-index: 20;
     }
     
     section.contact {
@@ -724,3 +737,4 @@ footer {
         color: $white;
     }
 }
+

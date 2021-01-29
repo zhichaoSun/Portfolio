@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react'
 
-import { gsap } from "gsap";
+import { gsap, Power3 } from "gsap";
 
 import AniLink from "gatsby-plugin-transition-link/AniLink";
+import TransitionLink from "gatsby-plugin-transition-link";
 
 import { BsCaretDownFill, BsCaretUpFill } from "react-icons/bs";
 import { FaHandPointRight } from "react-icons/fa";
@@ -50,14 +51,48 @@ const Work = ({scrollTo}) => {
                     <div className="icon third"><BsCaretUpFill size="2rem"/></div>
                 </div>
                 <div className="scrollRightIndicator">
-                    <AniLink 
+                    <TransitionLink 
+                        to="/toyPage"
+                        exit={{
+                            length: 2,
+                            trigger: ({node}) => (
+                                gsap.timeline()
+                                .to(node, {
+                                    duration: 1, 
+                                    xPercent: -100, 
+                                    ease: Power3.easeInOut,
+                                })
+                                .to(node, {
+                                    duration: 1, 
+                                    xPercent: -210, 
+                                    opacity: 0,
+                                    ease: Power3.easeInOut,
+                                })
+                            )
+                        }}
+                        entry={{
+                            delay: 2,
+                            length: 0.5,
+                            trigger: ({node}) => (
+                                gsap.timeline()
+                                .from(node, {
+                                    opacity: 0,
+                                    duration: 0.5, 
+                                    ease: Power3.easeInOut
+                                })
+                            )
+                        }}
+                    >
+                        <FaHandPointRight />
+                    </TransitionLink>
+                    {/* <AniLink 
                         cover to="/toyPage"
                         duration={1.5}
                         direction="right"
                         bg="#ff5722"
                     >
                         <FaHandPointRight />
-                    </AniLink>
+                    </AniLink> */}
                 </div>
                 <div className="scrollDownIndicator" onClick={()=>scrollTo("contact")}>
                     <div className="icon first"><BsCaretDownFill size="2rem"/></div>
@@ -65,6 +100,7 @@ const Work = ({scrollTo}) => {
                     <div className="icon third"><BsCaretDownFill size="2rem"/></div>
                 </div>
             </section>
+            <div className="workSectionCover"></div>
         </>
     )
 }
