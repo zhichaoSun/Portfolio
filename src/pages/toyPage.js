@@ -1,26 +1,51 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Layout from '../components/layout'
-import AniLink from "gatsby-plugin-transition-link/AniLink";
+import TransitionLink from "gatsby-plugin-transition-link";
 
-import { gsap } from "gsap";
+import { gsap, Power3 } from "gsap";
 
-const toyPage = () => {
-    
+const ToyPage = () => {
 
     return (
         <>
+            <div className="toyPageCover"></div>
             <div className="toyPage">
-                <AniLink 
-                    cover to="/"
-                    duration={1.5}
-                    direction="left"
-                    bg="#ff5722"
+                <TransitionLink 
+                    to="/"
+                    exit={{
+                        length: 1,
+                        trigger: ({node}) => (
+                            gsap.timeline()
+                            .to(node.querySelector(".toyPageCover"), {
+                                duration: 1, 
+                                xPercent: 100, 
+                                ease: Power3.easeIn,
+                            })
+                        )
+                    }}
+                    entry={{
+                        delay: 1,
+                        length: 1.5,
+                        trigger: ({node}) => (
+                            gsap.timeline()
+                            .from(node.querySelector(".workSectionCover"), {
+                                xPercent: -100,
+                                duration: 1, 
+                                ease: Power3.easeOut
+                            })
+                            .to(window, {
+                                duration: 0.5, 
+                                scrollTo: `#work`,
+                                ease: Power3.easeInOut
+                            })
+                        )
+                    }}
                 >
-                {`<-`}
-                </AniLink>
+                    <span className="ttttt">{`<-`}</span>
+                </TransitionLink>
             </div>
         </>
     )
 }
 
-export default toyPage
+export default ToyPage

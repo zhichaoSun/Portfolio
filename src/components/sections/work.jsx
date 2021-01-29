@@ -54,31 +54,25 @@ const Work = ({scrollTo}) => {
                     <TransitionLink 
                         to="/toyPage"
                         exit={{
-                            length: 2,
+                            length: 1,
                             trigger: ({node}) => (
                                 gsap.timeline()
-                                .to(node, {
+                                .to(node.querySelector(".workSectionCover"), {
                                     duration: 1, 
-                                    xPercent: -100, 
-                                    ease: Power3.easeInOut,
-                                })
-                                .to(node, {
-                                    duration: 1, 
-                                    xPercent: -210, 
-                                    opacity: 0,
-                                    ease: Power3.easeInOut,
+                                    xPercent: -101, 
+                                    ease: Power3.easeIn,
                                 })
                             )
                         }}
                         entry={{
-                            delay: 2,
-                            length: 0.5,
+                            delay: 1,
+                            length: 1,
                             trigger: ({node}) => (
                                 gsap.timeline()
-                                .from(node, {
-                                    opacity: 0,
-                                    duration: 0.5, 
-                                    ease: Power3.easeInOut
+                                .from(node.querySelector(".toyPageCover"), {
+                                    xPercent: 100,
+                                    duration: 1, 
+                                    ease: Power3.easeOut
                                 })
                             )
                         }}

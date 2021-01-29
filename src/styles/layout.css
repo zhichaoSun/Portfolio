@@ -76,6 +76,7 @@ header {
   display: block;
   position: fixed;
   top: 0;
+  left: 0;
   z-index: 10;
   overflow: hidden;
   visibility: hidden;
@@ -96,6 +97,7 @@ header .header-container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 10;
 }
 
 header .header-container .links {
@@ -897,6 +899,17 @@ footer {
 .scrollUpIndicator, .scrollRightIndicator, .scrollDownIndicator {
   cursor: pointer;
   z-index: 10;
+}
+
+.toyPageCover {
+  position: absolute;
+  top: 0;
+  left: -100vw;
+  background-color: #ff5722;
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+  color: #f7f7f7;
 }
 
 .toyPage {
