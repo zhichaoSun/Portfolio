@@ -99,7 +99,7 @@ const Work = ({scrollTo}) => {
                 </div>
                 <div className="scrollRightIndicator">
                     <TransitionLink 
-                        to="/toyPage"
+                        to="/toys"
                         exit={{
                             length: 0.8,
                             trigger: ({node}) => (
@@ -126,14 +126,6 @@ const Work = ({scrollTo}) => {
                     >
                         <FaHandPointRight />
                     </TransitionLink>
-                    {/* <AniLink 
-                        cover to="/toyPage"
-                        duration={1.5}
-                        direction="right"
-                        bg="#ff5722"
-                    >
-                        <FaHandPointRight />
-                    </AniLink> */}
                 </div>
                 <div className="scrollDownIndicator" onClick={()=>scrollTo("contact")}>
                     <div className="icon first"><BsCaretDownFill size="2rem"/></div>

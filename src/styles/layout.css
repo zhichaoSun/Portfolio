@@ -992,7 +992,7 @@ footer {
   color: #f7f7f7;
 }
 
-.toyPage {
+.toys {
   width: 100vw;
   height: 100vh;
   display: -webkit-box;
@@ -1010,7 +1010,7 @@ footer {
   font-weight: 800;
 }
 
-.toyPage a {
+.toys a {
   text-decoration: none;
   color: #f7f7f7;
 }
