@@ -69,7 +69,7 @@ const Work = ({scrollTo}) => {
                         </div>
                         <div className="details">
                             <div className="title">Embedded System</div>
-                            <div className="content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad minima officiis illo architecto quam, corrupti ipsa minus maiores placeat vitae maxime similique commodi nihil voluptate.</div>
+                            <div className="content">I used to be working in the control filed. Design and assemble the printed circuit board based on the requirement, flash the control program into the chips and finally integrate it with the system.</div>
                         </div>
                     </div>
                     <div className="card">
@@ -78,7 +78,7 @@ const Work = ({scrollTo}) => {
                         </div>
                         <div className="details">
                             <div className="title">System Monitoring</div>
-                            <div className="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus aperiam, temporibus mollitia iste possimus unde. Qui tenetur minus rerum ullam, deleniti ipsa exercitationem aperiam sapiente.</div>
+                            <div className="content">Programming on the monitoring system is also having a plenty of fun. And this is when I start to equip myself with modern javascript framework and web app development knowledge.</div>
                         </div>
                     </div>
                     <div className="card">
@@ -87,7 +87,7 @@ const Work = ({scrollTo}) => {
                         </div>
                         <div className="details">
                             <div className="title">Trading Advisory</div>
-                            <div className="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro magnam totam laboriosam esse reiciendis commodi officiis voluptatum autem beatae sunt itaque, accusamus perferendis.</div>
+                            <div className="content">Using ReactJS to develop and support all phases of an electrical energy trading advisory web app to facilitate AI model traning of a team of machine learning engineers and data scientists.</div>
                         </div>
                     </div>
                 </div>

@@ -399,7 +399,7 @@ header .header-container .toggle {
 .sectionContainer section.about .rects .rectContent {
   position: absolute;
   top: 15%;
-  left: 10%;
+  left: 15%;
   width: 33%;
   height: 70%;
   -webkit-transform: translate(100%, 0px);
@@ -459,8 +459,8 @@ header .header-container .toggle {
   top: 0;
   width: 105vh;
   height: 60vh;
-  -webkit-transform: translate(-20%, 30%) rotateZ(-10deg);
-          transform: translate(-20%, 30%) rotateZ(-10deg);
+  -webkit-transform: translate(-10%, 30%) rotateZ(-10deg);
+          transform: translate(-10%, 30%) rotateZ(-10deg);
   background-color: #954127;
 }
 
@@ -469,8 +469,8 @@ header .header-container .toggle {
   top: 0px;
   width: 120vh;
   height: 70vh;
-  -webkit-transform: translate(-20%, 10%) rotateZ(75deg);
-          transform: translate(-20%, 10%) rotateZ(75deg);
+  -webkit-transform: translate(-10%, 20%) rotateZ(75deg);
+          transform: translate(-10%, 20%) rotateZ(75deg);
   background-color: #603629;
 }
 
