@@ -503,8 +503,8 @@ header .header-container .toggle {
 
 .sectionContainer section.work .cards .card {
   position: relative;
-  width: 25%;
-  height: 50%;
+  width: 320px;
+  height: 465px;
   -webkit-box-shadow: -10px -10px 40px #1b1b1b;
           box-shadow: -10px -10px 40px #1b1b1b;
   overflow: hidden;
