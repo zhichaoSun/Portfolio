@@ -93,7 +93,7 @@ const Work = ({scrollTo}) => {
                 <div className="cards">
                     <div className="card">
                         <div className="image">
-                            <Img className="gatsbyImage" draggable={false} fluid={data.images.edges[2].node.childImageSharp.fluid}/>
+                            <Img className="gatsbyImage" draggable={false} fluid={data.images.edges[1].node.childImageSharp.fluid}/>
                         </div>
                         <div className="details">
                             <div className="title">
@@ -121,7 +121,7 @@ const Work = ({scrollTo}) => {
                     </div>
                     <div className="card">
                         <div className="image">
-                            <Img className="gatsbyImage" draggable={false} fluid={data.images.edges[1].node.childImageSharp.fluid}/>
+                            <Img className="gatsbyImage" draggable={false} fluid={data.images.edges[2].node.childImageSharp.fluid}/>
                         </div>
                         <div className="details">
                             <div className="title">
