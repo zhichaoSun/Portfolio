@@ -379,9 +379,9 @@ header {
 
                 .details {
                     position: absolute;
-                    top: 77%;
+                    top: 75.3%;
                     left: 0;
-                    height: 23%;
+                    // height: 24%;
                     width: 100%;
 
                     transition: all 0.2s ease-in-out;
@@ -393,6 +393,11 @@ header {
                         color: $gray;
                         height: 100%;
                         width: 100%;
+                        p {
+                            overflow: hidden;
+                            padding: 0 0 0.4rem 0;
+                            visibility: hidden;
+                        }
                     }
                     .content {
                         box-sizing: border-box;
@@ -795,8 +800,11 @@ footer {
     bottom: 0;
 }
 
-.scrollUpIndicator, .scrollRightIndicator, .scrollDownIndicator {
+.scrollUpIndicator, .scrollRightIndicator, .scrollDownIndicator, a{
     cursor: url("../images/CursorPointer.png"), auto;
+}
+
+.scrollUpIndicator, .scrollRightIndicator, .scrollDownIndicator{
     z-index: 10;
 }
 

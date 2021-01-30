@@ -531,9 +531,8 @@ header .header-container .toggle {
 
 .sectionContainer section.work .cards .card .details {
   position: absolute;
-  top: 77%;
+  top: 75.3%;
   left: 0;
-  height: 23%;
   width: 100%;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -546,6 +545,12 @@ header .header-container .toggle {
   color: #2b2b2b;
   height: 100%;
   width: 100%;
+}
+
+.sectionContainer section.work .cards .card .details .title p {
+  overflow: hidden;
+  padding: 0 0 0.4rem 0;
+  visibility: hidden;
 }
 
 .sectionContainer section.work .cards .card .details .content {
@@ -981,8 +986,11 @@ footer {
   bottom: 0;
 }
 
-.scrollUpIndicator, .scrollRightIndicator, .scrollDownIndicator {
+.scrollUpIndicator, .scrollRightIndicator, .scrollDownIndicator, a {
   cursor: url("../images/CursorPointer.png"), auto;
+}
+
+.scrollUpIndicator, .scrollRightIndicator, .scrollDownIndicator {
   z-index: 10;
 }
 
