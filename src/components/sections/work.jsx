@@ -36,7 +36,7 @@ const Work = ({scrollTo}) => {
             stagger: {
                 amount: 0.2,
             },
-            yPercent: 200,
+            yPercent: 100,
             autoAlpha: 0,
         }, "<0.35")
 
