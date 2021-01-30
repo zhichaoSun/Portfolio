@@ -65,29 +65,29 @@ const Work = ({scrollTo}) => {
                 <div className="cards">
                     <div className="card">
                         <div className="image">
-                            <Img className="gatsbyImage" fluid={data.images.edges[2].node.childImageSharp.fluid}/>
+                            <Img className="gatsbyImage" draggable={false} fluid={data.images.edges[2].node.childImageSharp.fluid}/>
                         </div>
                         <div className="details">
                             <div className="title">Embedded System</div>
-                            <div className="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, dolor?</div>
+                            <div className="content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad minima officiis illo architecto quam, corrupti ipsa minus maiores placeat vitae maxime similique commodi nihil voluptate.</div>
                         </div>
                     </div>
                     <div className="card">
-                        <div className="image">
-                            <Img className="gatsbyImage" fluid={data.images.edges[0].node.childImageSharp.fluid}/>
+                        <div className="image image2">
+                            <Img className="gatsbyImage" draggable={false} fluid={data.images.edges[0].node.childImageSharp.fluid}/>
                         </div>
                         <div className="details">
                             <div className="title">System Monitoring</div>
-                            <div className="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, dolor?</div>
+                            <div className="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus aperiam, temporibus mollitia iste possimus unde. Qui tenetur minus rerum ullam, deleniti ipsa exercitationem aperiam sapiente.</div>
                         </div>
                     </div>
                     <div className="card">
                         <div className="image">
-                            <Img className="gatsbyImage" fluid={data.images.edges[1].node.childImageSharp.fluid}/>
+                            <Img className="gatsbyImage" draggable={false} fluid={data.images.edges[1].node.childImageSharp.fluid}/>
                         </div>
                         <div className="details">
                             <div className="title">Trading Advisory</div>
-                            <div className="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, dolor?</div>
+                            <div className="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro magnam totam laboriosam esse reiciendis commodi officiis voluptatum autem beatae sunt itaque, accusamus perferendis.</div>
                         </div>
                     </div>
                 </div>
