@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react'
-import Layout from '../components/layout'
+import React from 'react'
+// import Layout from '../components/layout'
 import TransitionLink from "gatsby-plugin-transition-link";
 
 import { gsap, Power3 } from "gsap";
@@ -9,7 +9,7 @@ const ToyPage = () => {
     return (
         <>
             <div className="toyPageCover"></div>
-            <div className="toyPage">
+            <div className="toys">
                 <TransitionLink 
                     to="/"
                     exit={{
@@ -41,7 +41,8 @@ const ToyPage = () => {
                         )
                     }}
                 >
-                    <span className="ttttt">{`<-`}</span>
+                    <span className="ttttt" style={{color: "#ff5722"}}>{`<-`}</span>
+                    <div style={{fontSize: "3rem"}}>Coming Soon<span>...</span></div>
                 </TransitionLink>
             </div>
         </>

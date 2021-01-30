@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react'
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image";
 
 import { gsap, Power3 } from "gsap";
 
-import AniLink from "gatsby-plugin-transition-link/AniLink";
 import TransitionLink from "gatsby-plugin-transition-link";
 
 import { BsCaretDownFill, BsCaretUpFill } from "react-icons/bs";
@@ -11,6 +12,34 @@ import { FaHandPointRight } from "react-icons/fa";
 const Work = ({scrollTo}) => {
 
     useEffect(() => {
+        gsap.timeline({ scrollTrigger: {
+            // markers: true,
+            trigger: "#work",
+            start: "center center",
+            end: "center center",
+            toggleActions: "play none reverse none"
+        }})
+        .from(".card", {
+            duration: 0.5,
+            ease: Power3.easeOut,
+            stagger: {
+                amount: 0.3,
+                from: "end"
+            },
+            scale: 0.8,
+            yPercent: 60,
+            autoAlpha: 0
+        })
+        .from(".card .details .title p", {
+            duration: 0.5,
+            ease: Power3.easeInOut,
+            stagger: {
+                amount: 0.2,
+            },
+            yPercent: 200,
+            autoAlpha: 0,
+        }, "<0.35")
+
         gsap.from(".work .scrollUpIndicator", { 
             scrollTrigger: {
                 // markers: true,
@@ -39,12 +68,73 @@ const Work = ({scrollTo}) => {
         })
     }, [])
 
+    const data = useStaticQuery(graphql`
+    {
+      images: allFile(filter: {extension: {eq: "jpg"}}) {
+        edges {
+          node {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+
+    // console.log(JSON.stringify(data, null, 4))
+
     return (
         <>
             <div className="divider" id="work"></div>
             <section className="work">
-                <h1>TBD</h1>
-                <p>Will put some recent work here. Might do a page transition using barba.js to another page to show something else like my photagraphy or some toys written by javascript.</p>
+                <div className="cards">
+                    <div className="card">
+                        <div className="image">
+                            <Img className="gatsbyImage" draggable={false} fluid={data.images.edges[2].node.childImageSharp.fluid}/>
+                        </div>
+                        <div className="details">
+                            <div className="title">
+                                <p>Embedded</p>
+                                <p>System</p>
+                            </div>
+                            <div className="content">
+                                <p>I used to be working in the control filed. Design and assemble the printed circuit board based on the requirement, flash the control program into the chips and finally integrate it with the system.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="card">
+                        <div className="image image2">
+                            <Img className="gatsbyImage" draggable={false} fluid={data.images.edges[0].node.childImageSharp.fluid}/>
+                        </div>
+                        <div className="details">
+                            <div className="title">
+                                <p>System</p>
+                                <p>Monitoring</p>
+                            </div>
+                            <div className="content">
+                                <p>Programming on the monitoring system is also having a plenty of fun. And this is when I start to equip myself with modern javascript framework and web app development knowledge.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="card">
+                        <div className="image">
+                            <Img className="gatsbyImage" draggable={false} fluid={data.images.edges[1].node.childImageSharp.fluid}/>
+                        </div>
+                        <div className="details">
+                            <div className="title">
+                                <p>Trading</p>
+                                <p>Advisory</p>
+                            </div>
+                            <div className="content">
+                                <p>Using ReactJS to develop and support all phases of an electrical energy trading advisory web app to facilitate AI model traning of my team of many machine learning engineers and data scientists.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    
                 <div className="scrollUpIndicator" onClick={()=>scrollTo("about")}>
                     <div className="icon first"><BsCaretUpFill size="2rem"/></div>
                     <div className="icon second"><BsCaretUpFill size="2rem"/></div>
@@ -52,7 +142,7 @@ const Work = ({scrollTo}) => {
                 </div>
                 <div className="scrollRightIndicator">
                     <TransitionLink 
-                        to="/toyPage"
+                        to="/toys"
                         exit={{
                             length: 0.8,
                             trigger: ({node}) => (
@@ -79,14 +169,6 @@ const Work = ({scrollTo}) => {
                     >
                         <FaHandPointRight />
                     </TransitionLink>
-                    {/* <AniLink 
-                        cover to="/toyPage"
-                        duration={1.5}
-                        direction="right"
-                        bg="#ff5722"
-                    >
-                        <FaHandPointRight />
-                    </AniLink> */}
                 </div>
                 <div className="scrollDownIndicator" onClick={()=>scrollTo("contact")}>
                     <div className="icon first"><BsCaretDownFill size="2rem"/></div>

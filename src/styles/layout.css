@@ -63,6 +63,11 @@ html {
   overflow-y: scroll;
   opacity: 0;
   background-color: #1b1b1b;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: url("../images/cursor.png"), auto;
 }
 
 body {
@@ -115,11 +120,12 @@ header .header-container .links ul {
 
 header .header-container .links ul li {
   padding: 0 20px;
+  cursor: url("../images/CursorPointer.png"), auto;
 }
 
 header .header-container .links ul li p, header .header-container .links ul li a {
+  cursor: url("../images/CursorPointer.png"), auto;
   visibility: hidden;
-  cursor: pointer;
   color: #f7f7f7;
   text-decoration: none;
   text-transform: capitalize;
@@ -239,7 +245,7 @@ header .header-container .toggle {
   position: absolute;
   top: 15%;
   left: 0;
-  width: 62%;
+  width: 50%;
   height: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -264,12 +270,9 @@ header .header-container .toggle {
   font-size: 7rem;
 }
 
-.sectionContainer section.home .layers .layerContent div .name2 {
-  font-size: 4rem;
-}
-
 .sectionContainer section.home .layers .layerContent div .name3 {
   font-size: 2rem;
+  line-height: 2.5rem;
 }
 
 .sectionContainer section.home .layers .layerCircle {
@@ -396,11 +399,13 @@ header .header-container .toggle {
 .sectionContainer section.about .rects .rectContent {
   position: absolute;
   top: 15%;
-  width: 40%;
+  left: 15%;
+  width: 33%;
   height: 70%;
   -webkit-transform: translate(100%, 0px);
           transform: translate(100%, 0px);
   background-color: transparent;
+  line-height: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -423,6 +428,10 @@ header .header-container .toggle {
 
 .sectionContainer section.about .rects .rectContent div p {
   font-size: 1.25rem;
+}
+
+.sectionContainer section.about .rects .rectContent div p span.surName {
+  color: #ff5722;
 }
 
 .sectionContainer section.about .rects .rect1 {
@@ -450,8 +459,8 @@ header .header-container .toggle {
   top: 0;
   width: 105vh;
   height: 60vh;
-  -webkit-transform: translate(-20%, 30%) rotateZ(-10deg);
-          transform: translate(-20%, 30%) rotateZ(-10deg);
+  -webkit-transform: translate(-10%, 30%) rotateZ(-10deg);
+          transform: translate(-10%, 30%) rotateZ(-10deg);
   background-color: #954127;
 }
 
@@ -460,8 +469,8 @@ header .header-container .toggle {
   top: 0px;
   width: 120vh;
   height: 70vh;
-  -webkit-transform: translate(-20%, 10%) rotateZ(75deg);
-          transform: translate(-20%, 10%) rotateZ(75deg);
+  -webkit-transform: translate(-10%, 20%) rotateZ(75deg);
+          transform: translate(-10%, 20%) rotateZ(75deg);
   background-color: #603629;
 }
 
@@ -478,14 +487,95 @@ header .header-container .toggle {
   position: relative;
 }
 
-.sectionContainer section.work h1 {
-  width: 200px;
+.sectionContainer section.work .cards {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.sectionContainer section.work p {
-  width: 600px;
-  font-size: 1.5rem;
-  line-height: 2rem;
+.sectionContainer section.work .cards .card {
+  position: relative;
+  width: 320px;
+  height: 465px;
+  -webkit-box-shadow: -10px -10px 40px #1b1b1b;
+          box-shadow: -10px -10px 40px #1b1b1b;
+  overflow: hidden;
+}
+
+.sectionContainer section.work .cards .card .image {
+  background-color: #ff7e55;
+  -webkit-transform: scale(3);
+          transform: scale(3);
+}
+
+.sectionContainer section.work .cards .card .image .gatsbyImage {
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: multiply;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.sectionContainer section.work .cards .card .image2 {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.sectionContainer section.work .cards .card .details {
+  position: absolute;
+  top: 75.3%;
+  left: 0;
+  width: 100%;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.sectionContainer section.work .cards .card .details .title {
+  padding: 0.5rem 0.5rem;
+  font-size: 3rem;
+  background-color: #f7f7f7;
+  color: #2b2b2b;
+  height: 100%;
+  width: 100%;
+}
+
+.sectionContainer section.work .cards .card .details .title p {
+  overflow: hidden;
+  padding: 0 0 0.4rem 0;
+  visibility: hidden;
+}
+
+.sectionContainer section.work .cards .card .details .content {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0.5rem 0.5rem;
+  font-size: 1rem;
+  color: #2b2b2b;
+  background-color: #f7f7f7;
+  line-height: 1.5rem;
+  height: 200%;
+  width: 100%;
+}
+
+.sectionContainer section.work .cards .card:hover .details {
+  top: 38%;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-box-shadow: 0 -10px 40px #1b1b1b;
+          box-shadow: 0 -10px 40px #1b1b1b;
+}
+
+.sectionContainer section.work .cards .card:hover .gatsbyImage {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
 }
 
 .sectionContainer section.work .scrollUpIndicator {
@@ -858,7 +948,7 @@ header .header-container .toggle {
   outline: none;
   -webkit-box-shadow: 0px 2px 10px #1b1b1b;
           box-shadow: 0px 2px 10px #1b1b1b;
-  cursor: pointer;
+  cursor: url("../images/CursorPointer.png"), auto;
 }
 
 .sectionContainer section.contact .contact-grid-container .contactForm .form p {
@@ -896,8 +986,11 @@ footer {
   bottom: 0;
 }
 
+.scrollUpIndicator, .scrollRightIndicator, .scrollDownIndicator, a {
+  cursor: url("../images/CursorPointer.png"), auto;
+}
+
 .scrollUpIndicator, .scrollRightIndicator, .scrollDownIndicator {
-  cursor: pointer;
   z-index: 10;
 }
 
@@ -912,7 +1005,7 @@ footer {
   color: #f7f7f7;
 }
 
-.toyPage {
+.toys {
   width: 100vw;
   height: 100vh;
   display: -webkit-box;
@@ -930,8 +1023,12 @@ footer {
   font-weight: 800;
 }
 
-.toyPage a {
+.toys a {
   text-decoration: none;
   color: #f7f7f7;
+}
+
+input, label, .inputTextArea {
+  cursor: url("../images/CursorText.png"), auto;
 }
 /*# sourceMappingURL=layout.css.map */
