@@ -402,6 +402,7 @@ header .header-container .toggle {
   -webkit-transform: translate(100%, 0px);
           transform: translate(100%, 0px);
   background-color: transparent;
+  line-height: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -424,6 +425,10 @@ header .header-container .toggle {
 
 .sectionContainer section.about .rects .rectContent div p {
   font-size: 1.25rem;
+}
+
+.sectionContainer section.about .rects .rectContent div p span.surName {
+  color: #ff5722;
 }
 
 .sectionContainer section.about .rects .rect1 {

@@ -81,7 +81,6 @@ function About({scrollTo}) {
             opacity: 0,
             y: "10vh"
         })
-
     }, [])
 
 
@@ -95,9 +94,9 @@ function About({scrollTo}) {
                     <div className="rect rect2"></div>
                     <div className="rect rect1"></div>
                     <div className="rectContent">
-                        <div><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta perspiciatis suscipit ex neque veritatis, fugiat pariatur ab ad dolorum error?</p></div>
-                        <div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium facilis, mollitia veritatis natus temporibus modi?</p></div>
-                        <div><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa quidem nemo unde corrupti totam quisquam, error reprehenderit repellendus laudantium modi eum. Eius excepturi voluptate facere?</p></div>
+                        <div><p>Hello! My name is Zhichao <span className="surName">Sun</span>, and I am a web application developer living in Singapore.</p></div>
+                        <div><p>My favorite technologies right now are: ReactJS, GraphQL, Node and MongoDB. Currently, I am super comfortable using MERN stack to build my porject.</p></div>
+                        <div><p>I am still keep on learning and I have got interesting in Deno, Go and TailwindCSS in recent days.</p></div>
                     </div>
                 </div>
                 <div className="scrollUpIndicator" onClick={()=>scrollTo("home")}>

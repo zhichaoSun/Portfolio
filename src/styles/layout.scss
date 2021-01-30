@@ -12,6 +12,7 @@ html {
     opacity: 0;
     background-color: $black;
     user-select: none;
+    // cursor: url("../images/cursor.png"), auto;
 }
 
 body {
@@ -281,6 +282,7 @@ header {
                 height: 70%;
                 transform: translate(100%, 0px);;
                 background-color: transparent;
+                line-height: 1.5rem;
                 // outline: 1px solid $white;
 
                 display: flex;
@@ -293,6 +295,9 @@ header {
                     p {
                         // visibility: hidden;
                         font-size: 1.25rem;
+                        span.surName {
+                            color: $orange;
+                        }
                     }
                 }
             }

@@ -56,7 +56,7 @@ const Work = ({scrollTo}) => {
     }
   `)
 
-    console.log(JSON.stringify(data, null, 4))
+    // console.log(JSON.stringify(data, null, 4))
 
     return (
         <>
