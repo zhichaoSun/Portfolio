@@ -268,12 +268,9 @@ header .header-container .toggle {
   font-size: 7rem;
 }
 
-.sectionContainer section.home .layers .layerContent div .name2 {
-  font-size: 4rem;
-}
-
 .sectionContainer section.home .layers .layerContent div .name3 {
   font-size: 2rem;
+  line-height: 2.5rem;
 }
 
 .sectionContainer section.home .layers .layerCircle {

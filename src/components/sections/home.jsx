@@ -73,22 +73,23 @@ const Home = ({scrollTo}) => {
             <div className="divider" id="home"></div>
             <section className="home">
                 <div className="layers">
-                    <div className="todo">
+                    {/* <div className="todo">
                         <ul>
                             #TODO:
                             <li>To add real content</li>
                             <li>To add reCAPTCHA for message form submission</li>
                             <li>To add responsible for mobile devices</li>
                         </ul>
-                    </div>
+                    </div> */}
                     <div className="layerCircle circle4"></div>
                     <div className="layerCircle circle3"></div>
                     <div className="layerCircle circle2"></div>
                     <div className="layerCircle circle1"></div>
                     <div className="layerContent">
-                        <div><p className="name1">My Name</p></div>
-                        <div><p className="name2">Sth. else</p></div>
-                        <div><p className="name3">Lorem ipsum dolor sit amet.</p></div>
+                        <div><p className="name1">Zhichao</p></div>
+                        <div><p className="name1">SUN</p></div>
+                        <div><p className="name3">Software Engineer /</p></div>
+                        <div><p className="name3">Frontend Developer</p></div>
                     </div>
                 </div>
                 <div className="scrollDownIndicator" onClick={()=>scrollTo("about")}>
