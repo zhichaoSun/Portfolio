@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react'
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image";
 
 import { gsap, Power3 } from "gsap";
 
-import AniLink from "gatsby-plugin-transition-link/AniLink";
 import TransitionLink from "gatsby-plugin-transition-link";
 
 import { BsCaretDownFill, BsCaretUpFill } from "react-icons/bs";
@@ -39,12 +40,58 @@ const Work = ({scrollTo}) => {
         })
     }, [])
 
+    const data = useStaticQuery(graphql`
+    {
+      images: allFile(filter: {extension: {eq: "jpg"}}) {
+        edges {
+          node {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+
+    console.log(JSON.stringify(data, null, 4))
+
     return (
         <>
             <div className="divider" id="work"></div>
             <section className="work">
-                <h1>TBD</h1>
-                <p>Will put some recent work here. Might do a page transition using barba.js to another page to show something else like my photagraphy or some toys written by javascript.</p>
+                <div className="cards">
+                    <div className="card">
+                        <div className="image">
+                            <Img className="gatsbyImage" fluid={data.images.edges[2].node.childImageSharp.fluid}/>
+                        </div>
+                        <div className="details">
+                            <div className="title">Embedded System</div>
+                            <div className="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, dolor?</div>
+                        </div>
+                    </div>
+                    <div className="card">
+                        <div className="image">
+                            <Img className="gatsbyImage" fluid={data.images.edges[0].node.childImageSharp.fluid}/>
+                        </div>
+                        <div className="details">
+                            <div className="title">System Monitoring</div>
+                            <div className="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, dolor?</div>
+                        </div>
+                    </div>
+                    <div className="card">
+                        <div className="image">
+                            <Img className="gatsbyImage" fluid={data.images.edges[1].node.childImageSharp.fluid}/>
+                        </div>
+                        <div className="details">
+                            <div className="title">Trading Advisory</div>
+                            <div className="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, dolor?</div>
+                        </div>
+                    </div>
+                </div>
+                    
                 <div className="scrollUpIndicator" onClick={()=>scrollTo("about")}>
                     <div className="icon first"><BsCaretUpFill size="2rem"/></div>
                     <div className="icon second"><BsCaretUpFill size="2rem"/></div>
