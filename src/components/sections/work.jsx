@@ -140,7 +140,7 @@ const Work = ({scrollTo}) => {
                     <div className="icon second"><BsCaretUpFill size="2rem"/></div>
                     <div className="icon third"><BsCaretUpFill size="2rem"/></div>
                 </div>
-                <div className="scrollRightIndicator">
+                {/* <div className="scrollRightIndicator">
                     <TransitionLink 
                         to="/toys"
                         exit={{
@@ -169,7 +169,7 @@ const Work = ({scrollTo}) => {
                     >
                         <FaHandPointRight />
                     </TransitionLink>
-                </div>
+                </div> */}
                 <div className="scrollDownIndicator" onClick={()=>scrollTo("contact")}>
                     <div className="icon first"><BsCaretDownFill size="2rem"/></div>
                     <div className="icon second"><BsCaretDownFill size="2rem"/></div>
