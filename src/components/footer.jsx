@@ -3,7 +3,7 @@ import React from 'react'
 function Footer() {
     return (
         <footer>
-            © {new Date().getFullYear()}
+            Copyright © {new Date().getFullYear()} Zhichao Sun
         </footer>
     )
 }
