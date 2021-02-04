@@ -3,8 +3,11 @@ import React, { useEffect } from "react"
 import { gsap, Power3, ScrollToPlugin, ScrollTrigger } from "gsap/all";
 
 import { SiLinkedin, SiGithub } from "react-icons/si";
+import { FaFilePdf } from "react-icons/fa";
 import { CgDarkMode } from "react-icons/cg";
 import { IoLanguage } from "react-icons/io5";
+
+import { useStaticQuery, graphql } from "gatsby"
 
 const sections = ["home", "about", "work", "contact"]
 
@@ -78,19 +81,37 @@ const Header = () => {
         });
     }
 
+    const data = useStaticQuery(graphql`{
+        allFile(filter: {extension: {eq: "pdf"}}) {
+            edges {
+                node {
+                    name
+                    publicURL
+                }
+            }
+        }
+    }`)
+
+    console.log(JSON.stringify(data, null, 2))
+
     return (
         <header>
             <div className="header-container">
                 <div className="links social-links">
                     <ul>
                         <li>
-                            <a className="adfadf" href="https://www.linkedin.com/in/zhichao-sun/" target="_blank">
+                            <a href="https://www.linkedin.com/in/zhichao-sun/" target="_blank">
                                 <SiLinkedin />
                             </a>
                         </li>
                         <li>
-                            <a className="adfadf" href="https://github.com/zhichaoSun" target="_blank">
+                            <a href="https://github.com/zhichaoSun" target="_blank">
                                 <SiGithub />
+                            </a>
+                        </li>
+                        <li>
+                            <a href={data.allFile.edges[0].node.publicURL} target="_blank">
+                                <FaFilePdf />
                             </a>
                         </li>
                     </ul>
