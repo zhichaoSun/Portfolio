@@ -162,7 +162,8 @@ header {
                 flex-direction: column;
                 justify-content: center;
                 align-items: flex-end;
-                // outline: 1px solid $white;
+                outline: 1px solid $white;
+                transform: translate(5%, 0);
                 div {
                     overflow: hidden;
                     // p {

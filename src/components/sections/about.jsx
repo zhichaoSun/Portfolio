@@ -108,7 +108,7 @@ function About({scrollTo}) {
 
                         <div>
                             <p>
-                                I am not going to stop learning new stuff. In recent days, I have got some interests in Deno , Typescript and TailwindCSS.
+                                I am not going to stop learning new stuff. In recent days, I have got some interests in Jest, Typescript and TailwindCSS.
                             </p>
                         </div>
                     </div>
