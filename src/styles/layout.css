@@ -232,6 +232,13 @@ header .header-container .toggle {
   margin: 0 auto;
 }
 
+@media (pointer: coarse) {
+  .sectionContainer section.home .layers {
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
 .sectionContainer section.home .layers .todo {
   font-size: 1.25rem;
   line-height: 2rem;
@@ -390,6 +397,13 @@ header .header-container .toggle {
           transform-style: preserve-3d;
   -webkit-transform: perspective(1000px);
           transform: perspective(1000px);
+}
+
+@media (pointer: coarse) {
+  .sectionContainer section.about .rects {
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
 }
 
 .sectionContainer section.about .rects .rect {
