@@ -278,7 +278,7 @@ header .header-container .toggle {
 .sectionContainer section.home .layers .layerCircle {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   border-radius: 50%;
   display: -ms-grid;
   display: grid;
@@ -291,8 +291,8 @@ header .header-container .toggle {
   width: 25vh;
   height: 25vh;
   z-index: -1;
-  -webkit-transform: translate(290%, 35%);
-          transform: translate(290%, 35%);
+  -webkit-transform: translate(-200%, 35%);
+          transform: translate(-200%, 35%);
   background-color: #ff5722;
 }
 
@@ -300,8 +300,8 @@ header .header-container .toggle {
   width: 45vh;
   height: 45vh;
   z-index: -1;
-  -webkit-transform: translate(200%, 10%);
-          transform: translate(200%, 10%);
+  -webkit-transform: translate(-20%, 10%);
+          transform: translate(-20%, 10%);
   background-color: #CA4C24;
 }
 
@@ -309,8 +309,8 @@ header .header-container .toggle {
   width: 65vh;
   height: 65vh;
   z-index: -1;
-  -webkit-transform: translate(80%, 10%);
-          transform: translate(80%, 10%);
+  -webkit-transform: translate(-40%, 10%);
+          transform: translate(-40%, 10%);
   background-color: #954127;
 }
 
@@ -319,8 +319,8 @@ header .header-container .toggle {
   width: 85vh;
   z-index: -1;
   border-radius: 50%;
-  -webkit-transform: translate(80%, 30%);
-          transform: translate(80%, 30%);
+  -webkit-transform: translate(30%, 30%);
+          transform: translate(30%, 30%);
   background-color: #603629;
 }
 
@@ -399,11 +399,11 @@ header .header-container .toggle {
 .sectionContainer section.about .rects .rectContent {
   position: absolute;
   top: 15%;
-  left: 15%;
+  right: 0;
   width: 33%;
   height: 70%;
-  -webkit-transform: translate(100%, 0px);
-          transform: translate(100%, 0px);
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
   background-color: transparent;
   line-height: 1.5rem;
   display: -webkit-box;
@@ -430,7 +430,7 @@ header .header-container .toggle {
   font-size: 1.25rem;
 }
 
-.sectionContainer section.about .rects .rectContent div p span.surName {
+.sectionContainer section.about .rects .rectContent div p span.orange {
   color: #ff5722;
 }
 

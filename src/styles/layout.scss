@@ -184,7 +184,7 @@ header {
             .layerCircle {
                 position: absolute;
                 top: 0;
-                left: 0;
+                right: 0;
                 border-radius: 50%;
                 display: grid;
                 place-items: center;
@@ -197,21 +197,21 @@ header {
                 height: 25vh;
                 z-index: -1;
                 // overflow: hidden;
-                transform: translate(290%, 35%);
+                transform: translate(-200%, 35%);
                 background-color: #ff5722;
             }
             .circle2 {
                 width: 45vh;
                 height: 45vh;
                 z-index: -1;
-                transform: translate(200%, 10%);
+                transform: translate(-20%, 10%);
                 background-color: #CA4C24;
             }
             .circle3 {
                 width: 65vh;
                 height: 65vh;
                 z-index: -1;
-                transform: translate(80%, 10%);
+                transform: translate(-40%, 10%);
                 background-color: #954127;
             }
             .circle4 {
@@ -219,7 +219,7 @@ header {
                 width: 85vh;
                 z-index: -1;
                 border-radius: 50%;
-                transform: translate(80%, 30%);
+                transform: translate(30%, 30%);
                 background-color: #603629;
             }
         }
@@ -271,19 +271,22 @@ header {
             margin: 0 auto;
             transform-style: preserve-3d;
             transform: perspective(1000px);
+            // outline: 1px solid $white;
+
             .rect {
                 // visibility: hidden;
                 background: #f7f7f7;
                 position: relative;
                 box-shadow: -2px -2px 40px $black;
+
             }
             .rectContent {
                 position: absolute;
                 top: 15%;
-                left: 15%;
+                right: 0;
                 width: 33%;
                 height: 70%;
-                transform: translate(100%, 0px);;
+                transform: translate(-50%, 0);
                 background-color: transparent;
                 line-height: 1.5rem;
                 // outline: 1px solid $white;
@@ -298,7 +301,7 @@ header {
                     p {
                         // visibility: hidden;
                         font-size: 1.25rem;
-                        span.surName {
+                        span.orange {
                             color: $orange;
                         }
                     }

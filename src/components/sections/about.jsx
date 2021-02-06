@@ -94,9 +94,23 @@ function About({scrollTo}) {
                     <div className="rect rect2"></div>
                     <div className="rect rect1"></div>
                     <div className="rectContent">
-                        <div><p>Hello! My name is Zhichao <span className="surName">Sun</span>, and I am a web application developer living in Singapore.</p></div>
-                        <div><p>My favorite technologies right now are: ReactJS, GraphQL, Node and MongoDB. Currently, I am super comfortable using MERN stack to build my porject.</p></div>
-                        <div><p>I urge myself to keep on learning and I have got interesting in Deno, Go and TailwindCSS in recent days.</p></div>
+                        <div>
+                            <p>
+                                Hello! My name is <span className="orange">Zhichao Sun</span>, and I am a web application developer living in Singapore.
+                            </p>
+                        </div>
+
+                        <div>
+                            <p>
+                                My favorite technologies right now are: ReactJS, Node and GraphQL. Currently, I am super comfortable using <span className="orange">MERN</span> stack to build my porject.
+                            </p>
+                        </div>
+
+                        <div>
+                            <p>
+                                I am not going to stop learning new stuff. In recent days, I have got some interests in Deno , Typescript and TailwindCSS.
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <div className="scrollUpIndicator" onClick={()=>scrollTo("home")}>
