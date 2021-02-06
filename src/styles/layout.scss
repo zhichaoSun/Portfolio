@@ -4,7 +4,7 @@
 $white: #f7f7f7;
 $black: #1b1b1b;
 $gray: #2b2b2b;
-$orange:  #ff5722;
+$orange: #ff5722;
 
 html {
     overflow-x: hidden;
@@ -560,17 +560,6 @@ header {
                     box-shadow: -2px -2px 40px $black;
                     border-radius: 50%;
                     transform: translate(10%, 25%);
-                    // &::before {
-                    //     content: '';
-                    //     position: absolute;
-                    //     top: 0;
-                    //     width: 100%;
-                    //     height: 100%;
-                    //     background-color: #ff5722;
-                    //     box-shadow: -2px -2px 40px $black;
-                    //     border-radius: 50%;
-                    //     transform: translate(10%, 25%);
-                    // }
                 }
                 .rectL {
                     position: absolute;
@@ -580,16 +569,6 @@ header {
                     background-color: #603629;
                     box-shadow: -2px -2px 40px $black;
                     transform: translate(10%, 55%) rotate(-15deg);
-                    // &::before {
-                    //     content: '';
-                    //     position: absolute;
-                    //     top: 0;
-                    //     width: 100%;
-                    //     height: 100%;
-                    //     background-color: #603629;
-                    //     box-shadow: -2px -2px 40px $black;
-                    //     transform: translate(10%, 55%) rotate(-15deg);
-                    // }
                 }
             }
             .contactR { 
@@ -611,17 +590,6 @@ header {
                     border-radius: 50%;
                     box-shadow: -2px -2px 40px $black;
                     transform: translate(0%, 15%);
-                    // &::before {
-                    //     content: '';
-                    //     position: absolute;
-                    //     top: 0;
-                    //     width: 100%;
-                    //     height: 100%;
-                    //     background-color: #954127;
-                    //     box-shadow: -2px -2px 40px $black;
-                    //     border-radius: 50%;
-                    //     transform: translate(0%, 15%);
-                    // }
                 }
                 .rectR {
                     position: absolute;
@@ -631,16 +599,6 @@ header {
                     background-color: #CA4C24;
                     box-shadow: -2px -2px 40px $black;
                     transform: translate(-10%, 55%) rotate(-15deg)
-                    // &::before {
-                    //     content: '';
-                    //     position: absolute;
-                    //     top: 0;
-                    //     width: 100%;
-                    //     height: 100%;
-                    //     background-color: #CA4C24;
-                    //     box-shadow: -2px -2px 40px $black;
-                    //     transform: translate(-10%, 55%) rotate(-5deg);
-                    // }
                 }
             }
 
