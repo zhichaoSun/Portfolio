@@ -812,6 +812,24 @@ header .header-container .toggle {
   }
 }
 
+@media (max-width: 410px) {
+  .sectionContainer section.work .cards .card .details {
+    top: 70%;
+  }
+  .sectionContainer section.work .cards .card .details .title {
+    padding: 0rem 0.5rem;
+  }
+  .sectionContainer section.work .cards .card .details .title p {
+    display: inline;
+    font-size: 1.5rem;
+  }
+  .sectionContainer section.work .cards .card .details .content {
+    font-size: 0.85rem;
+    line-height: 0.85rem;
+    margin-top: -0.5rem;
+  }
+}
+
 @media (max-width: 320px) {
   .sectionContainer section.work .cards .card .details {
     top: 63%;
@@ -840,13 +858,19 @@ header .header-container .toggle {
 
 @media (max-width: 1024px) {
   .sectionContainer section.work .cards .card:hover .details {
-    top: 30%;
+    top: 20%;
   }
 }
 
 @media (max-width: 530px) {
   .sectionContainer section.work .cards .card:hover .details {
-    top: 30%;
+    top: 22%;
+  }
+}
+
+@media (max-width: 410px) {
+  .sectionContainer section.work .cards .card:hover .details {
+    top: 25%;
   }
 }
 

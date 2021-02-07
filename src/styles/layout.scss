@@ -614,6 +614,21 @@ header {
                             line-height: 0.95rem;
                         }
                     }
+                    @media (max-width: 410px) {
+                        top: 70%;
+                        .title {
+                            padding: 0rem 0.5rem;
+                            p {
+                                display: inline;
+                                font-size: 1.5rem;
+                            }
+                        }
+                        .content {
+                            font-size: 0.85rem;
+                            line-height: 0.85rem;
+                            margin-top: -0.5rem;
+                        }
+                    }
                     @media (max-width: 320px) {
                         top: 63%;
                         .title {
@@ -636,10 +651,13 @@ header {
                     transition: all 0.2s ease-in-out;
                     box-shadow: 0 -10px 40px $black;
                     @media (max-width: $tablet) {
-                        top: 30%;
+                        top: 20%;
                     }
                     @media (max-width: 530px) {
-                        top: 30%;
+                        top: 22%;
+                    }
+                    @media (max-width: 410px) {
+                        top: 25%;
                     }
                     @media (max-width: 320px) {
                         top: 25%;
