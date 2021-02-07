@@ -596,6 +596,46 @@ header .header-container .toggle {
           align-items: center;
 }
 
+@media (min-width: 640px) and (max-width: 1024px) {
+  .sectionContainer section.work .cards {
+    width: 80%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .sectionContainer section.work .cards {
+    width: 90%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .sectionContainer section.work .cards .card {
   position: relative;
   width: 320px;
@@ -605,10 +645,31 @@ header .header-container .toggle {
   overflow: hidden;
 }
 
+@media (min-width: 640px) and (max-width: 1024px) {
+  .sectionContainer section.work .cards .card {
+    width: 100%;
+    height: 25%;
+  }
+}
+
+@media (max-width: 640px) {
+  .sectionContainer section.work .cards .card {
+    width: 100%;
+    height: 25%;
+  }
+}
+
 .sectionContainer section.work .cards .card .image {
   background-color: #ff7e55;
   -webkit-transform: scale(3);
           transform: scale(3);
+}
+
+@media (max-width: 1024px) {
+  .sectionContainer section.work .cards .card .image {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
 }
 
 .sectionContainer section.work .cards .card .image .gatsbyImage {
@@ -656,8 +717,69 @@ header .header-container .toggle {
   color: #2b2b2b;
   background-color: #f7f7f7;
   line-height: 1.5rem;
-  height: 200%;
+  height: 300px;
   width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .sectionContainer section.work .cards .card .details {
+    top: 70%;
+  }
+  .sectionContainer section.work .cards .card .details .title p {
+    display: inline;
+  }
+  .sectionContainer section.work .cards .card .details .content {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .sectionContainer section.work .cards .card .details {
+    top: 70%;
+  }
+  .sectionContainer section.work .cards .card .details .title p {
+    display: inline;
+  }
+  .sectionContainer section.work .cards .card .details .content {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+}
+
+@media (max-width: 530px) {
+  .sectionContainer section.work .cards .card .details {
+    top: 73%;
+  }
+  .sectionContainer section.work .cards .card .details .title {
+    padding: 0rem 0.5rem;
+  }
+  .sectionContainer section.work .cards .card .details .title p {
+    display: inline;
+    font-size: 1.5rem;
+  }
+  .sectionContainer section.work .cards .card .details .content {
+    font-size: 0.95rem;
+    line-height: 0.95rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .sectionContainer section.work .cards .card .details {
+    top: 63%;
+  }
+  .sectionContainer section.work .cards .card .details .title {
+    padding: 0rem 0.5rem;
+  }
+  .sectionContainer section.work .cards .card .details .title p {
+    display: inline;
+    font-size: 1.25rem;
+  }
+  .sectionContainer section.work .cards .card .details .content {
+    font-size: 0.85rem;
+    line-height: 0.85rem;
+    margin-top: -0.5rem;
+  }
 }
 
 .sectionContainer section.work .cards .card:hover .details {
@@ -666,6 +788,24 @@ header .header-container .toggle {
   transition: all 0.2s ease-in-out;
   -webkit-box-shadow: 0 -10px 40px #1b1b1b;
           box-shadow: 0 -10px 40px #1b1b1b;
+}
+
+@media (max-width: 1024px) {
+  .sectionContainer section.work .cards .card:hover .details {
+    top: 30%;
+  }
+}
+
+@media (max-width: 530px) {
+  .sectionContainer section.work .cards .card:hover .details {
+    top: 30%;
+  }
+}
+
+@media (max-width: 320px) {
+  .sectionContainer section.work .cards .card:hover .details {
+    top: 25%;
+  }
 }
 
 .sectionContainer section.work .cards .card:hover .gatsbyImage {

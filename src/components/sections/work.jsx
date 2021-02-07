@@ -97,7 +97,7 @@ const Work = ({scrollTo}) => {
                         </div>
                         <div className="details">
                             <div className="title">
-                                <p>Embedded</p>
+                                <p>Embedded </p>
                                 <p>System</p>
                             </div>
                             <div className="content">
@@ -111,11 +111,12 @@ const Work = ({scrollTo}) => {
                         </div>
                         <div className="details">
                             <div className="title">
-                                <p>System</p>
+                                <p>System </p>
                                 <p>Monitoring</p>
                             </div>
                             <div className="content">
-                                <p>Programming on the monitoring system is also having a plenty of fun. And this is when I start to equip myself with modern javascript framework and web app development knowledge.</p>
+                                <p>Programming the monitoring system is having a plenty of fun. And this is when I start to equip myself with frontend development knowledge and end with making my mind to bacame a web developer.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -125,7 +126,7 @@ const Work = ({scrollTo}) => {
                         </div>
                         <div className="details">
                             <div className="title">
-                                <p>Trading</p>
+                                <p>Trading </p>
                                 <p>Advisory</p>
                             </div>
                             <div className="content">
