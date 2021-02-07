@@ -117,12 +117,12 @@ header {
     
     padding: 0.5rem 0;
     p {
+        font-family: 'Poppins', sans-serif;
         font-size: 2rem;
         font-weight: 800;
         line-height: 4rem;
         cursor: url("../images/CursorPointer.png"), auto;   
         // outline: 1px solid $white;
-
         &:hover {
             color: $orange;
         }
