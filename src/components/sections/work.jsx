@@ -130,7 +130,7 @@ const Work = ({scrollTo}) => {
                                 <p>Advisory</p>
                             </div>
                             <div className="content">
-                                <p>Using ReactJS to develop and support all phases of an electrical energy trading advisory web app to facilitate AI model traning of my team of many machine learning engineers and data scientists.</p>
+                                <p>Getting to know ReactJS in more depth by developing and supporting an electrical energy trading advisory web app to facilitate AI model traning of my team of many data scientists.</p>
                             </div>
                         </div>
                     </div>
