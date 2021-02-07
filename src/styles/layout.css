@@ -285,6 +285,42 @@ header .header-container .toggle {
   line-height: 2.5rem;
 }
 
+@media (min-width: 640px) and (max-width: 1024px) {
+  .sectionContainer section.home .layers .layerContent {
+    width: 60%;
+    left: 20%;
+    height: 70%;
+    outline: 1px solid #ff5722;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  .sectionContainer section.home .layers .layerContent div .name1 {
+    font-size: 5rem;
+  }
+  .sectionContainer section.home .layers .layerContent div .name3 {
+    font-size: 1.75rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .sectionContainer section.home .layers .layerContent {
+    width: 60%;
+    left: 20%;
+    height: 70%;
+    outline: 1px solid #ff5722;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  .sectionContainer section.home .layers .layerContent div .name1 {
+    font-size: 3.5rem;
+  }
+  .sectionContainer section.home .layers .layerContent div .name3 {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+}
+
 .sectionContainer section.home .layers .layerCircle {
   position: absolute;
   top: 0;

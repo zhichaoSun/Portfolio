@@ -170,6 +170,7 @@ header {
                 align-items: flex-end;
                 outline: 1px solid $white;
                 transform: translate(5%, 0);
+
                 div {
                     overflow: hidden;
                     // p {
@@ -184,6 +185,40 @@ header {
                     .name3 {
                         font-size: 2rem;
                         line-height: 2.5rem;
+                    }
+                }
+
+                @media (min-width: $phone) and (max-width: $tablet) {
+                    width: 60%;
+                    left: 20%;
+                    height: 70%;
+                    outline: 1px solid $orange;
+                    transform: translate(0, 0);
+                    div {
+                        .name1 {
+                            font-size: 5rem;
+                        }
+                        .name3 {
+                            font-size: 1.75rem;
+                            line-height: 1.75rem;
+                        }
+                    }
+                }
+
+                @media (max-width: $phone) {
+                    width: 60%;
+                    left: 20%;
+                    height: 70%;
+                    outline: 1px solid $orange;
+                    transform: translate(0, 0);
+                    div {
+                        .name1 {
+                            font-size: 3.5rem;
+                        }
+                        .name3 {
+                            font-size: 1rem;
+                            line-height: 1rem;
+                        }
                     }
                 }
             }
