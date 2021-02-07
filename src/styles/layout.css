@@ -143,6 +143,56 @@ header .header-container .toggle {
   font-size: 1.5em;
 }
 
+.sideToggle {
+  position: fixed;
+  top: 0;
+  color: #f7f7f7;
+  right: 0;
+  width: 80px;
+  height: 50px;
+  font-size: 1.25em;
+  background-color: #2b2b2b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: url("../images/CursorPointer.png"), auto;
+  z-index: 11;
+}
+
+.sidebar {
+  position: fixed;
+  top: 50px;
+  z-index: 11;
+  color: #f7f7f7;
+  background-color: #1b1b1b;
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+.sidebar p {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 4rem;
+  cursor: url("../images/CursorPointer.png"), auto;
+}
+
+.sidebar p:hover {
+  color: #ff5722;
+}
+
+.sidebar .hr {
+  width: 62%;
+  border-top: 1px solid #ff5722;
+  margin: 0 auto;
+}
+
 .sectionContainer {
   margin: 0 auto;
   max-width: 1280px;

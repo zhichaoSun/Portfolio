@@ -85,6 +85,55 @@ header {
     }
 }
 
+.sideToggle {
+    position: fixed;
+    top: 0;
+    color: $white;
+    right: 0;
+    // outline: 1px solid white;
+    width: 80px;
+    height: 50px;
+    font-size: 1.25em;
+    background-color: $gray;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: url("../images/CursorPointer.png"), auto;   
+    z-index: 11;
+
+}
+.sidebar {
+    // outline: 1px solid $white;
+    position: fixed;
+    top: 50px;
+    z-index: 11;
+
+    color: $white;
+    background-color: $black;
+
+    width: 100%;
+    text-align: center;
+    
+    padding: 0.5rem 0;
+    p {
+        font-size: 2rem;
+        font-weight: 800;
+        line-height: 4rem;
+        cursor: url("../images/CursorPointer.png"), auto;   
+        // outline: 1px solid $white;
+
+        &:hover {
+            color: $orange;
+        }
+    }
+    .hr {
+        width: 62%;
+        border-top: 1px solid $orange;
+        margin: 0 auto;
+    }
+}
+
 .sectionContainer{
     margin: 0 auto;
     max-width: 1280px;

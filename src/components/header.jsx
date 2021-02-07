@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 // import { Link } from "gatsby"
 import { gsap, Power3, ScrollToPlugin, ScrollTrigger } from "gsap/all";
 
@@ -6,8 +6,11 @@ import { SiLinkedin, SiGithub } from "react-icons/si";
 import { FaFilePdf } from "react-icons/fa";
 import { CgDarkMode } from "react-icons/cg";
 import { IoLanguage } from "react-icons/io5";
+import { HiDotsVertical } from "react-icons/hi";
+import { ImCross } from "react-icons/im";
 
 import { useStaticQuery, graphql } from "gatsby"
+import Sidebar from "./sidebar";
 
 const sections = ["home", "about", "work", "contact"]
 
@@ -19,6 +22,9 @@ const colors = {
 }
 
 const Header = () => {
+
+    const [width, setWidth] = useState(0)
+    const [sidebar, setSidebar] = useState(false)
 
     useEffect(() => {
         // gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
@@ -57,7 +63,7 @@ const Header = () => {
             }
         }, "<")
 
-        gsap.to("header", { 
+        gsap.to(["header", ".sideToggle"], { 
             scrollTrigger: {
                 // markers: true,
                 trigger: "#home",
@@ -92,58 +98,83 @@ const Header = () => {
         }
     }`)
 
-    // console.log(JSON.stringify(data, null, 2))
+    const updateWidth = () => {
+        setWidth(window.innerWidth)
+    }
+    useEffect(() => {
+        window.addEventListener("resize", updateWidth)
+        return () => {
+            window.removeEventListener("resize", updateWidth)
+        }
+    }, [window.innerWidth])
+
+    // console.log(width)
 
     return (
-        <header>
-            <div className="header-container">
-                <div className="links social-links">
-                    <ul>
-                        <li>
-                            <a href="https://www.linkedin.com/in/zhichao-sun/" target="_blank">
-                                <SiLinkedin />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/zhichaoSun" target="_blank">
-                                <SiGithub />
-                            </a>
-                        </li>
-                        <li>
-                            <a href={data.allFile.edges[0].node.publicURL} target="_blank">
-                                <FaFilePdf />
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div className="links section-links">
-                    <ul>
-                    {
-                        sections.map(section => (
-                            <li key={section}>
-                                <p
-                                    onClick={() => scrollTo(section)}
-                                    id={`p-${section}`}
-                                >
-                                    {section}
-                                </p>
+        <>
+            <header>
+                <div className="header-container">
+                    <div className="links social-links">
+                        <ul>
+                            <li>
+                                <a href="https://www.linkedin.com/in/zhichao-sun/" target="_blank">
+                                    <SiLinkedin />
+                                </a>
                             </li>
-                        ))
-                    }
-                    </ul>
+                            <li>
+                                <a href="https://github.com/zhichaoSun" target="_blank">
+                                    <SiGithub />
+                                </a>
+                            </li>
+                            <li>
+                                <a href={data.allFile.edges[0].node.publicURL} target="_blank">
+                                    <FaFilePdf />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className="links section-links">
+                        <ul style={{visibility: width>800 ? "visible" : "hidden"}}>
+                        {
+                            sections.map(section => (
+                                <li key={section}>
+                                    <p
+                                        onClick={() => scrollTo(section)}
+                                        id={`p-${section}`}
+                                    >
+                                        {section}
+                                    </p>
+                                </li>
+                            ))
+                        }
+                        </ul>
+                    </div>
+                    {/* <div className="links toggle">
+                        <ul>
+                            <li onClick={() => alert("Do not click on me")}>
+                                <p><CgDarkMode /></p>
+                            </li>
+                            <li onClick={() => alert("Do not click on me")}>
+                                <p><IoLanguage /></p>
+                            </li>
+                        </ul>
+                    </div> */}
                 </div>
-                {/* <div className="links toggle">
-                    <ul>
-                        <li onClick={() => alert("Do not click on me")}>
-                            <p><CgDarkMode /></p>
-                        </li>
-                        <li onClick={() => alert("Do not click on me")}>
-                            <p><IoLanguage /></p>
-                        </li>
-                    </ul>
-                </div> */}
+            </header>
+            <div style={{visibility: (width<=800) ? "visible" : "hidden"}}>
+                <div className="sideToggle" onClick={()=>setSidebar(!sidebar)}>
+                {
+                    sidebar
+                    ? <ImCross />
+                    : <HiDotsVertical />
+                }
+                    
+                </div>
+                <div style={{visibility: sidebar ? "visible" : "hidden"}}>
+                    <Sidebar sections={sections} setSidebar={setSidebar}/>
+                </div>
             </div>
-        </header>
+        </>
     );
 }
 
