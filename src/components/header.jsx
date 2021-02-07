@@ -26,6 +26,8 @@ const Header = () => {
     const [width, setWidth] = useState(0)
     const [sidebar, setSidebar] = useState(false)
 
+    const isBrowser = () => typeof window !== "undefined"
+
     useEffect(() => {
         // gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
@@ -102,11 +104,12 @@ const Header = () => {
         setWidth(window.innerWidth)
     }
     useEffect(() => {
+        updateWidth()
         window.addEventListener("resize", updateWidth)
         return () => {
             window.removeEventListener("resize", updateWidth)
         }
-    }, [window.innerWidth])
+    }, [isBrowser() && window.innerWidth])
 
     // console.log(width)
 
