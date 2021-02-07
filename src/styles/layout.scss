@@ -357,6 +357,31 @@ header {
                         }
                     }
                 }
+
+                @media (min-width: $phone) and (max-width: $tablet) {
+                    right: 25%;
+                    width: 50%;
+                    height: 70%;
+                    transform: translate(0, 0);
+                }
+
+                @media (max-width: $phone) {
+                    top: 13%;
+                    right: 15%;
+                    width: 70%;
+                    height: 70%;
+                    transform: translate(0, 0);
+                    line-height: 1.5rem;
+                    div {
+                        p {
+                            font-size: 1rem;
+                            span.orange {
+                                color: $orange;
+                            }
+                        }
+                    }
+                }
+
             }
             .rect1 {
                 position: absolute;
@@ -365,6 +390,12 @@ header {
                 height: 22vh;
                 transform: translate(230%, 250%) rotateZ(20deg);
                 background-color: #ff5722;
+                @media (min-width: $phone) and (max-width: $tablet) {
+                    transform: translate(30%, 250%) rotateZ(20deg);
+                }
+                @media (max-width: $phone) {
+                    transform: translate(30%, 250%) rotateZ(20deg);
+                }
             }
             .rect2 {
                 position: absolute;

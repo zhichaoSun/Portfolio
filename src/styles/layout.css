@@ -487,6 +487,34 @@ header .header-container .toggle {
   color: #ff5722;
 }
 
+@media (min-width: 640px) and (max-width: 1024px) {
+  .sectionContainer section.about .rects .rectContent {
+    right: 25%;
+    width: 50%;
+    height: 70%;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@media (max-width: 640px) {
+  .sectionContainer section.about .rects .rectContent {
+    top: 13%;
+    right: 15%;
+    width: 70%;
+    height: 70%;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    line-height: 1.5rem;
+  }
+  .sectionContainer section.about .rects .rectContent div p {
+    font-size: 1rem;
+  }
+  .sectionContainer section.about .rects .rectContent div p span.orange {
+    color: #ff5722;
+  }
+}
+
 .sectionContainer section.about .rects .rect1 {
   position: absolute;
   top: 0;
@@ -495,6 +523,20 @@ header .header-container .toggle {
   -webkit-transform: translate(230%, 250%) rotateZ(20deg);
           transform: translate(230%, 250%) rotateZ(20deg);
   background-color: #ff5722;
+}
+
+@media (min-width: 640px) and (max-width: 1024px) {
+  .sectionContainer section.about .rects .rect1 {
+    -webkit-transform: translate(30%, 250%) rotateZ(20deg);
+            transform: translate(30%, 250%) rotateZ(20deg);
+  }
+}
+
+@media (max-width: 640px) {
+  .sectionContainer section.about .rects .rect1 {
+    -webkit-transform: translate(30%, 250%) rotateZ(20deg);
+            transform: translate(30%, 250%) rotateZ(20deg);
+  }
 }
 
 .sectionContainer section.about .rects .rect2 {
