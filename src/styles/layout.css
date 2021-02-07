@@ -317,7 +317,6 @@ header .header-container .toggle {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  outline: 1px solid #f7f7f7;
   -webkit-transform: translate(5%, 0);
           transform: translate(5%, 0);
 }
@@ -340,7 +339,6 @@ header .header-container .toggle {
     width: 60%;
     left: 20%;
     height: 70%;
-    outline: 1px solid #ff5722;
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
   }
@@ -358,7 +356,6 @@ header .header-container .toggle {
     width: 60%;
     left: 20%;
     height: 70%;
-    outline: 1px solid #ff5722;
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
   }
