@@ -102,7 +102,7 @@ function About({scrollTo}) {
 
                         <div>
                             <p>
-                                My favorite technologies right now are: ReactJS, Node and GraphQL. Currently, I am super comfortable using <span className="orange">MERN</span> stack to build my porject.
+                                My favorite tools right now are: ReactJS, GraphQL and styled-components. I am mainly focused on forntend currently, but if i need to be full-stack for certain projects, the <span className="orange">MERN</span> stack is a comfortable way for me to go.
                             </p>
                         </div>
 
