@@ -96,21 +96,21 @@ function About({scrollTo}) {
                     <div className="rectContent">
                         <div>
                             <p>
-                                Hello! My name is <span className="orange">Zhichao Sun</span>, and I am a web application developer living in Singapore.
+                                Hello! My name is <span className="orange">Zhichao Sun</span>, and I am an IoT engineer and full-stack developer living in Singapore.
                             </p>
                         </div>
 
                         <div>
                             <p>
-                                My favorite tools right now are: ReactJS, GraphQL and styled-components. I am mainly focused on forntend currently, but if I need to be full-stack for certain projects, the <span className="orange">MERN</span> stack is a comfortable way for me to go.
+                                My favorite tools right now are: ReactJS, GraphQL and styled-components. The MERN stack is a comfortable way for me to go.
                             </p>
                         </div>
 
-                        <div>
-                            <p>
-                                I am not going to stop learning new stuff. In recent days, I have got some interests in Jest, Typescript and TailwindCSS.
-                            </p>
-                        </div>
+                        {/*<div>*/}
+                        {/*    <p>*/}
+                        {/*        I am not going to stop learning new stuff. In recent days, I have got some interests in Jest, Typescript and TailwindCSS.*/}
+                        {/*    </p>*/}
+                        {/*</div>*/}
                     </div>
                 </div>
                 <div className="scrollUpIndicator" onClick={()=>scrollTo("home")}>

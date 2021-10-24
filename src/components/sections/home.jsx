@@ -88,8 +88,8 @@ const Home = ({scrollTo}) => {
                     <div className="layerContent">
                         <div><p className="name1">Zhichao</p></div>
                         <div><p className="name1">SUN</p></div>
-                        <div><p className="name3">Software Engineer /</p></div>
-                        <div><p className="name3">Frontend Developer</p></div>
+                        <div><p className="name3">IoT Engineer /</p></div>
+                        <div><p className="name3">Full-stack Developer</p></div>
                     </div>
                 </div>
                 <div className="scrollDownIndicator" onClick={()=>scrollTo("about")}>
