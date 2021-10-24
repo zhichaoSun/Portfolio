@@ -124,11 +124,11 @@ const Header = () => {
                                     <SiLinkedin />
                                 </a>
                             </li>
-                            <li>
-                                <a href="https://github.com/zhichaoSun" target="_blank">
-                                    <SiGithub />
-                                </a>
-                            </li>
+                            {/*<li>*/}
+                            {/*    <a href="https://github.com/zhichaoSun" target="_blank">*/}
+                            {/*        <SiGithub />*/}
+                            {/*    </a>*/}
+                            {/*</li>*/}
                             <li>
                                 <a href={data.allFile.edges[0].node.publicURL} target="_blank">
                                     <FaFilePdf />
