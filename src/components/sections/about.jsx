@@ -96,15 +96,21 @@ function About({scrollTo}) {
                     <div className="rectContent">
                         <div>
                             <p>
-                                Hello! My name is <span className="orange">Zhichao Sun</span>, and I am an IoT engineer and full-stack developer living in Singapore.
+                                Hi! Glad you are here. My name is <span className="orange">Zhichao Sun</span>, and I am an IoT engineer and full-stack developer living in Singapore.
                             </p>
                         </div>
 
                         <div>
                             <p>
-                                My favorite tools right now are: ReactJS, GraphQL and styled-components. The MERN stack is a comfortable way for me to go.
+                                I have been working on embedded system, monitoring system and full-stack development for years.
                             </p>
                         </div>
+
+                        {/*<div>*/}
+                        {/*    <p>*/}
+                        {/*        My favorite tools right now are: ReactJS, GraphQL and styled-components. The MERN stack is a comfortable way for me to go.*/}
+                        {/*    </p>*/}
+                        {/*</div>*/}
 
                         {/*<div>*/}
                         {/*    <p>*/}

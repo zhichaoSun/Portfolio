@@ -101,7 +101,7 @@ const Work = ({scrollTo}) => {
                                 <p>System</p>
                             </div>
                             <div className="content">
-                                <p>I used to be working in the control filed. Design and assemble the printed circuit board based on the requirement, flash the control program into the chips and finally integrate it with the system.</p>
+                                <p>I used to be working in the controlling filed. Design and assemble the printed circuit board based on the requirement, flash the control program into the chips and finally integrate it with the system.</p>
                             </div>
                         </div>
                     </div>
@@ -115,7 +115,7 @@ const Work = ({scrollTo}) => {
                                 <p>Monitoring</p>
                             </div>
                             <div className="content">
-                                <p>Programming the monitoring system is having a plenty of fun. And this is when I start to equip myself with frontend development knowledge and end with making my mind to bacame a web developer.
+                                <p>Programming the monitoring system has a plenty of fun. And this is when I start to equip myself with web design knowledge and end up with making my mind to become a full-stack developer.
                                 </p>
                             </div>
                         </div>
@@ -130,7 +130,7 @@ const Work = ({scrollTo}) => {
                                 <p>Advisory</p>
                             </div>
                             <div className="content">
-                                <p>Getting to know ReactJS in more depth by developing and supporting an electrical energy trading advisory web app to facilitate AI model traning of my team of many data scientists.</p>
+                                <p>Getting to know ReactJS and NodeJS further by developing and supporting an electrical energy trading advisory web app to facilitate AI model training of my team of many data scientists.</p>
                             </div>
                         </div>
                     </div>
