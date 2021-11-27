@@ -16,7 +16,7 @@ html {
     opacity: 0;
     background-color: $black;
     user-select: none;
-    cursor: url("../images/Cursor.png"), auto;
+    cursor: url("../images/Cursor.png") 16 16, auto;
 }
 
 body {
@@ -60,10 +60,10 @@ header {
                 display: flex;
                 li {
                     padding: 0 20px;
-                    cursor: url("../images/CursorPointer.png"), auto;
+                    cursor: url("../images/CursorPointer.png") 16 16, auto;
                     p, a {
 
-                        cursor: url("../images/CursorPointer.png"), auto;
+                        cursor: url("../images/CursorPointer.png") 16 16, auto;
                         visibility :hidden;
                         color: $white;
                         text-decoration: none;
@@ -99,7 +99,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: url("../images/CursorPointer.png"), auto;   
+    cursor: url("../images/CursorPointer.png") 16 16, auto;
     z-index: 11;
 
 }
@@ -121,7 +121,7 @@ header {
         font-size: 2rem;
         font-weight: 800;
         line-height: 4rem;
-        cursor: url("../images/CursorPointer.png"), auto;   
+        cursor: url("../images/CursorPointer.png") 16 16, auto;
         // outline: 1px solid $white;
         &:hover {
             color: $orange;
@@ -1001,7 +1001,7 @@ header {
                         }
 
                         
-                        cursor: url("../images/CursorPointer.png"), auto;
+                        cursor: url("../images/CursorPointer.png") 16 16, auto;
                     }
 
                     // .submitBtnDisabled {
@@ -1064,7 +1064,7 @@ footer {
 }
 
 .scrollUpIndicator, .scrollRightIndicator, .scrollDownIndicator, a{
-    cursor: url("../images/CursorPointer.png"), auto;
+    cursor: url("../images/CursorPointer.png") 16 16, auto;
 }
 
 .scrollUpIndicator, .scrollRightIndicator, .scrollDownIndicator{
@@ -1101,6 +1101,6 @@ footer {
 }
 
 input, label, .inputTextArea {
-    cursor: url("../images/CursorText.png"), auto;
+    cursor: url("../images/CursorText.png") 16 16, auto;
 }
 
