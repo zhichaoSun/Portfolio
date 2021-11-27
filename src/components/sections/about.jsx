@@ -102,7 +102,7 @@ function About({scrollTo}) {
 
                         <div>
                             <p>
-                                I have been working on embedded system, monitoring system and full-stack development for years.
+                                I have been working on embedded system, monitoring system and full-stack IoT development for years. And now I am really into working as a web developer and I have been learning stuff with this goal for some time.
                             </p>
                         </div>
 
