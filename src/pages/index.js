@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react"
-
+import React, { useEffect } from "react"
 import { gsap, ScrollTrigger, Power3 } from "gsap/all";
 
 import SEO from "../components/seo"
@@ -134,7 +133,7 @@ const IndexPage = () => {
         })
     }, []);
 
-    const scrollTo = (id) => {
+    const scrollTo = id => {
         gsap.to(window, {
             duration: 0.5, 
             scrollTo: `#${id}`,
@@ -145,17 +144,11 @@ const IndexPage = () => {
 
     return(
         <Layout scrollTo={scrollTo} >
-            <SEO title="Home" />
-
-            <Home scrollTo={scrollTo} />
-
-            <About scrollTo={scrollTo} />
-
-            <Work scrollTo={scrollTo} />
-
-            <Contact scrollTo={scrollTo} />
-
-            {/* <Link to="/page-2/">Go to page 2</Link> */}
+            <SEO title="Home" /> {/* Actually not really want to be searched. */}
+            <Home/>
+            <About/>
+            <Work/>
+            <Contact/>
         </Layout>
     )
 }

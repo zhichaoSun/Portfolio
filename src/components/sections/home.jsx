@@ -2,9 +2,7 @@ import React, { useEffect } from 'react'
 import { gsap, Power3 } from "gsap/all";
 import VanillaTilt from "vanilla-tilt";
 
-import { BsCaretDownFill } from "react-icons/bs";
-
-const Home = ({scrollTo}) => {
+const Home = () => {
 
     useEffect(() => {
 
@@ -70,32 +68,19 @@ const Home = ({scrollTo}) => {
     
     return (
         <>
-            <div className="divider" id="home"></div>
+            <div className="divider" id="home"/>
             <section className="home">
                 <div className="layers">
-                    {/* <div className="todo">
-                        <ul>
-                            #TODO:
-                            <li>To add real content</li>
-                            <li>To add reCAPTCHA for message form submission</li>
-                            <li>To add responsible for mobile devices</li>
-                        </ul>
-                    </div> */}
-                    <div className="layerCircle circle4"></div>
-                    <div className="layerCircle circle3"></div>
-                    <div className="layerCircle circle2"></div>
-                    <div className="layerCircle circle1"></div>
+                    <div className="layerCircle circle4"/>
+                    <div className="layerCircle circle3"/>
+                    <div className="layerCircle circle2"/>
+                    <div className="layerCircle circle1"/>
                     <div className="layerContent">
                         <div><p className="name1">Zhichao</p></div>
                         <div><p className="name1">SUN</p></div>
                         <div><p className="name3">IoT Engineer /</p></div>
                         <div><p className="name3">Full-stack Developer</p></div>
                     </div>
-                </div>
-                <div className="scrollDownIndicator" onClick={()=>scrollTo("about")}>
-                    <div className="icon first"><BsCaretDownFill size="2rem"/></div>
-                    <div className="icon second"><BsCaretDownFill size="2rem"/></div>
-                    <div className="icon third"><BsCaretDownFill size="2rem"/></div>
                 </div>
             </section>
         </>

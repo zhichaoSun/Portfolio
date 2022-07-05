@@ -1,5 +1,6 @@
 import React from 'react'
-import { gsap, Power3, ScrollToPlugin, ScrollTrigger } from "gsap/all";
+
+import { gsap, Power3 } from "gsap/all";
 
 const Sidebar = ({sections, setSidebar}) => {
 
@@ -15,20 +16,19 @@ const Sidebar = ({sections, setSidebar}) => {
     return (
         <div className="sidebar">
             <ul>
-            {
-                sections.map(section => (
-                    <li key={`s-${section}`} onClick={()=>scrollTo(section)}>
-                        <p id={`s-${section}`}>
-                            {section}
-                        </p>
-                    {
-                        section!="contact"
-                        &&
-                        <div className="hr"></div>
-                    }
-                    </li>
-                ))
-            }
+                {
+                    sections.map(section => (
+                        <li key={`s-${section}`} onClick={()=>scrollTo(section)}>
+                            <p id={`s-${section}`}>{section}</p>
+                            
+                            {
+                                section!=="contact"
+                                &&
+                                <div className="hr"/>
+                            }
+                        </li>
+                    ))
+                }
             </ul>
         </div>
     )

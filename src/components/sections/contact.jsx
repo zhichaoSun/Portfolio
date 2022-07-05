@@ -2,9 +2,8 @@ import React, { useEffect } from 'react'
 
 import { gsap, Power3, ScrollTrigger } from "gsap/all";
 import ContactForm from '../form/contactForm';
-import { BsCaretUpFill } from 'react-icons/bs';
 
-const Contact = ({scrollTo}) => {
+const Contact = () => {
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger)
@@ -91,28 +90,26 @@ const Contact = ({scrollTo}) => {
     
     return (
         <>
-            <div className="divider" id="contact"></div>
+            <div className="divider" id="contact"/>
             <section className="contact">
                 <div className="contact-grid-container">
-
                     <div 
                         className="contactL" 
                         onMouseEnter={enterL} 
                         onMouseLeave={leaveL}
                     >
-                        <div className="rectL"></div>
-                        <div className="circleL"></div>
+                        <div className="rectL"/>
+                        <div className="circleL"/>
                     </div>
                     <div 
                         className="contactR"
                         onMouseEnter={enterR} 
                         onMouseLeave={leaveR}
                     >
-                        <div className="circleR"></div>
-                        <div className="rectR"></div>
+                        <div className="circleR"/>
+                        <div className="rectR"/>
                     </div>
                     
-
                     <div className="contactForm">
                         <div className="title">
                             <div className="mask">
@@ -123,13 +120,6 @@ const Contact = ({scrollTo}) => {
                             <ContactForm />
                         </div>
                     </div>
-
-                </div>
-
-                <div className="scrollUpIndicator" onClick={()=>scrollTo("work")}>
-                    <div className="icon first"><BsCaretUpFill size="2rem"/></div>
-                    <div className="icon second"><BsCaretUpFill size="2rem"/></div>
-                    <div className="icon third"><BsCaretUpFill size="2rem"/></div>
                 </div>
             </section>
         </>

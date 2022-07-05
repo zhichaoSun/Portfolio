@@ -4,12 +4,7 @@ import Img from "gatsby-image";
 
 import { gsap, Power3 } from "gsap";
 
-import TransitionLink from "gatsby-plugin-transition-link";
-
-import { BsCaretDownFill, BsCaretUpFill } from "react-icons/bs";
-import { FaHandPointRight } from "react-icons/fa";
-
-const Work = ({scrollTo}) => {
+const Work = () => {
 
     useEffect(() => {
         gsap.timeline({ scrollTrigger: {
@@ -84,11 +79,9 @@ const Work = ({scrollTo}) => {
     }
   `)
 
-    // console.log(JSON.stringify(data, null, 4))
-
     return (
         <>
-            <div className="divider" id="work"></div>
+            <div className="divider" id="work"/>
             <section className="work">
                 <div className="cards">
                     <div className="card">
@@ -105,6 +98,7 @@ const Work = ({scrollTo}) => {
                             </div>
                         </div>
                     </div>
+
                     <div className="card">
                         <div className="image image2">
                             <Img className="gatsbyImage" draggable={false} fluid={data.images.edges[0].node.childImageSharp.fluid}/>
@@ -115,11 +109,12 @@ const Work = ({scrollTo}) => {
                                 <p>Monitoring</p>
                             </div>
                             <div className="content">
-                                <p>Programming the monitoring system has a plenty of fun. And this is when I start to equip myself with web design knowledge and end up with making my mind to become a full-stack developer.
+                                <p>Programming the monitoring system has a plenty of fun. And this is when I start to equip myself with web developing knowledge and end up with making my mind to become a full-stack developer.
                                 </p>
                             </div>
                         </div>
                     </div>
+                    
                     <div className="card">
                         <div className="image">
                             <Img className="gatsbyImage" draggable={false} fluid={data.images.edges[2].node.childImageSharp.fluid}/>
@@ -130,54 +125,13 @@ const Work = ({scrollTo}) => {
                                 <p>Advisory</p>
                             </div>
                             <div className="content">
-                                <p>Getting to know ReactJS and NodeJS further by developing and supporting an electrical energy trading advisory web app to facilitate AI model training of my team of many data scientists.</p>
+                                <p>Understand more about the MERN full-stack development by implementing and maintaining an customizable dashboard web application and supporting our data scientist team.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                    
-                <div className="scrollUpIndicator" onClick={()=>scrollTo("about")}>
-                    <div className="icon first"><BsCaretUpFill size="2rem"/></div>
-                    <div className="icon second"><BsCaretUpFill size="2rem"/></div>
-                    <div className="icon third"><BsCaretUpFill size="2rem"/></div>
-                </div>
-                {/* <div className="scrollRightIndicator">
-                    <TransitionLink 
-                        to="/toys"
-                        exit={{
-                            length: 0.8,
-                            trigger: ({node}) => (
-                                gsap.timeline()
-                                .to(node.querySelector(".workSectionCover"), {
-                                    duration: 0.8, 
-                                    xPercent: -101, 
-                                    ease: Power3.easeIn,
-                                })
-                            )
-                        }}
-                        entry={{
-                            delay: 0.8,
-                            length: 0.8,
-                            trigger: ({node}) => (
-                                gsap.timeline()
-                                .from(node.querySelector(".toyPageCover"), {
-                                    xPercent: 100,
-                                    duration: 0.8, 
-                                    ease: Power3.easeOut
-                                })
-                            )
-                        }}
-                    >
-                        <FaHandPointRight />
-                    </TransitionLink>
-                </div> */}
-                <div className="scrollDownIndicator" onClick={()=>scrollTo("contact")}>
-                    <div className="icon first"><BsCaretDownFill size="2rem"/></div>
-                    <div className="icon second"><BsCaretDownFill size="2rem"/></div>
-                    <div className="icon third"><BsCaretDownFill size="2rem"/></div>
-                </div>
             </section>
-            <div className="workSectionCover"></div>
+            <div className="workSectionCover"/>
         </>
     )
 }

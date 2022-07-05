@@ -1,10 +1,8 @@
 import React, { useEffect } from 'react'
-import { gsap, ScrollTrigger, Power3 } from "gsap/all";
+import { gsap, Power3 } from "gsap/all";
 import VanillaTilt from "vanilla-tilt";
 
-import { BsCaretDownFill, BsCaretUpFill } from "react-icons/bs";
-
-function About({scrollTo}) {
+function About() {
     
     useEffect(() => {
 
@@ -86,48 +84,33 @@ function About({scrollTo}) {
 
     return (
         <>
-            <div className="divider" id="about"></div>
+            <div className="divider" id="about"/>
             <section className="about">
                 <div className="rects">
-                    <div className="rect rect4"></div>
-                    <div className="rect rect3"></div>
-                    <div className="rect rect2"></div>
-                    <div className="rect rect1"></div>
+                    <div className="rect rect4"/>
+                    <div className="rect rect3"/>
+                    <div className="rect rect2"/>
+                    <div className="rect rect1"/>
+                    
                     <div className="rectContent">
                         <div>
                             <p>
-                                Hi! Glad you are here. My name is <span className="orange">Zhichao Sun</span>, and I am an IoT engineer and full-stack developer living in Singapore.
+                                Hi! Glad you are here. My name is <span className="orange noWrap">Zhichao Sun</span>, and I am a software developer living in Singapore.
                             </p>
                         </div>
 
                         <div>
                             <p>
-                                I have been working on embedded system, monitoring system and full-stack IoT development for years. And now I am really into working as a web developer and I have been learning stuff with this goal for some time.
+                                I have been working on embedded system, monitoring system and full-stack IoT development for years.
                             </p>
                         </div>
 
-                        {/*<div>*/}
-                        {/*    <p>*/}
-                        {/*        My favorite tools right now are: ReactJS, GraphQL and styled-components. The MERN stack is a comfortable way for me to go.*/}
-                        {/*    </p>*/}
-                        {/*</div>*/}
-
-                        {/*<div>*/}
-                        {/*    <p>*/}
-                        {/*        I am not going to stop learning new stuff. In recent days, I have got some interests in Jest, Typescript and TailwindCSS.*/}
-                        {/*    </p>*/}
-                        {/*</div>*/}
+                        <div>
+                           <p>
+                               In terms of web application development, my skillset includes: React, styled-components, NodeJS, typescript and MongoDB/MySql. And I am always happy to learn new stuff.
+                           </p>
+                        </div>
                     </div>
-                </div>
-                <div className="scrollUpIndicator" onClick={()=>scrollTo("home")}>
-                    <div className="icon first"><BsCaretUpFill size="2rem"/></div>
-                    <div className="icon second"><BsCaretUpFill size="2rem"/></div>
-                    <div className="icon third"><BsCaretUpFill size="2rem"/></div>
-                </div>
-                <div className="scrollDownIndicator" onClick={()=>scrollTo("work")}>
-                    <div className="icon first"><BsCaretDownFill size="2rem"/></div>
-                    <div className="icon second"><BsCaretDownFill size="2rem"/></div>
-                    <div className="icon third"><BsCaretDownFill size="2rem"/></div>
                 </div>
             </section>
         </>
