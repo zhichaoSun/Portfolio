@@ -35,7 +35,7 @@ function ContactForm() {
         setServerState({...serverState, submitted, ok, msg});
     };
 
-    console.log(process.env.GATSBY_FORMSPREE_URL)
+    console.log(process.env.FORMSPREE_URL)
 
     const handleOnSubmit = (values, actions) => {
         axios({
