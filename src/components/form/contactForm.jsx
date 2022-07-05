@@ -23,6 +23,8 @@ const validationSchema = yup.object().shape({
         .required("Required.")
 })
 
+// 6LdOFDoaAAAAAHauxjT6xQubq5DGwdw1n9jO5PU6
+
 function ContactForm() {
 
     const [serverState, setServerState] = useState({
@@ -34,8 +36,6 @@ function ContactForm() {
     const handleServerResponse = (submitted, ok, msg) => {
         setServerState({...serverState, submitted, ok, msg});
     };
-
-    console.log(process.env.FORMSPREE_URL)
 
     const handleOnSubmit = (values, actions) => {
         axios({
