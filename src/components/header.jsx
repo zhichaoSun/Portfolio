@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from "react"
-// import { Link } from "gatsby"
-import { gsap, Power3, ScrollToPlugin, ScrollTrigger } from "gsap/all";
+import { useStaticQuery, graphql } from "gatsby"
+import { gsap, Power3 } from "gsap/all";
+import ReactTooltip from "react-tooltip";
 
-import { SiLinkedin, SiGithub } from "react-icons/si";
-import { FaFilePdf } from "react-icons/fa";
-import { CgDarkMode } from "react-icons/cg";
-import { IoLanguage } from "react-icons/io5";
+import Sidebar from "./sidebar";
+
+import { AiFillLinkedin, AiOutlineGithub } from "react-icons/ai";
+import { GoFilePdf } from "react-icons/go";
 import { HiDotsVertical } from "react-icons/hi";
 import { ImCross } from "react-icons/im";
 
-import { useStaticQuery, graphql } from "gatsby"
-import Sidebar from "./sidebar";
 
 const sections = ["home", "about", "work", "contact"]
 
@@ -29,7 +28,6 @@ const Header = () => {
     const isBrowser = () => typeof window !== "undefined"
 
     useEffect(() => {
-        // gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
         gsap.timeline()
         .set([".links p", ".links a"], {
@@ -100,39 +98,40 @@ const Header = () => {
         }
     }`)
 
-    const updateWidth = () => {
-        setWidth(window.innerWidth)
-    }
+    const updateWidth = () => setWidth(window.innerWidth)
+
     useEffect(() => {
         updateWidth()
         window.addEventListener("resize", updateWidth)
-        return () => {
-            window.removeEventListener("resize", updateWidth)
-        }
+        return () => window.removeEventListener("resize", updateWidth)
     }, [isBrowser() && window.innerWidth])
-
-    // console.log(width)
 
     return (
         <>
             <header>
+                <ReactTooltip
+                    place="bottom" 
+                    type="dark"
+                    effect="float"
+                    className="tooltip"
+                />
                 <div className="header-container">
                     <div className="links social-links">
                         <ul>
-                            <li>
+                            <li data-tip="LinkedIn">
                                 <a href="https://www.linkedin.com/in/zhichao-sun/" target="_blank">
-                                    <SiLinkedin />
+                                    <AiFillLinkedin />
                                 </a>
                             </li>
-                            {/*<li>*/}
-                            {/*    <a href="https://github.com/zhichaoSun" target="_blank">*/}
-                            {/*        <SiGithub />*/}
-                            {/*    </a>*/}
-                            {/*</li>*/}
-                            <li>
+                            <li data-tip="Resume">
                                 <a href={data.allFile.edges[0].node.publicURL} target="_blank">
-                                    <FaFilePdf />
+                                    <GoFilePdf />
                                 </a>
+                            </li>
+                            <li data-tip="Source code of this page">
+                               <a href="https://github.com/zhichaoSun/Portfolio" target="_blank">
+                                   <AiOutlineGithub />
+                               </a>
                             </li>
                         </ul>
                     </div>
@@ -152,16 +151,6 @@ const Header = () => {
                         }
                         </ul>
                     </div>
-                    {/* <div className="links toggle">
-                        <ul>
-                            <li onClick={() => alert("Do not click on me")}>
-                                <p><CgDarkMode /></p>
-                            </li>
-                            <li onClick={() => alert("Do not click on me")}>
-                                <p><IoLanguage /></p>
-                            </li>
-                        </ul>
-                    </div> */}
                 </div>
             </header>
             <div style={{visibility: (width<=800) ? "visible" : "hidden"}}>
