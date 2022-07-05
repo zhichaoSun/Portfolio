@@ -41,6 +41,12 @@ header {
     background-color: $black;
     box-shadow: 0px 2px 10px $black;
     
+    .tooltip {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 800;
+        font-size: 1rem !important;
+        color: $white;
+    }
 
     .header-container {
         height: 100%;
@@ -161,28 +167,6 @@ header {
     
     section.home {
         position: relative;
-        .scrollDownIndicator {
-            position: absolute;
-            bottom: 2rem;
-            left: calc(50% - 1rem);
-            .icon {
-                height: 1.5rem;
-            }
-            .first {
-                animation: blink 1s ease-in-out infinite 1s;
-            }
-            .second {
-                animation: blink 1s ease-in-out infinite 1.33s;
-            }
-            .third {
-                animation: blink 1s ease-in-out infinite 1.66s;
-            }
-            @keyframes blink { // @keyframes does not cascade, one is enough
-                0% { color: $white; };
-                50% { color: $orange; };
-                100% { color: $white; };
-            }
-        }
 
         .layers {
             transform-style: preserve-3d;
@@ -227,6 +211,7 @@ header {
                     // }
                     .name1 {
                         font-size: 7rem;
+                        white-space: nowrap;
                     }
                     // .name2 {
                     //     font-size: 4rem;
@@ -234,6 +219,7 @@ header {
                     .name3 {
                         font-size: 2rem;
                         line-height: 2.5rem;
+                        white-space: nowrap;
                     }
                 }
 
@@ -271,8 +257,6 @@ header {
                     }
                 }
             }
-
-            
 
             .layerCircle {
                 position: absolute;
@@ -320,42 +304,6 @@ header {
     
     section.about {
         position: relative;
-
-        .scrollUpIndicator {
-            position: absolute;
-            top: 0;
-            left: calc(50% - 1rem);
-            .icon {
-                height: 1.5rem;
-            }
-            .first {
-                animation: blink 1s ease-in-out infinite 1.66s;
-            }
-            .second {
-                animation: blink 1s ease-in-out infinite 1.33s;
-            }
-            .third {
-                animation: blink 1s ease-in-out infinite 1s;
-            }
-        }
-
-        .scrollDownIndicator {
-            position: absolute;
-            bottom: 2rem;
-            left: calc(50% - 1rem);
-            .icon {
-                height: 1.5rem;
-            }
-            .first {
-                animation: blink 1s ease-in-out infinite 1s;
-            }
-            .second {
-                animation: blink 1s ease-in-out infinite 1.33s;
-            }
-            .third {
-                animation: blink 1s ease-in-out infinite 1.66s;
-            }
-        }
 
         .rects {
             position: relative;
@@ -470,6 +418,10 @@ header {
                 transform: translate(-10%, 20%) rotateZ(75deg);
                 background-color: #603629;
             }
+        }
+
+        .noWrap {
+            white-space: nowrap;
         }
     }
     
@@ -670,80 +622,6 @@ header {
             }
         }
 
-
-        .scrollUpIndicator {
-            position: absolute;
-            top: 0;
-            left: calc(50% - 1rem);
-            .icon {
-                height: 1.5rem;
-            }
-            .first {
-                animation: blink 1s ease-in-out infinite 1.66s;
-            }
-            .second {
-                animation: blink 1s ease-in-out infinite 1.33s;
-            }
-            .third {
-                animation: blink 1s ease-in-out infinite 1s;
-            }
-        }
-
-        .scrollRightIndicator {
-            position: absolute;
-            top: calc(50% - 3rem);
-            right: 1rem;
-            
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            height: 6rem;
-            width: 6rem;
-            margin: 0 -0.2rem;
-            padding: 0;
-            font-size: 2rem;
-
-            // border: 1px solid $white;
-            
-            a {
-                text-decoration: none;
-                color: $white;
-                height: 100%;
-                width: 100%;
-
-                display: grid;
-                place-items: center;
-                // border: 1px solid $white;
-            }
-
-            animation: right 1.5s ease-in-out infinite;
-            @keyframes right {
-                0% { color: $white; transform: translateX(0%);};
-                50% { color: $white; transform: translateX(33%);};
-                100% { color: $white; transform: translateX(0%);};
-            }
-        }
-
-        .scrollDownIndicator {
-            position: absolute;
-            bottom: 2rem;
-            left: calc(50% - 1rem);
-            .icon {
-                height: 1.5rem;
-            }
-            .first {
-                animation: blink 1s ease-in-out infinite 1s;
-            }
-            .second {
-                animation: blink 1s ease-in-out infinite 1.33s;
-            }
-            .third {
-                animation: blink 1s ease-in-out infinite 1.66s;
-            }
-        }
-    }
-
     .workSectionCover {
         position: absolute;
         top: 0;
@@ -760,23 +638,256 @@ header {
         // overflow: hidden;
 
         position: relative;
-        .scrollUpIndicator {
-            position: absolute;
-            top: 0;
-            left: calc(50% - 1rem);
-            .icon {
-                height: 1.5rem;
+    
+        .contact-grid-container {
+            height: 100%;
+    
+            display: grid;
+            grid-template-columns: 1em 1fr 1fr 1fr 1em;
+            grid-template-rows: 1fr;
+            gap: 0px 10px;
+            grid-template-areas:
+                ". contactL contactForm contactR .";
+
+            @media (min-width: $phone) and (max-width: $tablet) {
+                grid-template-columns: 1em 1fr 4fr 1fr 1em;
             }
-            .first {
-                animation: blink 1s ease-in-out infinite 1.66s;
+            @media (max-width: $phone) {
+                grid-template-columns: 0.5em 1fr 8fr 1fr 0.5em;
             }
-            .second {
-                animation: blink 1s ease-in-out infinite 1.33s;
+    
+            .contactL {
+                position: relative;
+                grid-area: contactL; 
+                height: 100%; 
+                .circleL, .rectL {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    visibility: hidden;
+                }
+                .circleL {
+                    position: absolute;
+                    width: 35vh;
+                    height: 35vh;
+                    background-color: #ff5722;
+                    border-radius: 50%;
+                    box-shadow: -2px -2px 40px $black;
+                    border-radius: 50%;
+                    transform: translate(10%, 25%);
+                }
+                .rectL {
+                    position: absolute;
+                    width: 45vh;
+                    height: 50vh;
+                    // z-index: 0;
+                    background-color: #603629;
+                    box-shadow: -2px -2px 40px $black;
+                    transform: translate(10%, 55%) rotate(-15deg);
+                }
             }
-            .third {
-                animation: blink 1s ease-in-out infinite 1s;
+            .contactR { 
+                position: relative;
+                grid-area: contactR; 
+                height: 100%; 
+                .circleR, .rectR {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    visibility: hidden;
+                }
+                .circleR {
+                    position: absolute;
+                    width: 50vh;
+                    height: 50vh;
+                    z-index: 0;
+                    background-color: #954127;
+                    border-radius: 50%;
+                    box-shadow: -2px -2px 40px $black;
+                    transform: translate(0%, 15%);
+                }
+                .rectR {
+                    position: absolute;
+                    width: 30vh;
+                    height: 50vh;
+                    z-index: 0;
+                    background-color: #CA4C24;
+                    box-shadow: -2px -2px 40px $black;
+                    transform: translate(-10%, 55%) rotate(-15deg)
+                }
+            }
+
+            .contactForm {
+
+                div.mask {
+                    overflow: hidden;
+                    @media (min-width: $phone) and (max-width: $tablet) {
+                        h1 {
+                            font-size: 2rem;
+                        }
+                    }
+                    @media (max-width: $phone) {
+                        h1 {
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+
+                grid-area: contactForm; 
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                z-index: 1;
+                // visibility: hidden;
+
+                @media (min-width: $phone) and (max-width: $tablet) {
+                    width: 100%;
+                }
+                .title {
+                    width: 100%;
+                    display: grid;
+                    place-items: center;
+                    color: $white;
+                }
+                .form {
+                    text-align: center;
+
+                    @media (min-width: $phone) and (max-width: $tablet) {
+                        width: 75%;
+                    }
+                    @media (max-width: $phone) {
+                        width: 100%;
+                    }
+                    .form-control {
+                        display: flex;
+                        flex-direction: column;
+                        align-content: center;
+                        justify-content: center;
+                        .formTitle {
+                            color: $white;
+                            font-size: 1.25rem;
+                            margin: 30px 0 10px 0;
+                            text-align: center;
+                            @media (min-width: $phone) and (max-width: $tablet) {
+                                font-size: 1.25rem;
+                                margin: 30px 0 10px 0;
+                            }
+                            @media (max-width: $phone) {
+                                font-size: 1rem;
+                                margin: 10px 0 10px 0;
+                            }
+                        }
+                        .inputField {
+                            margin: 0;
+                            height: 30px;
+                            width: 100%;
+                            padding: 10px;
+                            box-sizing: border-box;
+
+                            // border: none;
+                            border: 3px solid $white;
+                            background-color: transparent;
+                            color: $white;
+                            
+                            font-family: 'Poppins', sans-serif;
+                            font-weight: 600;
+                            // backdrop-filter: blur(10px);
+                            &:focus {
+                                outline: none;
+                                border: 3px solid $orange;
+                            }
+                        }
+                        .inputTextArea {
+                            margin: 0;
+                            height: 95px;
+                            width: 100%;
+                            padding: 10px;
+                            box-sizing: border-box;
+
+                            // border: none;
+                            border: 3px solid $white;
+                            background-color: transparent;
+                            color: $white;
+
+                            font-family: 'Poppins', sans-serif;
+                            font-weight: 600;
+                            resize: none;
+                            // backdrop-filter: blur(10px);
+                            &:focus {
+                                outline: none;
+                                border: 3px solid $orange;
+                            }
+                            &:valid {
+                                background-color: transparent;
+                            }
+                        }
+                        .formError {
+                            color: $orange;
+                            font-size: 1.25rem;
+                            margin-top: 10px;
+                            text-align: end;
+                            @media (min-width: $phone) and (max-width: $tablet) {
+                                // font-size: 1.25rem;
+                                // margin: 30px 0 10px 0;
+                            }
+                            @media (max-width: $phone) {
+                                font-size: 1rem;
+                                margin-top: 5px;
+                            }
+                        }
+                    }
+                    button {
+                        padding: 10px 20px;
+                        margin-top: 40px;
+                        font-family: 'Poppins', sans-serif;
+                        font-weight: 800;
+                        font-size: 1.25rem;
+                        text-transform: uppercase;
+                        
+                        // color: $orange;
+                        background: $black;
+
+                        border: none;
+                        outline: none;
+                        box-shadow: 0px 2px 10px $black;
+
+                        @media (min-width: $phone) and (max-width: $tablet) {
+                            // font-size: 1.25rem;
+                            // margin: 30px 0 10px 0;
+                        }
+                        @media (max-width: $phone) {
+                            margin-top: 10px;
+                        }
+
+                        
+                        cursor: url("../images/CursorPointer.png") 16 16, auto;
+                    }
+
+                    p {
+                        font-size: 1rem;
+                        margin-top: 30px;
+                        line-height: 2rem;
+                    }
+
+                    .submitFailed {
+                        color: $orange
+                    }
+                    .submitSuccess {
+                        color: $white
+                    }
+                }
             }
         }
+    }
+    }
+
+    section.contact {
+        height: calc(100vh - 100px);
+        // overflow: hidden;
+
+        position: relative;
     
         .contact-grid-container {
             height: 100%;
@@ -1063,44 +1174,6 @@ footer {
     }
 }
 
-.scrollUpIndicator, .scrollRightIndicator, .scrollDownIndicator, a{
-    cursor: url("../images/CursorPointer.png") 16 16, auto;
-}
-
-.scrollUpIndicator, .scrollRightIndicator, .scrollDownIndicator{
-    z-index: 10;
-}
-
-.toyPageCover {
-    position: absolute;
-    top: 0;
-    left: -100vw;
-    // left: 0;
-    background-color: $orange;
-    width: 100vw;
-    height: 100vh;
-    z-index: 20;
-    color: $white;
-}
-
-.toys {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: $white;
-    font-family: 'Poppins', sans-serif;
-    font-size: 4rem;
-    font-weight: 800;
-
-    a {
-        text-decoration: none;
-        color: $white;
-    }
-}
-
 input, label, .inputTextArea {
     cursor: url("../images/CursorText.png") 16 16, auto;
 }
-

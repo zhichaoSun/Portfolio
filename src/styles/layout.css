@@ -49,7 +49,7 @@ blockquote, q {
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -86,43 +86,35 @@ header {
   overflow: hidden;
   visibility: hidden;
   background-color: #1b1b1b;
-  -webkit-box-shadow: 0px 2px 10px #1b1b1b;
-          box-shadow: 0px 2px 10px #1b1b1b;
+  box-shadow: 0px 2px 10px #1b1b1b;
 }
-
+header .tooltip {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 1rem !important;
+  color: #f7f7f7;
+}
 header .header-container {
   height: 100%;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   z-index: 10;
 }
-
 header .header-container .links {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 800;
   font-size: 1.25em;
   margin: 0 20px;
 }
-
 header .header-container .links ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 header .header-container .links ul li {
   padding: 0 20px;
   cursor: url("../images/CursorPointer.png") 16 16, auto;
 }
-
 header .header-container .links ul li p, header .header-container .links ul li a {
   cursor: url("../images/CursorPointer.png") 16 16, auto;
   visibility: hidden;
@@ -130,15 +122,12 @@ header .header-container .links ul li p, header .header-container .links ul li a
   text-decoration: none;
   text-transform: capitalize;
 }
-
 header .header-container .links ul li .active {
   color: #ff5722;
 }
-
 header .header-container .section-links {
   margin: 0 50px;
 }
-
 header .header-container .toggle {
   font-size: 1.5em;
 }
@@ -152,15 +141,9 @@ header .header-container .toggle {
   height: 50px;
   font-size: 1.25em;
   background-color: #2b2b2b;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   cursor: url("../images/CursorPointer.png") 16 16, auto;
   z-index: 11;
 }
@@ -175,19 +158,16 @@ header .header-container .toggle {
   text-align: center;
   padding: 0.5rem 0;
 }
-
 .sidebar p {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 2rem;
   font-weight: 800;
   line-height: 4rem;
   cursor: url("../images/CursorPointer.png") 16 16, auto;
 }
-
 .sidebar p:hover {
   color: #ff5722;
 }
-
 .sidebar .hr {
   width: 62%;
   border-top: 1px solid #ff5722;
@@ -198,150 +178,76 @@ header .header-container .toggle {
   margin: 0 auto;
   max-width: 1280px;
 }
-
 .sectionContainer .fakeHeader {
   height: 50px;
   background-color: transparent;
   z-index: -1;
 }
-
 .sectionContainer .divider {
   height: 50px;
   width: 100vh;
   margin: 0 auto;
 }
-
 .sectionContainer section {
   height: calc(100vh - 50px);
   color: #f7f7f7;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 800;
   font-size: 3rem;
 }
-
 .sectionContainer section.home {
   position: relative;
 }
-
-.sectionContainer section.home .scrollDownIndicator {
-  position: absolute;
-  bottom: 2rem;
-  left: calc(50% - 1rem);
-}
-
-.sectionContainer section.home .scrollDownIndicator .icon {
-  height: 1.5rem;
-}
-
-.sectionContainer section.home .scrollDownIndicator .first {
-  -webkit-animation: blink 1s ease-in-out infinite 1s;
-          animation: blink 1s ease-in-out infinite 1s;
-}
-
-.sectionContainer section.home .scrollDownIndicator .second {
-  -webkit-animation: blink 1s ease-in-out infinite 1.33s;
-          animation: blink 1s ease-in-out infinite 1.33s;
-}
-
-.sectionContainer section.home .scrollDownIndicator .third {
-  -webkit-animation: blink 1s ease-in-out infinite 1.66s;
-          animation: blink 1s ease-in-out infinite 1.66s;
-}
-
-@-webkit-keyframes blink {
-  0% {
-    color: #f7f7f7;
-  }
-  50% {
-    color: #ff5722;
-  }
-  100% {
-    color: #f7f7f7;
-  }
-}
-
-@keyframes blink {
-  0% {
-    color: #f7f7f7;
-  }
-  50% {
-    color: #ff5722;
-  }
-  100% {
-    color: #f7f7f7;
-  }
-}
-
 .sectionContainer section.home .layers {
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-transform: perspective(1000px);
-          transform: perspective(1000px);
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
   position: relative;
   height: 100%;
   max-width: 1280px;
   margin: 0 auto;
 }
-
 @media (pointer: coarse) {
   .sectionContainer section.home .layers {
-    -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
 }
-
 .sectionContainer section.home .layers .todo {
   font-size: 1.25rem;
   line-height: 2rem;
 }
-
 .sectionContainer section.home .layers .todo li {
   list-style: circle;
 }
-
 .sectionContainer section.home .layers .layerContent {
   position: absolute;
   top: 15%;
   left: 0;
   width: 55%;
   height: 70%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-transform: translate(5%, 0);
-          transform: translate(5%, 0);
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  transform: translate(5%, 0);
 }
-
 .sectionContainer section.home .layers .layerContent div {
   overflow: hidden;
 }
-
 .sectionContainer section.home .layers .layerContent div .name1 {
   font-size: 7rem;
+  white-space: nowrap;
 }
-
 .sectionContainer section.home .layers .layerContent div .name3 {
   font-size: 2rem;
   line-height: 2.5rem;
+  white-space: nowrap;
 }
-
 @media (min-width: 640px) and (max-width: 1024px) {
   .sectionContainer section.home .layers .layerContent {
     width: 60%;
     left: 20%;
     height: 70%;
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+    transform: translate(0, 0);
   }
   .sectionContainer section.home .layers .layerContent div .name1 {
     font-size: 5rem;
@@ -351,14 +257,12 @@ header .header-container .toggle {
     line-height: 1.75rem;
   }
 }
-
 @media (max-width: 640px) {
   .sectionContainer section.home .layers .layerContent {
     width: 60%;
     left: 20%;
     height: 70%;
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+    transform: translate(0, 0);
   }
   .sectionContainer section.home .layers .layerContent div .name1 {
     font-size: 3.5rem;
@@ -368,191 +272,104 @@ header .header-container .toggle {
     line-height: 1rem;
   }
 }
-
 .sectionContainer section.home .layers .layerCircle {
   position: absolute;
   top: 0;
   right: 0;
   border-radius: 50%;
-  display: -ms-grid;
   display: grid;
   place-items: center;
-  -webkit-box-shadow: -2px -2px 40px #1b1b1b;
-          box-shadow: -2px -2px 40px #1b1b1b;
+  box-shadow: -2px -2px 40px #1b1b1b;
 }
-
 .sectionContainer section.home .layers .circle1 {
   width: 25vh;
   height: 25vh;
   z-index: -1;
-  -webkit-transform: translate(-200%, 35%);
-          transform: translate(-200%, 35%);
+  transform: translate(-200%, 35%);
   background-color: #ff5722;
 }
-
 .sectionContainer section.home .layers .circle2 {
   width: 45vh;
   height: 45vh;
   z-index: -1;
-  -webkit-transform: translate(-20%, 10%);
-          transform: translate(-20%, 10%);
+  transform: translate(-20%, 10%);
   background-color: #CA4C24;
 }
-
 .sectionContainer section.home .layers .circle3 {
   width: 65vh;
   height: 65vh;
   z-index: -1;
-  -webkit-transform: translate(-40%, 10%);
-          transform: translate(-40%, 10%);
+  transform: translate(-40%, 10%);
   background-color: #954127;
 }
-
 .sectionContainer section.home .layers .circle4 {
   height: 85vh;
   width: 85vh;
   z-index: -1;
   border-radius: 50%;
-  -webkit-transform: translate(30%, 30%);
-          transform: translate(30%, 30%);
+  transform: translate(30%, 30%);
   background-color: #603629;
 }
-
 .sectionContainer section.about {
   position: relative;
 }
-
-.sectionContainer section.about .scrollUpIndicator {
-  position: absolute;
-  top: 0;
-  left: calc(50% - 1rem);
-}
-
-.sectionContainer section.about .scrollUpIndicator .icon {
-  height: 1.5rem;
-}
-
-.sectionContainer section.about .scrollUpIndicator .first {
-  -webkit-animation: blink 1s ease-in-out infinite 1.66s;
-          animation: blink 1s ease-in-out infinite 1.66s;
-}
-
-.sectionContainer section.about .scrollUpIndicator .second {
-  -webkit-animation: blink 1s ease-in-out infinite 1.33s;
-          animation: blink 1s ease-in-out infinite 1.33s;
-}
-
-.sectionContainer section.about .scrollUpIndicator .third {
-  -webkit-animation: blink 1s ease-in-out infinite 1s;
-          animation: blink 1s ease-in-out infinite 1s;
-}
-
-.sectionContainer section.about .scrollDownIndicator {
-  position: absolute;
-  bottom: 2rem;
-  left: calc(50% - 1rem);
-}
-
-.sectionContainer section.about .scrollDownIndicator .icon {
-  height: 1.5rem;
-}
-
-.sectionContainer section.about .scrollDownIndicator .first {
-  -webkit-animation: blink 1s ease-in-out infinite 1s;
-          animation: blink 1s ease-in-out infinite 1s;
-}
-
-.sectionContainer section.about .scrollDownIndicator .second {
-  -webkit-animation: blink 1s ease-in-out infinite 1.33s;
-          animation: blink 1s ease-in-out infinite 1.33s;
-}
-
-.sectionContainer section.about .scrollDownIndicator .third {
-  -webkit-animation: blink 1s ease-in-out infinite 1.66s;
-          animation: blink 1s ease-in-out infinite 1.66s;
-}
-
 .sectionContainer section.about .rects {
   position: relative;
   height: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-transform: perspective(1000px);
-          transform: perspective(1000px);
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
 }
-
 @media (pointer: coarse) {
   .sectionContainer section.about .rects {
-    -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
 }
-
 .sectionContainer section.about .rects .rect {
   background: #f7f7f7;
   position: relative;
-  -webkit-box-shadow: -2px -2px 40px #1b1b1b;
-          box-shadow: -2px -2px 40px #1b1b1b;
+  box-shadow: -2px -2px 40px #1b1b1b;
 }
-
 .sectionContainer section.about .rects .rectContent {
   position: absolute;
   top: 15%;
   right: 0;
   width: 33%;
   height: 70%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
   background-color: transparent;
   line-height: 1.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
 .sectionContainer section.about .rects .rectContent div {
   overflow: hidden;
   margin: 0.5rem 0;
 }
-
 .sectionContainer section.about .rects .rectContent div p {
   font-size: 1.25rem;
 }
-
 .sectionContainer section.about .rects .rectContent div p span.orange {
   color: #ff5722;
 }
-
 @media (min-width: 640px) and (max-width: 1024px) {
   .sectionContainer section.about .rects .rectContent {
     right: 25%;
     width: 50%;
     height: 70%;
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+    transform: translate(0, 0);
   }
 }
-
 @media (max-width: 640px) {
   .sectionContainer section.about .rects .rectContent {
     top: 13%;
     right: 15%;
     width: 70%;
     height: 70%;
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+    transform: translate(0, 0);
     line-height: 1.5rem;
   }
   .sectionContainer section.about .rects .rectContent div p {
@@ -562,186 +379,128 @@ header .header-container .toggle {
     color: #ff5722;
   }
 }
-
 .sectionContainer section.about .rects .rect1 {
   position: absolute;
   top: 0;
   width: 30vh;
   height: 22vh;
-  -webkit-transform: translate(230%, 250%) rotateZ(20deg);
-          transform: translate(230%, 250%) rotateZ(20deg);
+  transform: translate(230%, 250%) rotateZ(20deg);
   background-color: #ff5722;
 }
-
 @media (min-width: 640px) and (max-width: 1024px) {
   .sectionContainer section.about .rects .rect1 {
-    -webkit-transform: translate(30%, 250%) rotateZ(20deg);
-            transform: translate(30%, 250%) rotateZ(20deg);
+    transform: translate(30%, 250%) rotateZ(20deg);
   }
 }
-
 @media (max-width: 640px) {
   .sectionContainer section.about .rects .rect1 {
-    -webkit-transform: translate(30%, 250%) rotateZ(20deg);
-            transform: translate(30%, 250%) rotateZ(20deg);
+    transform: translate(30%, 250%) rotateZ(20deg);
   }
 }
-
 .sectionContainer section.about .rects .rect2 {
   position: absolute;
   top: 0;
   width: 30vh;
   height: 30vh;
-  -webkit-transform: translate(150%, 80%) rotateZ(0deg);
-          transform: translate(150%, 80%) rotateZ(0deg);
+  transform: translate(150%, 80%) rotateZ(0deg);
   background-color: #CA4C24;
 }
-
 .sectionContainer section.about .rects .rect3 {
   position: absolute;
   top: 0;
   width: 105vh;
   height: 60vh;
-  -webkit-transform: translate(-10%, 30%) rotateZ(-10deg);
-          transform: translate(-10%, 30%) rotateZ(-10deg);
+  transform: translate(-10%, 30%) rotateZ(-10deg);
   background-color: #954127;
 }
-
 .sectionContainer section.about .rects .rect4 {
   position: absolute;
   top: 0px;
   width: 120vh;
   height: 70vh;
-  -webkit-transform: translate(-10%, 20%) rotateZ(75deg);
-          transform: translate(-10%, 20%) rotateZ(75deg);
+  transform: translate(-10%, 20%) rotateZ(75deg);
   background-color: #603629;
 }
-
+.sectionContainer section.about .noWrap {
+  white-space: nowrap;
+}
 .sectionContainer section.work {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   position: relative;
 }
-
 .sectionContainer section.work .cards {
   width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-evenly;
+  align-items: center;
 }
-
 @media (min-width: 640px) and (max-width: 1024px) {
   .sectionContainer section.work .cards {
     width: 80%;
     height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
   }
 }
-
 @media (max-width: 640px) {
   .sectionContainer section.work .cards {
     width: 90%;
     height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
   }
 }
-
 .sectionContainer section.work .cards .card {
   position: relative;
   width: 320px;
   height: 465px;
-  -webkit-box-shadow: -10px -10px 40px #1b1b1b;
-          box-shadow: -10px -10px 40px #1b1b1b;
+  box-shadow: -10px -10px 40px #1b1b1b;
   overflow: hidden;
 }
-
 @media (min-width: 640px) and (max-width: 1024px) {
   .sectionContainer section.work .cards .card {
     width: 100%;
     height: 25%;
   }
 }
-
 @media (max-width: 640px) {
   .sectionContainer section.work .cards .card {
     width: 100%;
     height: 25%;
   }
 }
-
 .sectionContainer section.work .cards .card .image {
   background-color: #ff7e55;
-  -webkit-transform: scale(3);
-          transform: scale(3);
+  transform: scale(3);
 }
-
 @media (max-width: 1024px) {
   .sectionContainer section.work .cards .card .image {
-    -webkit-transform: scale(2);
-            transform: scale(2);
+    transform: scale(2);
   }
 }
-
 .sectionContainer section.work .cards .card .image .gatsbyImage {
   width: 100%;
   height: 100%;
   mix-blend-mode: multiply;
-  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-
 .sectionContainer section.work .cards .card .image2 {
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
+  transform: scale(1.3);
 }
-
 .sectionContainer section.work .cards .card .details {
   position: absolute;
   top: 75.3%;
   left: 0;
   width: 100%;
-  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-
 .sectionContainer section.work .cards .card .details .title {
   padding: 0.5rem 0.5rem;
   font-size: 3rem;
@@ -750,16 +509,13 @@ header .header-container .toggle {
   height: 100%;
   width: 100%;
 }
-
 .sectionContainer section.work .cards .card .details .title p {
   overflow: hidden;
   padding: 0 0 0.4rem 0;
   visibility: hidden;
 }
-
 .sectionContainer section.work .cards .card .details .content {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 0.5rem 0.5rem;
   font-size: 1rem;
   color: #2b2b2b;
@@ -768,7 +524,6 @@ header .header-container .toggle {
   height: 300px;
   width: 100%;
 }
-
 @media (max-width: 1024px) {
   .sectionContainer section.work .cards .card .details {
     top: 70%;
@@ -781,7 +536,6 @@ header .header-container .toggle {
     line-height: 1.5rem;
   }
 }
-
 @media (max-width: 640px) {
   .sectionContainer section.work .cards .card .details {
     top: 70%;
@@ -794,7 +548,6 @@ header .header-container .toggle {
     line-height: 1rem;
   }
 }
-
 @media (max-width: 530px) {
   .sectionContainer section.work .cards .card .details {
     top: 73%;
@@ -811,7 +564,6 @@ header .header-container .toggle {
     line-height: 0.95rem;
   }
 }
-
 @media (max-width: 410px) {
   .sectionContainer section.work .cards .card .details {
     top: 70%;
@@ -829,7 +581,6 @@ header .header-container .toggle {
     margin-top: -0.5rem;
   }
 }
-
 @media (max-width: 320px) {
   .sectionContainer section.work .cards .card .details {
     top: 63%;
@@ -847,163 +598,35 @@ header .header-container .toggle {
     margin-top: -0.5rem;
   }
 }
-
 .sectionContainer section.work .cards .card:hover .details {
   top: 38%;
-  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  -webkit-box-shadow: 0 -10px 40px #1b1b1b;
-          box-shadow: 0 -10px 40px #1b1b1b;
+  box-shadow: 0 -10px 40px #1b1b1b;
 }
-
 @media (max-width: 1024px) {
   .sectionContainer section.work .cards .card:hover .details {
     top: 20%;
   }
 }
-
 @media (max-width: 530px) {
   .sectionContainer section.work .cards .card:hover .details {
     top: 22%;
   }
 }
-
 @media (max-width: 410px) {
   .sectionContainer section.work .cards .card:hover .details {
     top: 25%;
   }
 }
-
 @media (max-width: 320px) {
   .sectionContainer section.work .cards .card:hover .details {
     top: 25%;
   }
 }
-
 .sectionContainer section.work .cards .card:hover .gatsbyImage {
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
+  transform: scale(0.8);
 }
-
-.sectionContainer section.work .scrollUpIndicator {
-  position: absolute;
-  top: 0;
-  left: calc(50% - 1rem);
-}
-
-.sectionContainer section.work .scrollUpIndicator .icon {
-  height: 1.5rem;
-}
-
-.sectionContainer section.work .scrollUpIndicator .first {
-  -webkit-animation: blink 1s ease-in-out infinite 1.66s;
-          animation: blink 1s ease-in-out infinite 1.66s;
-}
-
-.sectionContainer section.work .scrollUpIndicator .second {
-  -webkit-animation: blink 1s ease-in-out infinite 1.33s;
-          animation: blink 1s ease-in-out infinite 1.33s;
-}
-
-.sectionContainer section.work .scrollUpIndicator .third {
-  -webkit-animation: blink 1s ease-in-out infinite 1s;
-          animation: blink 1s ease-in-out infinite 1s;
-}
-
-.sectionContainer section.work .scrollRightIndicator {
-  position: absolute;
-  top: calc(50% - 3rem);
-  right: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 6rem;
-  width: 6rem;
-  margin: 0 -0.2rem;
-  padding: 0;
-  font-size: 2rem;
-  -webkit-animation: right 1.5s ease-in-out infinite;
-          animation: right 1.5s ease-in-out infinite;
-}
-
-.sectionContainer section.work .scrollRightIndicator a {
-  text-decoration: none;
-  color: #f7f7f7;
-  height: 100%;
-  width: 100%;
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
-}
-
-@-webkit-keyframes right {
-  0% {
-    color: #f7f7f7;
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
-  50% {
-    color: #f7f7f7;
-    -webkit-transform: translateX(33%);
-            transform: translateX(33%);
-  }
-  100% {
-    color: #f7f7f7;
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
-}
-
-@keyframes right {
-  0% {
-    color: #f7f7f7;
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
-  50% {
-    color: #f7f7f7;
-    -webkit-transform: translateX(33%);
-            transform: translateX(33%);
-  }
-  100% {
-    color: #f7f7f7;
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
-}
-
-.sectionContainer section.work .scrollDownIndicator {
-  position: absolute;
-  bottom: 2rem;
-  left: calc(50% - 1rem);
-}
-
-.sectionContainer section.work .scrollDownIndicator .icon {
-  height: 1.5rem;
-}
-
-.sectionContainer section.work .scrollDownIndicator .first {
-  -webkit-animation: blink 1s ease-in-out infinite 1s;
-          animation: blink 1s ease-in-out infinite 1s;
-}
-
-.sectionContainer section.work .scrollDownIndicator .second {
-  -webkit-animation: blink 1s ease-in-out infinite 1.33s;
-          animation: blink 1s ease-in-out infinite 1.33s;
-}
-
-.sectionContainer section.work .scrollDownIndicator .third {
-  -webkit-animation: blink 1s ease-in-out infinite 1.66s;
-          animation: blink 1s ease-in-out infinite 1.66s;
-}
-
-.sectionContainer .workSectionCover {
+.sectionContainer section.work .workSectionCover {
   position: absolute;
   top: 0;
   left: 100vw;
@@ -1012,117 +635,296 @@ header .header-container .toggle {
   height: 100%;
   z-index: 20;
 }
-
+.sectionContainer section.work section.contact {
+  height: calc(100vh - 100px);
+  position: relative;
+}
+.sectionContainer section.work section.contact .contact-grid-container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1em 1fr 1fr 1fr 1em;
+  grid-template-rows: 1fr;
+  gap: 0px 10px;
+  grid-template-areas: ". contactL contactForm contactR .";
+}
+@media (min-width: 640px) and (max-width: 1024px) {
+  .sectionContainer section.work section.contact .contact-grid-container {
+    grid-template-columns: 1em 1fr 4fr 1fr 1em;
+  }
+}
+@media (max-width: 640px) {
+  .sectionContainer section.work section.contact .contact-grid-container {
+    grid-template-columns: 0.5em 1fr 8fr 1fr 0.5em;
+  }
+}
+.sectionContainer section.work section.contact .contact-grid-container .contactL {
+  position: relative;
+  grid-area: contactL;
+  height: 100%;
+}
+.sectionContainer section.work section.contact .contact-grid-container .contactL .circleL, .sectionContainer section.work section.contact .contact-grid-container .contactL .rectL {
+  position: absolute;
+  left: 0;
+  top: 0;
+  visibility: hidden;
+}
+.sectionContainer section.work section.contact .contact-grid-container .contactL .circleL {
+  position: absolute;
+  width: 35vh;
+  height: 35vh;
+  background-color: #ff5722;
+  border-radius: 50%;
+  box-shadow: -2px -2px 40px #1b1b1b;
+  border-radius: 50%;
+  transform: translate(10%, 25%);
+}
+.sectionContainer section.work section.contact .contact-grid-container .contactL .rectL {
+  position: absolute;
+  width: 45vh;
+  height: 50vh;
+  background-color: #603629;
+  box-shadow: -2px -2px 40px #1b1b1b;
+  transform: translate(10%, 55%) rotate(-15deg);
+}
+.sectionContainer section.work section.contact .contact-grid-container .contactR {
+  position: relative;
+  grid-area: contactR;
+  height: 100%;
+}
+.sectionContainer section.work section.contact .contact-grid-container .contactR .circleR, .sectionContainer section.work section.contact .contact-grid-container .contactR .rectR {
+  position: absolute;
+  top: 0;
+  right: 0;
+  visibility: hidden;
+}
+.sectionContainer section.work section.contact .contact-grid-container .contactR .circleR {
+  position: absolute;
+  width: 50vh;
+  height: 50vh;
+  z-index: 0;
+  background-color: #954127;
+  border-radius: 50%;
+  box-shadow: -2px -2px 40px #1b1b1b;
+  transform: translate(0%, 15%);
+}
+.sectionContainer section.work section.contact .contact-grid-container .contactR .rectR {
+  position: absolute;
+  width: 30vh;
+  height: 50vh;
+  z-index: 0;
+  background-color: #CA4C24;
+  box-shadow: -2px -2px 40px #1b1b1b;
+  transform: translate(-10%, 55%) rotate(-15deg);
+}
+.sectionContainer section.work section.contact .contact-grid-container .contactForm {
+  grid-area: contactForm;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.sectionContainer section.work section.contact .contact-grid-container .contactForm div.mask {
+  overflow: hidden;
+}
+@media (min-width: 640px) and (max-width: 1024px) {
+  .sectionContainer section.work section.contact .contact-grid-container .contactForm div.mask h1 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 640px) {
+  .sectionContainer section.work section.contact .contact-grid-container .contactForm div.mask h1 {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 640px) and (max-width: 1024px) {
+  .sectionContainer section.work section.contact .contact-grid-container .contactForm {
+    width: 100%;
+  }
+}
+.sectionContainer section.work section.contact .contact-grid-container .contactForm .title {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  color: #f7f7f7;
+}
+.sectionContainer section.work section.contact .contact-grid-container .contactForm .form {
+  text-align: center;
+}
+@media (min-width: 640px) and (max-width: 1024px) {
+  .sectionContainer section.work section.contact .contact-grid-container .contactForm .form {
+    width: 75%;
+  }
+}
+@media (max-width: 640px) {
+  .sectionContainer section.work section.contact .contact-grid-container .contactForm .form {
+    width: 100%;
+  }
+}
+.sectionContainer section.work section.contact .contact-grid-container .contactForm .form .form-control {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+.sectionContainer section.work section.contact .contact-grid-container .contactForm .form .form-control .formTitle {
+  color: #f7f7f7;
+  font-size: 1.25rem;
+  margin: 30px 0 10px 0;
+  text-align: center;
+}
+@media (min-width: 640px) and (max-width: 1024px) {
+  .sectionContainer section.work section.contact .contact-grid-container .contactForm .form .form-control .formTitle {
+    font-size: 1.25rem;
+    margin: 30px 0 10px 0;
+  }
+}
+@media (max-width: 640px) {
+  .sectionContainer section.work section.contact .contact-grid-container .contactForm .form .form-control .formTitle {
+    font-size: 1rem;
+    margin: 10px 0 10px 0;
+  }
+}
+.sectionContainer section.work section.contact .contact-grid-container .contactForm .form .form-control .inputField {
+  margin: 0;
+  height: 30px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 3px solid #f7f7f7;
+  background-color: transparent;
+  color: #f7f7f7;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+.sectionContainer section.work section.contact .contact-grid-container .contactForm .form .form-control .inputField:focus {
+  outline: none;
+  border: 3px solid #ff5722;
+}
+.sectionContainer section.work section.contact .contact-grid-container .contactForm .form .form-control .inputTextArea {
+  margin: 0;
+  height: 95px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 3px solid #f7f7f7;
+  background-color: transparent;
+  color: #f7f7f7;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  resize: none;
+}
+.sectionContainer section.work section.contact .contact-grid-container .contactForm .form .form-control .inputTextArea:focus {
+  outline: none;
+  border: 3px solid #ff5722;
+}
+.sectionContainer section.work section.contact .contact-grid-container .contactForm .form .form-control .inputTextArea:valid {
+  background-color: transparent;
+}
+.sectionContainer section.work section.contact .contact-grid-container .contactForm .form .form-control .formError {
+  color: #ff5722;
+  font-size: 1.25rem;
+  margin-top: 10px;
+  text-align: end;
+}
+@media (max-width: 640px) {
+  .sectionContainer section.work section.contact .contact-grid-container .contactForm .form .form-control .formError {
+    font-size: 1rem;
+    margin-top: 5px;
+  }
+}
+.sectionContainer section.work section.contact .contact-grid-container .contactForm .form button {
+  padding: 10px 20px;
+  margin-top: 40px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  background: #1b1b1b;
+  border: none;
+  outline: none;
+  box-shadow: 0px 2px 10px #1b1b1b;
+  cursor: url("../images/CursorPointer.png") 16 16, auto;
+}
+@media (max-width: 640px) {
+  .sectionContainer section.work section.contact .contact-grid-container .contactForm .form button {
+    margin-top: 10px;
+  }
+}
+.sectionContainer section.work section.contact .contact-grid-container .contactForm .form p {
+  font-size: 1rem;
+  margin-top: 30px;
+  line-height: 2rem;
+}
+.sectionContainer section.work section.contact .contact-grid-container .contactForm .form .submitFailed {
+  color: #ff5722;
+}
+.sectionContainer section.work section.contact .contact-grid-container .contactForm .form .submitSuccess {
+  color: #f7f7f7;
+}
 .sectionContainer section.contact {
   height: calc(100vh - 100px);
   position: relative;
 }
-
-.sectionContainer section.contact .scrollUpIndicator {
-  position: absolute;
-  top: 0;
-  left: calc(50% - 1rem);
-}
-
-.sectionContainer section.contact .scrollUpIndicator .icon {
-  height: 1.5rem;
-}
-
-.sectionContainer section.contact .scrollUpIndicator .first {
-  -webkit-animation: blink 1s ease-in-out infinite 1.66s;
-          animation: blink 1s ease-in-out infinite 1.66s;
-}
-
-.sectionContainer section.contact .scrollUpIndicator .second {
-  -webkit-animation: blink 1s ease-in-out infinite 1.33s;
-          animation: blink 1s ease-in-out infinite 1.33s;
-}
-
-.sectionContainer section.contact .scrollUpIndicator .third {
-  -webkit-animation: blink 1s ease-in-out infinite 1s;
-          animation: blink 1s ease-in-out infinite 1s;
-}
-
 .sectionContainer section.contact .contact-grid-container {
   height: 100%;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1em 1fr 1fr 1fr 1em;
-      grid-template-columns: 1em 1fr 1fr 1fr 1em;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
+  grid-template-columns: 1em 1fr 1fr 1fr 1em;
+  grid-template-rows: 1fr;
   gap: 0px 10px;
-      grid-template-areas: ". contactL contactForm contactR .";
+  grid-template-areas: ". contactL contactForm contactR .";
 }
-
 @media (min-width: 640px) and (max-width: 1024px) {
   .sectionContainer section.contact .contact-grid-container {
-    -ms-grid-columns: 1em 1fr 4fr 1fr 1em;
-        grid-template-columns: 1em 1fr 4fr 1fr 1em;
+    grid-template-columns: 1em 1fr 4fr 1fr 1em;
   }
 }
-
 @media (max-width: 640px) {
   .sectionContainer section.contact .contact-grid-container {
-    -ms-grid-columns: 0.5em 1fr 8fr 1fr 0.5em;
-        grid-template-columns: 0.5em 1fr 8fr 1fr 0.5em;
+    grid-template-columns: 0.5em 1fr 8fr 1fr 0.5em;
   }
 }
-
 .sectionContainer section.contact .contact-grid-container .contactL {
   position: relative;
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
   grid-area: contactL;
   height: 100%;
 }
-
 .sectionContainer section.contact .contact-grid-container .contactL .circleL, .sectionContainer section.contact .contact-grid-container .contactL .rectL {
   position: absolute;
   left: 0;
   top: 0;
   visibility: hidden;
 }
-
 .sectionContainer section.contact .contact-grid-container .contactL .circleL {
   position: absolute;
   width: 35vh;
   height: 35vh;
   background-color: #ff5722;
   border-radius: 50%;
-  -webkit-box-shadow: -2px -2px 40px #1b1b1b;
-          box-shadow: -2px -2px 40px #1b1b1b;
+  box-shadow: -2px -2px 40px #1b1b1b;
   border-radius: 50%;
-  -webkit-transform: translate(10%, 25%);
-          transform: translate(10%, 25%);
+  transform: translate(10%, 25%);
 }
-
 .sectionContainer section.contact .contact-grid-container .contactL .rectL {
   position: absolute;
   width: 45vh;
   height: 50vh;
   background-color: #603629;
-  -webkit-box-shadow: -2px -2px 40px #1b1b1b;
-          box-shadow: -2px -2px 40px #1b1b1b;
-  -webkit-transform: translate(10%, 55%) rotate(-15deg);
-          transform: translate(10%, 55%) rotate(-15deg);
+  box-shadow: -2px -2px 40px #1b1b1b;
+  transform: translate(10%, 55%) rotate(-15deg);
 }
-
 .sectionContainer section.contact .contact-grid-container .contactR {
   position: relative;
-  -ms-grid-row: 1;
-  -ms-grid-column: 4;
   grid-area: contactR;
   height: 100%;
 }
-
 .sectionContainer section.contact .contact-grid-container .contactR .circleR, .sectionContainer section.contact .contact-grid-container .contactR .rectR {
   position: absolute;
   top: 0;
   right: 0;
   visibility: hidden;
 }
-
 .sectionContainer section.contact .contact-grid-container .contactR .circleR {
   position: absolute;
   width: 50vh;
@@ -1130,215 +932,162 @@ header .header-container .toggle {
   z-index: 0;
   background-color: #954127;
   border-radius: 50%;
-  -webkit-box-shadow: -2px -2px 40px #1b1b1b;
-          box-shadow: -2px -2px 40px #1b1b1b;
-  -webkit-transform: translate(0%, 15%);
-          transform: translate(0%, 15%);
+  box-shadow: -2px -2px 40px #1b1b1b;
+  transform: translate(0%, 15%);
 }
-
 .sectionContainer section.contact .contact-grid-container .contactR .rectR {
   position: absolute;
   width: 30vh;
   height: 50vh;
   z-index: 0;
   background-color: #CA4C24;
-  -webkit-box-shadow: -2px -2px 40px #1b1b1b;
-          box-shadow: -2px -2px 40px #1b1b1b;
-  -webkit-transform: translate(-10%, 55%) rotate(-15deg);
-          transform: translate(-10%, 55%) rotate(-15deg);
+  box-shadow: -2px -2px 40px #1b1b1b;
+  transform: translate(-10%, 55%) rotate(-15deg);
 }
-
 .sectionContainer section.contact .contact-grid-container .contactForm {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
   grid-area: contactForm;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   z-index: 1;
 }
-
 .sectionContainer section.contact .contact-grid-container .contactForm div.mask {
   overflow: hidden;
 }
-
 @media (min-width: 640px) and (max-width: 1024px) {
   .sectionContainer section.contact .contact-grid-container .contactForm div.mask h1 {
     font-size: 2rem;
   }
 }
-
 @media (max-width: 640px) {
   .sectionContainer section.contact .contact-grid-container .contactForm div.mask h1 {
     font-size: 1.5rem;
   }
 }
-
 @media (min-width: 640px) and (max-width: 1024px) {
   .sectionContainer section.contact .contact-grid-container .contactForm {
     width: 100%;
   }
 }
-
 .sectionContainer section.contact .contact-grid-container .contactForm .title {
   width: 100%;
-  display: -ms-grid;
   display: grid;
   place-items: center;
   color: #f7f7f7;
 }
-
 .sectionContainer section.contact .contact-grid-container .contactForm .form {
   text-align: center;
 }
-
 @media (min-width: 640px) and (max-width: 1024px) {
   .sectionContainer section.contact .contact-grid-container .contactForm .form {
     width: 75%;
   }
 }
-
 @media (max-width: 640px) {
   .sectionContainer section.contact .contact-grid-container .contactForm .form {
     width: 100%;
   }
 }
-
 .sectionContainer section.contact .contact-grid-container .contactForm .form .form-control {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
 }
-
 .sectionContainer section.contact .contact-grid-container .contactForm .form .form-control .formTitle {
   color: #f7f7f7;
   font-size: 1.25rem;
   margin: 30px 0 10px 0;
   text-align: center;
 }
-
 @media (min-width: 640px) and (max-width: 1024px) {
   .sectionContainer section.contact .contact-grid-container .contactForm .form .form-control .formTitle {
     font-size: 1.25rem;
     margin: 30px 0 10px 0;
   }
 }
-
 @media (max-width: 640px) {
   .sectionContainer section.contact .contact-grid-container .contactForm .form .form-control .formTitle {
     font-size: 1rem;
     margin: 10px 0 10px 0;
   }
 }
-
 .sectionContainer section.contact .contact-grid-container .contactForm .form .form-control .inputField {
   margin: 0;
   height: 30px;
   width: 100%;
   padding: 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border: 3px solid #f7f7f7;
   background-color: transparent;
   color: #f7f7f7;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
 }
-
 .sectionContainer section.contact .contact-grid-container .contactForm .form .form-control .inputField:focus {
   outline: none;
   border: 3px solid #ff5722;
 }
-
 .sectionContainer section.contact .contact-grid-container .contactForm .form .form-control .inputTextArea {
   margin: 0;
   height: 95px;
   width: 100%;
   padding: 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border: 3px solid #f7f7f7;
   background-color: transparent;
   color: #f7f7f7;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   resize: none;
 }
-
 .sectionContainer section.contact .contact-grid-container .contactForm .form .form-control .inputTextArea:focus {
   outline: none;
   border: 3px solid #ff5722;
 }
-
 .sectionContainer section.contact .contact-grid-container .contactForm .form .form-control .inputTextArea:valid {
   background-color: transparent;
 }
-
 .sectionContainer section.contact .contact-grid-container .contactForm .form .form-control .formError {
   color: #ff5722;
   font-size: 1.25rem;
   margin-top: 10px;
   text-align: end;
 }
-
 @media (max-width: 640px) {
   .sectionContainer section.contact .contact-grid-container .contactForm .form .form-control .formError {
     font-size: 1rem;
     margin-top: 5px;
   }
 }
-
 .sectionContainer section.contact .contact-grid-container .contactForm .form button {
   padding: 10px 20px;
   margin-top: 40px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 800;
   font-size: 1.25rem;
   text-transform: uppercase;
   background: #1b1b1b;
   border: none;
   outline: none;
-  -webkit-box-shadow: 0px 2px 10px #1b1b1b;
-          box-shadow: 0px 2px 10px #1b1b1b;
+  box-shadow: 0px 2px 10px #1b1b1b;
   cursor: url("../images/CursorPointer.png") 16 16, auto;
 }
-
 @media (max-width: 640px) {
   .sectionContainer section.contact .contact-grid-container .contactForm .form button {
     margin-top: 10px;
   }
 }
-
 .sectionContainer section.contact .contact-grid-container .contactForm .form p {
   font-size: 1rem;
   margin-top: 30px;
   line-height: 2rem;
 }
-
 .sectionContainer section.contact .contact-grid-container .contactForm .form .submitFailed {
   color: #ff5722;
 }
-
 .sectionContainer section.contact .contact-grid-container .contactForm .form .submitSuccess {
   color: #f7f7f7;
 }
@@ -1346,79 +1095,28 @@ header .header-container .toggle {
 footer {
   height: 50px;
   color: #f7f7f7;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   background-color: #1b1b1b;
   margin: 0 auto;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 800;
   font-size: 1.5rem;
   position: relative;
   bottom: 0;
 }
-
 @media (min-width: 640px) and (max-width: 1024px) {
   footer {
     font-size: 1rem;
   }
 }
-
 @media (max-width: 640px) {
   footer {
     font-size: 0.85rem;
   }
 }
 
-.scrollUpIndicator, .scrollRightIndicator, .scrollDownIndicator, a {
-  cursor: url("../images/CursorPointer.png") 16 16, auto;
-}
-
-.scrollUpIndicator, .scrollRightIndicator, .scrollDownIndicator {
-  z-index: 10;
-}
-
-.toyPageCover {
-  position: absolute;
-  top: 0;
-  left: -100vw;
-  background-color: #ff5722;
-  width: 100vw;
-  height: 100vh;
-  z-index: 20;
-  color: #f7f7f7;
-}
-
-.toys {
-  width: 100vw;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #f7f7f7;
-  font-family: 'Poppins', sans-serif;
-  font-size: 4rem;
-  font-weight: 800;
-}
-
-.toys a {
-  text-decoration: none;
-  color: #f7f7f7;
-}
-
 input, label, .inputTextArea {
   cursor: url("../images/CursorText.png") 16 16, auto;
-}
-/*# sourceMappingURL=layout.css.map */
+}/*# sourceMappingURL=layout.css.map */
