@@ -40,7 +40,7 @@ function ContactForm() {
     const handleOnSubmit = (values, actions) => {
         axios({
             method: "POST",
-            url: process.env.FORMSPREE_URL,
+            url: process.env.GATSBY_FORMSPREE_URL,
             data: values
         })
         .then(response => {
