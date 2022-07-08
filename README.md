@@ -1,3 +1,6 @@
+Now available on https://szc.netlify.app
+
+
 ## 🚥 Prerequisite
 
     npm install
